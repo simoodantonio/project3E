@@ -1,0 +1,18 @@
+.homeBar {
+    display: flex;
+    align-items: center;
+    margin: 0 1.5vw;
+    height: 15vh;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+    position: sticky;
+    top: 0;
+}
+.box {
+    display: block;
+    align-items: center;
+    justify-content: center;
+    width: 20%;
+    height: 100%;
+}
