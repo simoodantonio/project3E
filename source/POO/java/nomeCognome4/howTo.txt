@@ -1,0 +1,4 @@
+POO Java - Punti da trattare:
+
+1. Classe String
+2. Metodi statici

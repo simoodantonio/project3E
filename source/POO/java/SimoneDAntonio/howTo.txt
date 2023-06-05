@@ -1,0 +1,5 @@
+POO Java - Punti da trattare:
+
+1. Stream (canali, buffer) di I/O e la sua astrazione in java (system in/system out)
+2. Classe Scanner per lettura da input
+3. File in Java (creazione, scrittura e lettura)
