@@ -1,96 +1,225 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <title>Programmazione orientata agli oggetti</title>
+  <style>
+    #spazio {
+      display: block;
+      font-family: monospace;
+      white-space: pre;
+      margin: 1em 0;
+      margin-top: -30px;
+    }
+
+    /* Stile per il contenitore della lista */
+    ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    /* Stile per gli elementi della lista */
+    li {
+      margin-bottom: 10px;
+      position: relative;
+    }
+
+    /* Stile per i rettangoli contenitori dei titoli */
+    li:before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 0;
+      width: 350px;
+      /* Imposta la larghezza del rettangolo*/
+      transform: translateY(-50%);
+      height: 20px;
+      /* Imposta l'altezza del rettangolo*/
+      background-color: #f5f5f5;
+      border-radius: 5px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      z-index: -1;
+    }
+
+    /* Stile per le righe di separazione */
+    li:after {
+      content: "";
+      position: absolute;
+      bottom: -5px;
+      left: 0;
+      width: 350px;
+      /* Imposta la riga sotto al rettangolo */
+      height: 2px;
+      background-color: #333;
+    }
+
+
+    /* Stile per i link */
+    a {
+      text-decoration: none;
+      color: #333;
+    }
+
+    /* Stile per gli elementi della lista all'interno del contenitore centrato */
+    ul.centered {
+      text-align: center;
+    }
+
+    /* Stile per gli elementi della lista all'interno del contenitore centrato */
+    ul.centered li {
+      display: inline-block;
+      padding: 10px;
+      margin: 0 10px;
+      position: relative;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  </style>
 </head>
+
 <body>
-                        
-                                             <center><p><h1>Programmazione orientata agli oggetti</h1></p> </center>
 
-<ul>
-  <li><a href="#Paradigma Object-Oriented Programming (OOP)">Paradigma Object-Oriented Programming (OOP)</a></li>
-  <li><a href="#Approccio Bottom-Up nella progettazione OOP">Approccio Bottom-Up nella progettazione OOP</a></li>
-  <li><a href="#Definizione di Classe">Definizione di Classe</a></li>
-  <li><a href="#Definizione di Tipi di Dati Astratti">Definizione di Tipi di Dati Astratti</a></li>
-  <li><a href="#Attributi di una classe">Attributi di una classe</a></li>
-  <li><a href="#Metodi di una classe">Metodi di una classe</a></li>
-   <li><a href="#Esempio di codice:">Esempio di codice:</a></li>
-</ul>
-  
+  <center>
+    <p>
+    <h1>Programmazione orientata agli oggetti</h1>
+    </p>
+  </center>
 
-  
+  <ul>
+    <li><a href="#Paradigma Object-Oriented Programming (OOP)">Paradigma Object-Oriented Programming (OOP)</a></li>
+    <li><a href="#Approccio Bottom-Up nella progettazione OOP">Approccio Bottom-Up nella progettazione OOP</a></li>
+    <li><a href="#Definizione di Classe">Definizione di Classe</a></li>
+    <li><a href="#Definizione di Tipi di Dati Astratti">Definizione di Tipi di Dati Astratti</a></li>
+    <li><a href="#Attributi di una classe">Attributi di una classe</a></li>
+    <li><a href="#Metodi di una classe">Metodi di una classe</a></li>
+    <li><a href="#Esempio di codice:">Esempio di codice:</a></li>
+  </ul>
+
+
+  <hr>
   <h2 id="Paradigma Object-Oriented Programming (OOP)">Paradigma Object-Oriented Programming (OOP)</h2>
   <p>
-    L'<b>OOP</b> è un paradigma di programmazione che organizza il codice intorno agli <b>oggetti</b>.Questi rappresentano <b>istanze di classi</b>, che sono modelli astratti che definiscono gli <b>attributi</b> e i <b>comportamenti</b> comuni agli oggetti di un certo tipo. L'OOP si basa su concetti fondamentali come l'<b>incapsulamento</b>,<b>information hiding</b>, l'<b>ereditarietà</b> e il <b>polimorfismo</b>.
+    L'<b>OOP</b> è un paradigma di programmazione che organizza il codice intorno agli <b>oggetti</b>.Questi
+    rappresentano <b>istanze di classi</b>, che sono modelli astratti che definiscono gli <b>attributi</b> e i
+    <b>comportamenti</b> comuni agli oggetti di un certo tipo. L'OOP si basa su concetti fondamentali come
+    l'<b>incapsulamento</b>,<b>information hiding</b>, l'<b>ereditarietà</b> e il <b>polimorfismo</b>.
   </p>
 
   <h3>1. Incapsulamento</h3>
   <p>
-    L'<b>incapsulamento</b> è un concetto fondamentale dell'<b>object-oriented programming</b> (OOP) che combina dati e metodi correlati all'interno di un oggetto, nascondendo i dettagli implementativi e consentendo l'accesso controllato alle funzionalità dell'oggetto.
-<br><br/>
-L'incapsulamento raggruppa lo <b>stato (attributi)</b> e il <b>comportamento (metodi)</b> correlati di un oggetto in un'unica entità, consentendo di proteggere i dati e di definire regole per l'accesso e la modifica. Gli attributi di un oggetto vengono dichiarati come <b>privati (private)</b>,che possono essere accessibili solo all'interno della classe stessa. Mentre l'accesso agli attributi viene fornito attraverso i <b>metodi pubblici (public)</b> che ne controllano l'accesso e ne garantiscono la coerenza.
-<br><br/>
-L'incapsulamento promuove la <b>modularità del codice</b>, in quanto gli oggetti possono interagire tra loro solo attraverso un'<b>interfaccia pubblica</b> definita dalla classe. Permettendo di nascondere i dettagli interni e di garantire che gli oggetti siano utilizzati correttamente, riducendo così il rischio di errori.
+    L'<b>incapsulamento</b> è un concetto fondamentale dell'<b>object-oriented programming</b> (OOP) che combina dati e
+    metodi correlati all'interno di un oggetto, nascondendo i dettagli implementativi e consentendo l'accesso
+    controllato alle funzionalità dell'oggetto.
+    <br><br />
+    L'incapsulamento raggruppa lo <b>stato (attributi)</b> e il <b>comportamento (metodi)</b> correlati di un oggetto in
+    un'unica entità, consentendo di proteggere i dati e di definire regole per l'accesso e la modifica. Gli attributi di
+    un oggetto vengono dichiarati come <b>privati (private)</b>,che possono essere accessibili solo all'interno della
+    classe stessa. Mentre l'accesso agli attributi viene fornito attraverso i <b>metodi pubblici (public)</b> che ne
+    controllano l'accesso e ne garantiscono la coerenza.
+    <br><br />
+    L'incapsulamento promuove la <b>modularità del codice</b>, in quanto gli oggetti possono interagire tra loro solo
+    attraverso un'<b>interfaccia pubblica</b> definita dalla classe. Permettendo di nascondere i dettagli interni e di
+    garantire che gli oggetti siano utilizzati correttamente, riducendo così il rischio di errori.
   </p>
 
   <h3>2.Information Hiding</h3>
   <p>
-    L'<b>information hiding</b>, o scatola nera, è un principio che si basa sull'<b>incapsulamento</b> e si riferisce alla pratica di <b>nascondere i dettagli interni di un oggetto</b> e fornire solo un'<b>interfaccia pubblica</b> per l'interazione con esso.
-<br><br/>
-L'obiettivo dell'information hiding è quello di <b>limitare l'accesso diretto agli attributi</b> di un oggetto e di consentire l'accesso solo tramite i <b>metodi definiti</b> dall'oggetto stesso. Questo per protegge i dati interni da <b>modifiche o letture accidentali</b> e permette di <b>controllare l'accesso e le operazioni eseguite</b> sugli attributi.
-<br><br/>
-L'information hiding migliora la <b>sicurezza e la robustezza del codice</b>, in quanto gli oggetti esterni non possono manipolare direttamente lo stato interno di un oggetto. Inoltre, permette di <b>modificare l'implementazione interna di un oggetto senza influenzare il codice esterno</b> che interagisce con esso.
+    L'<b>information hiding</b>, o scatola nera, è un principio che si basa sull'<b>incapsulamento</b> e si riferisce
+    alla pratica di <b>nascondere i dettagli interni di un oggetto</b> e fornire solo un'<b>interfaccia pubblica</b> per
+    l'interazione con esso.
+    <br><br />
+    L'obiettivo dell'information hiding è quello di <b>limitare l'accesso diretto agli attributi</b> di un oggetto e di
+    consentire l'accesso solo tramite i <b>metodi definiti</b> dall'oggetto stesso. Questo per protegge i dati interni
+    da <b>modifiche o letture accidentali</b> e permette di <b>controllare l'accesso e le operazioni eseguite</b> sugli
+    attributi.
+    <br><br />
+    L'information hiding migliora la <b>sicurezza e la robustezza del codice</b>, in quanto gli oggetti esterni non
+    possono manipolare direttamente lo stato interno di un oggetto. Inoltre, permette di <b>modificare l'implementazione
+      interna di un oggetto senza influenzare il codice esterno</b> che interagisce con esso.
 
   </p>
 
   <h3>3. Ereditarietà</h3>
   <p>
-    L'ereditarietà è un meccanismo chiave della <b>programmazione orientata agli oggetti</b> che permette di definire nuove classi basate su classi esistenti. Una classe derivata, nota anche come sottoclasse o classe figlia, <b>eredita gli attributi e i metodi dalla classe di base</b>, nota anche come classe madre.
-<br><br/>
-L'ereditarietà favorisce il riutilizzo del codice, in quanto è possibile definire una <b>gerarchia di classi</b> che condividono caratteristiche comuni. La classe derivata eredita gli attributi e i metodi della classe di base e può estenderli <b>aggiungendo nuovi attributi e metodi o sovrascrivendo quelli esistenti</b> per personalizzarne il comportamento.
-<br><br/>
-L'ereditarietà promuove la <b>modularità, la flessibilità e la facilità di manutenzione del codice</b>. Permettendo di definire classi di base più generiche che possono essere specializzate da classi derivate più specifiche. Inoltre, l'ereditarietà supporta concetti come il <b>polimorfismo</b>.
+    L'ereditarietà è un meccanismo chiave della <b>programmazione orientata agli oggetti</b> che permette di definire
+    nuove classi basate su classi esistenti. Una classe derivata, nota anche come sottoclasse o classe figlia,
+    <b>eredita gli attributi e i metodi dalla classe di base</b>, nota anche come classe madre.
+    <br><br />
+    L'ereditarietà favorisce il riutilizzo del codice, in quanto è possibile definire una <b>gerarchia di classi</b> che
+    condividono caratteristiche comuni. La classe derivata eredita gli attributi e i metodi della classe di base e può
+    estenderli <b>aggiungendo nuovi attributi e metodi o sovrascrivendo quelli esistenti</b> per personalizzarne il
+    comportamento.
+    <br><br />
+    L'ereditarietà promuove la <b>modularità, la flessibilità e la facilità di manutenzione del codice</b>. Permettendo
+    di definire classi di base più generiche che possono essere specializzate da classi derivate più specifiche.
+    Inoltre, l'ereditarietà supporta concetti come il <b>polimorfismo</b>.
   </p>
 
   <h3>4. Polimorfismo</h3>
   <p>
-Il <b>polimorfismo</b> è un principio che consente a oggetti di classi diverse di essere trattati in modo simile attraverso un'interfaccia comune o un tipo di dato astratto. Gli oggetti possono rispondere a chiamate di metodi con lo stesso nome, ma con implementazioni diverse a seconda del tipo effettivo dell'oggetto. Ciò permette di scrivere codice generico che può lavorare con diverse classi di oggetti senza dover fare distinzioni basate sul tipo specifico di ogni oggetto.
+    Il <b>polimorfismo</b> è un principio che consente a oggetti di classi diverse di essere trattati in modo simile
+    attraverso un'interfaccia comune o un tipo di dato astratto. Gli oggetti possono rispondere a chiamate di metodi con
+    lo stesso nome, ma con implementazioni diverse a seconda del tipo effettivo dell'oggetto. Ciò permette di scrivere
+    codice generico che può lavorare con diverse classi di oggetti senza dover fare distinzioni basate sul tipo
+    specifico di ogni oggetto.
   </p>
-
+  <hr>
   <h2 id="Approccio Bottom-Up nella progettazione OOP">Approccio Bottom-Up nella progettazione OOP</h2>
   <p>
-    L'<b>approccio bottom-up</b> nella progettazione OOP si concentra sulla definizione delle <b>classi di base</b> prima di costruire le <b>classi derivate</b>. Questo approccio parte dalle <b>entità più fondamentali</b> del sistema e si espande gradualmente definendo classi specializzate che ereditano funzionalità da classi di livello superiore.
-<br><br/>
-Il processo di sviluppo bottom-up inizia con l'identificazione delle <b>classi di base</b> che rappresentano i <b>concetti chiave</b> del dominio del problema. Queste classi sono progettate per gestire <b>funzionalità di base</b> che forniscono un'interfaccia stabile per le classi derivate. Successivamente, vengono create le <b>classi derivate</b> che estendono le funzionalità delle classi di base aggiungendo nuovi attributi e metodi o specializzandoli.
-<br><br/> 
-Quindi l'approccio bottom-up promuove il <b>riuso del codice</b>, l'<b>organizzazione modulare</b> e la <b>separazione delle responsabilità</b>, consentendo di concentrarsi sulle <b>componenti fondamentali</b> del sistema prima di affrontare dettagli più specifici. Questo approccio può essere utile quando si progetta un sistema complesso in cui le classi derivate dipendono dalle funzionalità stabili fornite dalle classi di base.
+    L'<b>approccio bottom-up</b> nella progettazione OOP si concentra sulla definizione delle <b>classi di base</b>
+    prima di costruire le <b>classi derivate</b>. Questo approccio parte dalle <b>entità più fondamentali</b> del
+    sistema e si espande gradualmente definendo classi specializzate che ereditano funzionalità da classi di livello
+    superiore.
+    <br><br />
+    Il processo di sviluppo bottom-up inizia con l'identificazione delle <b>classi di base</b> che rappresentano i
+    <b>concetti chiave</b> del dominio del problema. Queste classi sono progettate per gestire <b>funzionalità di
+      base</b> che forniscono un'interfaccia stabile per le classi derivate. Successivamente, vengono create le
+    <b>classi derivate</b> che estendono le funzionalità delle classi di base aggiungendo nuovi attributi e metodi o
+    specializzandoli.
+    <br><br />
+    Quindi l'approccio bottom-up promuove il <b>riuso del codice</b>, l'<b>organizzazione modulare</b> e la
+    <b>separazione delle responsabilità</b>, consentendo di concentrarsi sulle <b>componenti fondamentali</b> del
+    sistema prima di affrontare dettagli più specifici. Questo approccio può essere utile quando si progetta un sistema
+    complesso in cui le classi derivate dipendono dalle funzionalità stabili fornite dalle classi di base.
   </p>
-
-
+<hr>
   <h2 id="Definizione di Classe">Definizione di Classe</h2>
   <p>La Classe descrive astrattamente un tipo di dato con caratteristiche e comportamenti simili.
-  Questa è un modello per un insieme di oggetti analoghi caratterizzati:
-    <br><br/>
+    Questa è un modello per un insieme di oggetti analoghi caratterizzati:
+    <br><br />
     - Dalla <b>stessa rappresentazione interna</b><br>
     - Dalle <b>stesse operazioni con lo stesso funzionamento</b>, che permettono di descrivere un insieme di oggetti<br>
-    <blockquote style="margin-left: 30px;">
-        <b>- che hanno gli stessi attributi (variabili)<br>
-        - eseguono le stesse operazioni (funzioni o metodi)</b>
-    </blockquote>
+  <blockquote style="margin-left: 30px;">
+    <b>- che hanno gli stessi attributi (variabili)<br>
+      - eseguono le stesse operazioni (funzioni o metodi)</b>
+  </blockquote>
   </p>
-
-    
+<hr>
   <h2 id="Definizione di Tipi di Dati Astratti">Definizione di Tipi di Dati Astratti</h2>
-  <p>Il <b>TDA</b> definisce le operazioni che possono essere eseguite sui dati e anche le proprietà e il comportamento associati a quei dati, ma non specifica come vengono effettivamente implementate queste operazioni o come i dati vengono memorizzati internamente. Questa separazione tra l'astrazione del tipo di dato e la sua implementazione interna consente di scrivere codice che si concentra sulle operazioni e sul comportamento dei dati senza preoccuparsi dei dettagli specifici di come sono memorizzati o elaborati.
-<br><br/>
-L'uso dei <b>TDA</b> facilita la modularità e la riusabilità del codice, poiché consente di scrivere funzioni e algoritmi che operano su tipi di dati astratti senza dipendere dalla loro implementazione specifica. In questo modo, è possibile cambiare l'implementazione interna di un tipo di dato senza dover modificare il codice che ne fa uso, purché le operazioni definite dal <b>TDA</b> rimangano invariate.</p>
-
+  <p>Il <b>TDA</b> definisce le operazioni che possono essere eseguite sui dati e anche le proprietà e il comportamento
+    associati a quei dati, ma non specifica come vengono effettivamente implementate queste operazioni o come i dati
+    vengono memorizzati internamente. Questa separazione tra l'astrazione del tipo di dato e la sua implementazione
+    interna consente di scrivere codice che si concentra sulle operazioni e sul comportamento dei dati senza
+    preoccuparsi dei dettagli specifici di come sono memorizzati o elaborati.
+    <br><br />
+    L'uso dei <b>TDA</b> facilita la modularità e la riusabilità del codice, poiché consente di scrivere funzioni e
+    algoritmi che operano su tipi di dati astratti senza dipendere dalla loro implementazione specifica. In questo modo,
+    è possibile cambiare l'implementazione interna di un tipo di dato senza dover modificare il codice che ne fa uso,
+    purché le operazioni definite dal <b>TDA</b> rimangano invariate.
+  </p>
+<hr>
   <h2 id="Attributi di una classe">Attributi di una classe</h2>
- <p>Gli <b>attributi</b> di una classe sono le <b>variabili definite all'interno della classe stessa</b>. Gli attributi rappresentano lo <b>stato o le caratteristiche degli oggetti</b> che saranno creati dalla classe. Possono essere <b>variabili di istanza</b> o <b>variabili di classe</b>.
-<br></br>
-<span style="font-size: 17px;"><b>1. Attributi di istanza:</b></span> questi sono specifici per ogni <b>istanza</b> (oggetto) creato dalla <b>classe</b>. Ogni istanza ha i suoi valori unici per questi <b>attributi</b>. Gli attributi di istanza sono definiti all'interno del <b>metodo costruttore</b> della classe.<br> Ad esempio:
+  <p>Gli <b>attributi</b> di una classe sono le <b>variabili definite all'interno della classe stessa</b>. Gli attributi
+    rappresentano lo <b>stato o le caratteristiche degli oggetti</b> che saranno creati dalla classe. Possono essere
+    <b>variabili di istanza</b> o <b>variabili di classe</b>.
+    <br></br>
+    <span style="font-size: 17px;"><b>1. Attributi di istanza:</b></span> questi sono specifici per ogni <b>istanza</b>
+    (oggetto) creato dalla <b>classe</b>. Ogni istanza ha i suoi valori unici per questi <b>attributi</b>. Gli attributi
+    di istanza sono definiti all'interno del <b>metodo costruttore</b> della classe.<br> Ad esempio:
 
-<pre style="white-space: pre-wrap; background-color: 	#ffffff; padding: 10px;">
+  <pre style="white-space: pre-wrap; background-color: 	#ffffff; padding: 10px;">
     <code>
       <b>
         public class Persona {
@@ -125,11 +254,15 @@ L'uso dei <b>TDA</b> facilita la modularità e la riusabilità del codice, poich
 </pre>
 
 
-In questo esempio, <b>`nome`</b> e <b>`età`</b> sono attributi di istanza della classe <b>`Persona`</b>. Ogni istanza della classe avrà i suoi valori specifici per questi attributi.
-<br></br>
-<span style="font-size: 17px;"><b>2. Attributi di classe:</b></span> questi sono condivisi tra tutte le istanze della classe. Sono definiti all'interno della <b>classe</b>, ma al di fuori di qualsiasi <b>metodo</b>. Gli <b>attributi di classe</b> sono gli stessi per tutte le istanze e possono essere <b>accessati</b> sia dalle istanze che dalla <b>classe</b> stessa. <br>Ad esempio:
+  In questo esempio, <b>`nome`</b> e <b>`età`</b> sono attributi di istanza della classe <b>`Persona`</b>. Ogni istanza
+  della classe avrà i suoi valori specifici per questi attributi.
+  <br></br>
+  <span style="font-size: 17px;"><b>2. Attributi di classe:</b></span> questi sono condivisi tra tutte le istanze della
+  classe. Sono definiti all'interno della <b>classe</b>, ma al di fuori di qualsiasi <b>metodo</b>. Gli <b>attributi di
+    classe</b> sono gli stessi per tutte le istanze e possono essere <b>accessati</b> sia dalle istanze che dalla
+  <b>classe</b> stessa. <br>Ad esempio:
 
-<pre style="white-space: pre-wrap; background-color: 	#ffffff; padding: 10px;">
+  <pre style="white-space: pre-wrap; background-color: 	#ffffff; padding: 10px;">
     <code>
       <b>
         public class Persona {
@@ -142,11 +275,14 @@ In questo esempio, <b>`nome`</b> e <b>`età`</b> sono attributi di istanza della
 </pre>
 
 
-In questo esempio, <b>`numero_di_occhi`</b> è un attributo di classe della classe `Persona`. Tutte le istanze di <b>`Persona`</b> avranno il valore <b>`2`</b> per <b>`numero_di_occhi`</b>.
+  In questo esempio, <b>`numero_di_occhi`</b> è un attributo di classe della classe `Persona`. Tutte le istanze di
+  <b>`Persona`</b> avranno il valore <b>`2`</b> per <b>`numero_di_occhi`</b>.
 
-Gli attributi di una classe possono essere accessati e modificati utilizzando la sintassi <b>`nome_istanza.nome_attributo`</b> per gli attributi di istanza e <b>`nome_classe.nome_attributo`</b> per gli attributi di classe.<br>Ad esempio:
+  Gli attributi di una classe possono essere accessati e modificati utilizzando la sintassi
+  <b>`nome_istanza.nome_attributo`</b> per gli attributi di istanza e <b>`nome_classe.nome_attributo`</b> per gli
+  attributi di classe.<br>Ad esempio:
 
-<pre style="white-space: pre-wrap; background-color: #ffffff; padding: 10px;">
+  <pre style="white-space: pre-wrap; background-color: #ffffff; padding: 10px;">
     <code>
       <b>
         Persona p = new Persona("Mario", 30);
@@ -157,13 +293,15 @@ Gli attributi di una classe possono essere accessati e modificati utilizzando la
     </code>
 </pre>
 
-In questo esempio, <b>`p.nome`</b> accede all'attributo di istanza <b>`nome`</b> dell'oggetto <b>`p`</b>, mentre <b>`Persona.numero_di_occhi`</b> accede all'attributo di classe <b>`numero_di_occhi`</b> della classe <b>`Persona`</b>.</p>
+  In questo esempio, <b>`p.nome`</b> accede all'attributo di istanza <b>`nome`</b> dell'oggetto <b>`p`</b>, mentre
+  <b>`Persona.numero_di_occhi`</b> accede all'attributo di classe <b>`numero_di_occhi`</b> della classe
+  <b>`Persona`</b>.</p>
+<hr>
+  <h2 id="Metodi di una classe">Metodi di una classe </h2>
+  <p>I <b>metodi</b> di una classe sono le funzioni definite all'interno di una classe che possono essere invocate per
+    eseguire determinate azioni o calcoli.</p>
 
-
-    <h2 id="Metodi di una classe">Metodi di una classe </h2>
-    <p>I <b>metodi</b> di una classe sono le funzioni definite all'interno di una classe che possono essere invocate per eseguire determinate azioni o calcoli.</p>
-    
-    <h3>Dichiarazione del metodo:</h3>
+  <h3>Dichiarazione del metodo:</h3>
   <pre style="white-space: pre-wrap; background-color: 	#ffffff; padding: 10px;">
     <code>
       <b>
@@ -173,36 +311,39 @@ In questo esempio, <b>`p.nome`</b> accede all'attributo di istanza <b>`nome`</b>
       </b>
     </code>
 </pre>
-  
-      - <b>`modificatore`:</b> specifica la visibilità e l'accessibilità del metodo, come ad esempio <b>`public`</b>, <b>`private`</b> o <b>`protected`</b>.
-              <blockquote style="margin-left: 30px;">
-        - <b>`public`:</b> permette l'utilizzo di variabili e metodi dall'esterno (+)<br>   
-        - <b>`private`:</b> nasconde metodi e codice che risulteranno NON utilizzabili (-) <br>
-        - <b>`protected`:</b> dati e codice nascosti a esterni, ma visibili da chi eredita (#)
-    </blockquote>
-    - <b>`tipoRitorno`:</b> specifica il tipo di dato che il metodo restituisce. Se il metodo non restituisce alcun valore, viene utilizzato il tipo `void`.
-     <br>-<b> `nomeMetodo`:</b> il nome del metodo che lo identifica.
-     <br>-<b> `parametri`:</b> specifica i parametri necessari per il metodo, inclusi il loro tipo e il loro nome
-      </p>
- 
-    
-    <h3>Chiamata del metodo:</h3>
 
-<pre style="white-space: pre-wrap; background-color: 	#ffffff; padding: 10px;">
+  - <b>`modificatore`:</b> specifica la visibilità e l'accessibilità del metodo, come ad esempio <b>`public`</b>,
+  <b>`private`</b> o <b>`protected`</b>.
+  <blockquote style="margin-left: 30px;">
+    - <b>`public`:</b> permette l'utilizzo di variabili e metodi dall'esterno (+)<br>
+    - <b>`private`:</b> nasconde metodi e codice che risulteranno NON utilizzabili (-) <br>
+    - <b>`protected`:</b> dati e codice nascosti a esterni, ma visibili da chi eredita (#)
+  </blockquote>
+  - <b>`tipoRitorno`:</b> specifica il tipo di dato che il metodo restituisce. Se il metodo non restituisce alcun
+  valore, viene utilizzato il tipo `void`.
+  <br>-<b> `nomeMetodo`:</b> il nome del metodo che lo identifica.
+  <br>-<b> `parametri`:</b> specifica i parametri necessari per il metodo, inclusi il loro tipo e il loro nome
+  </p>
+
+
+  <h3>Chiamata del metodo:</h3>
+
+  <pre style="white-space: pre-wrap; background-color: 	#ffffff; padding: 10px;">
     <code>
       <b>
         &lt;nomeMetodo&gt;(<em>argomenti</em>);
         </b>
     </code>
 </pre>
-      <p>- <b>`nomeMetodo` :</b> il nome del metodo che viene chiamato.<br>
-- <b>`argomenti` :</b> specifica gli argomenti passati al metodo durante la chiamata. Gli argomenti devono corrispondere ai tipi e all'ordine dei parametri definiti nel metodo.
-      </p>
-   
-    
-    <h3>Ritorno di valori:</h3>
+  <p>- <b>`nomeMetodo` :</b> il nome del metodo che viene chiamato.<br>
+    - <b>`argomenti` :</b> specifica gli argomenti passati al metodo durante la chiamata. Gli argomenti devono
+    corrispondere ai tipi e all'ordine dei parametri definiti nel metodo.
+  </p>
 
-<pre style="white-space: pre-wrap; background-color: 	#ffffff; padding: 10px;">
+
+  <h3>Ritorno di valori:</h3>
+
+  <pre style="white-space: pre-wrap; background-color: 	#ffffff; padding: 10px;">
     <code>
       <b>
          <em>tipoRitorno</em> <em>nomeMetodo</em>(<em>parametri</em>) {
@@ -211,17 +352,20 @@ In questo esempio, <b>`p.nome`</b> accede all'attributo di istanza <b>`nome`</b>
       </b>
     </code>
 </pre>
-      <p>- <b>`tipoRitorno` : </b>specifica il tipo di dato restituito dal metodo. Se il metodo non restituisce alcun valore, viene utilizzato il tipo void.<br>
-- <b>`nomeMetodo` :</b> il nome del metodo che restituisce un valore.<br>
-- <b>`parametri` :</b> specifica i parametri necessari per il metodo, inclusi il loro tipo e il loro nome.<br>
-- <b>`return valore` :</b> il valore che viene restituito dal metodo al chiamante. Il tipo del valore restituito deve corrispondere al tipo dichiarato nel metodo.</p>
-    
-    
-    <h3>Overloading dei metodi:</h3>
-    <p>L'<b>overloading</b> dei metodi consente di definire più metodi con lo stesso nome ma con <b>firme (parametri) diversi</b> nella stessa classe.</p>
+  <p>- <b>`tipoRitorno` : </b>specifica il tipo di dato restituito dal metodo. Se il metodo non restituisce alcun
+    valore, viene utilizzato il tipo void.<br>
+    - <b>`nomeMetodo` :</b> il nome del metodo che restituisce un valore.<br>
+    - <b>`parametri` :</b> specifica i parametri necessari per il metodo, inclusi il loro tipo e il loro nome.<br>
+    - <b>`return valore` :</b> il valore che viene restituito dal metodo al chiamante. Il tipo del valore restituito
+    deve corrispondere al tipo dichiarato nel metodo.</p>
 
 
-<pre style="white-space: pre-wrap; background-color: 	#ffffff; padding: 10px;">
+  <h3>Overloading dei metodi:</h3>
+  <p>L'<b>overloading</b> dei metodi consente di definire più metodi con lo stesso nome ma con <b>firme (parametri)
+      diversi</b> nella stessa classe.</p>
+
+
+  <pre style="white-space: pre-wrap; background-color: 	#ffffff; padding: 10px;">
     <code>
       <b>
        &lt;modificatore&gt; <em>tipoRitorno</em> <em>nomeMetodo</em>(<em>parametri1</em>) {
@@ -234,18 +378,17 @@ In questo esempio, <b>`p.nome`</b> accede all'attributo di istanza <b>`nome`</b>
       </b>
     </code>
 </pre>
-  
-- <b>`modificatore` :</b> specifica la visibilità e l'accessibilità del metodo, come ad esempio public, private o protected.<br>
-- <b>`tipoRitorno` :</b> specifica il tipo di dato che il metodo restituisce.<br>
-- <b>`nomeMetodo` :</b> lo stesso nome del metodo usato in diverse definizioni.<br>
-- <b>`parametri1` :</b> specifica i parametri della prima definizione del metodo.<br>
-- <b>`parametri2` :</b> specifica i parametri della seconda definizione del metodo.
-      </p>
-   
-    
-    <h2 id="Esempio di codice:">Esempio di codice:</h2>
 
-<pre style="white-space: pre-wrap; background-color: 	#ffffff; padding: 10px;">
+  - <b>`modificatore` :</b> specifica la visibilità e l'accessibilità del metodo, come ad esempio public, private o
+  protected.<br>
+  - <b>`tipoRitorno` :</b> specifica il tipo di dato che il metodo restituisce.<br>
+  - <b>`nomeMetodo` :</b> lo stesso nome del metodo usato in diverse definizioni.<br>
+  - <b>`parametri1` :</b> specifica i parametri della prima definizione del metodo.<br>
+  - <b>`parametri2` :</b> specifica i parametri della seconda definizione del metodo.
+  </p>
+  <hr>
+  <h2 id="Esempio di codice:">Esempio di codice:</h2>
+  <pre style="white-space: pre-wrap; background-color: 	#ffffff; padding: 10px" ; id="spazio">
     <code>
       <b>
       public class Persona {
@@ -275,12 +418,47 @@ In questo esempio, <b>`p.nome`</b> accede all'attributo di istanza <b>`nome`</b>
         Persona persona = new Persona("Mario", 30);
 
         // Chiamata dei metodi sull'istanza
-        persona.saluta();  // Output: Ciao, sono Mario e ho 30 anni.
-        persona.festeggiaCompleanno();  // Output: Buon compleanno! Ora ho 31 anni.
+        persona.saluta();   <span style="color: blue;">// Output: Ciao, sono Mario e ho 30 anni.</span>
+        persona.festeggiaCompleanno(); <span style="color: blue;">// Output: Buon compleanno! Ora ho 31 anni.</span> 
     }
 }
         </b>
     </code>
+    <div style="display: flex; justify-content: center; align-items: center; width: 250px; height: 50px; background-color: #F7F7EE; border: 3px solid #ccc;">
+  <a style="color: #B6EB7A; text-decoration: none;" href="https://onlinegdb.com/BbAqCy30q"><centre><b>PROVA IL CODICE CLICCANDOMI</b></centre></a>
+</div>
 </pre>
+  <p>
+    <b>- Paradigma Object-Oriented Programming (OOP):</b> Il programma utilizza il paradigma OOP in quanto la classe
+    "Persona" incapsula dati (attributi come nome ed età) e comportamenti (metodi come saluta() e
+    festeggiaCompleanno()).
+    <br></br>
+    <b>- Approccio Bottom-Up nella progettazione OOP:</b> Nel programma, la classe "Persona" viene definita inizialmente
+    con i suoi attributi e metodi di base. Questo rappresenta l'approccio bottom-up in cui si definiscono prima le
+    classi di base prima di costruire classi derivate.
+    <br></br>
+    <b>- Definizione di Classe:</b> La classe "Persona" viene definita con i suoi attributi (nome ed età) e metodi
+    (saluta() e festeggiaCompleanno()).
+    <br></br>
+    <b>- Definizione di Tipi di Dati Astratti:</b> La classe "Persona" rappresenta un tipo di dato astratto che
+    incapsula le caratteristiche e i comportamenti di una persona. I metodi come saluta() e festeggiaCompleanno()
+    definiscono le operazioni che possono essere eseguite sui dati di una persona senza preoccuparsi
+    dell'implementazione interna.
+    <br></br>
+    <b>- Attributi di una classe:</b> Nella classe "Persona", sono presenti due attributi: nome (rappresenta il nome
+    della persona) ed età (rappresenta l'età della persona). Gli attributi sono dichiarati come variabili private e sono
+    accessibili solo all'interno della classe.
+    <br></br>
+    <b>- Metodi di una classe:</b> Nella classe "Persona", sono presenti due metodi: saluta() e festeggiaCompleanno().
+    Il metodo saluta() stampa un messaggio di saluto che include il nome e l'età della persona, mentre il metodo
+    festeggiaCompleanno() incrementa l'età della persona di un anno e stampa un messaggio di compleanno. Entrambi i
+    metodi sono pubblici e non restituiscono alcun valore.
+    <br></br>
+    <b>- Metodo main:</b> Il programma contiene un metodo main() che crea un'istanza della classe "Persona" chiamata
+    "persona" con il nome "Mario" e l'età 30. Successivamente, vengono chiamati i metodi saluta() e
+    festeggiaCompleanno() sull'istanza "persona".
+  </p>
+  <hr>
 </body>
+
 </html>
