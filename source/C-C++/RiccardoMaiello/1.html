@@ -14,10 +14,11 @@
 </head>
 
 <body>
-    <div class="loading-screen">
+    <div class="loading-screen" style="text-align: center; border-top: 15%;">
         <!-- Immagine di caricamento con testo alternativo -->
-        <img src="image/loading.gif" alt="Schermata di caricamento..." style="margin-bottom: 50%;">
-
+        <div class="div" style="border-top: 15%;">
+            <img src="image/loading.gif" alt="Schermata di caricamento..." style="margin-bottom: 50%;">
+        </div>
     </div>
     <!-- Il corpo del documento HTML -->
     <div class="mainBoxTitle">
@@ -38,7 +39,10 @@
         </div>
         <div class="box2" style="border-top-right-radius: 0px; background-color: rgb(156, 1, 187);">
             <!-- Ancora un div con la classe "box2" e stili CSS -->
-            <a class="link"></a>
+            <a href="2.html" class="link" style="text-align: right;">
+                <img src="image/advance.png" alt="Argomento successivo" width="100" height="100"
+                    style="margin-top: 9%;">
+            </a>
             <!-- Un link vuoto senza attributo "href" solo per copiare lo stile -->
         </div>
     </div>
@@ -46,26 +50,30 @@
         <!-- Un div con la classe "paragrafoUno" -->
         <h2>IDE</h2>
         <!-- Un titolo di secondo livello con alcuni stili CSS -->
-        <p>Per iniziare a programmare un nuovo linguaggio si deve capire bene che IDE <em>(Integrated Development
-                Environment, ovvero ambiente di sviluppo integrato)</em> si deve usare, noi vi consigliamo:</p>
-        <p><a href="https://www.bloodshed.net/" target="_blank"
-                style="color: black;text-decoration: underline;">"Dev-C++"</a> un IDE
-            per piattaforme Windows 98, NT, 2000, XP, Vista, 7, 8, 10, 11;</p>
-        <p><a href="https://apps.apple.com/it/app/xcode/id497799835?mt=12" target="_blank"
-                style="color: black;text-decoration: underline;">"Xcode"</a> IDE predefinito per MAC OS, al suo interno
-            contiene tools per programmare C++;</p>
-        <p><a href="https://www.onlinegdb.com/online_c++_compiler" target="_blank"
-                style="color: black;text-decoration: underline;">"Online C++ Compiler"</a> IDE web accessibile da
-            qualsiasi parte e da qualsiasi dispositivi connesso ad internet, questo IDE è quello usato da questa giuda
-            come predefinito.</p>
+        <div class="textcenter">
+            <p>Per iniziare a programmare un nuovo linguaggio si deve capire bene che IDE <em>(Integrated Development
+                    Environment, ovvero ambiente di sviluppo integrato)</em> si deve usare, noi vi consigliamo:</p>
+            <p><a href="https://www.bloodshed.net/" target="_blank"
+                    style="color: black;text-decoration: underline;">"Dev-C++"</a> un IDE
+                per piattaforme Windows 98, NT, 2000, XP, Vista, 7, 8, 10, 11;</p>
+            <p><a href="https://apps.apple.com/it/app/xcode/id497799835?mt=12" target="_blank"
+                    style="color: black;text-decoration: underline;">"Xcode"</a> IDE predefinito per MAC OS, al suo
+                interno
+                contiene tools per programmare C++;</p>
+            <p><a href="https://www.onlinegdb.com/online_c++_compiler" target="_blank"
+                    style="color: black;text-decoration: underline;">"Online C++ Compiler"</a> IDE web accessibile da
+                qualsiasi parte e da qualsiasi dispositivi connesso ad internet, questo IDE è quello usato da questa
+                giuda
+                come predefinito.</p>
+        </div>
         <!-- Paragrafo di testo con un'annotazione "<em>" e ulteriori paragrafi e link (Informazioni che appagliono a schermo)-->
     </div>
     <div class="paragrafoDue">
         <h2>Primi passi</h2>
         <p>Per capire velocemente ed al meglio C++ analizzaremo il codice base di ogni linguaggio di programmazione,
             "Hello World!" <em>("Ciao Mondo!")</em> non a caso è il primo codice che vi appare aprendo l'IDE "Online
-            C++";</p>
-        <div class="immagineUno" style="text-align: center;">
+            C++".</p>
+        <div class="immagineCenter">
             <img src="image/HelloWord.png" alt="Caricamento imagine..." width="583" height="297">
         </div>
         <p>Questo è il codice base "Hello World!", ma cominciamo dall'inizio:</p>
@@ -96,24 +104,51 @@
             apreno uno spazio chiamato <b>corpo</b> contrassegnato da quello che c'è sritto dentro è spaziato
             diversamente</p>
         <p>La sintassi del corpo main è: <b>" int main( ){ apertura corpo }"</b>;</p>
-        <p>Dentro il corpo del "main" alla riga 7 troviamo il comando "cout" ("console out") significa che mandamo in
-            console un messaggio da mostrare, in questo caso una frase "Hello World!"</p>
-        <p>La sintassi è <b> cout < < " Frase " ; </b></p>
-        <p>Ultimo comando alla riga 9 troviamo il "return 0;" <em>("Restituisci 0")</em> cioè alla fine del programma restituiamo un valore di corretta eseguzione del programma</p>
-        <p>La sintassi è: <b> return 0; </b></p>
+        <p>Dentro il corpo del "main" alla riga 7 troviamo il comando "cout" ("character output") significa che mandamo
+            in
+            console un messaggio da mostrare, in questo caso una frase "Hello World!". È seguita da << , l'operatore di
+                inserimento. Gli operatori di inserimento mandano i dati agli operatori di flusso che vengono prima di
+                loro</p>
+                <p>La sintassi è <b> cout < < " Frase " ; </b>
+                </p>
+                <p>Ultimo comando alla riga 9 troviamo il "return 0;" <em>("Restituisci 0")</em> cioè alla fine del
+                    programma
+                    restituiamo un valore di corretta eseguzione del programma</p>
+                <p>La sintassi è: <b> return 0; </b></p>
     </div>
     <div class="paragrafoTre">
         <h2>Esecuzione</h2>
-        <p>Capito come scritto è il tempo di eseguirlo, clicco sul tasto verde "RUN" oppure F9 ed eseguo.</p>
-        <div class="runProgram" style="text-align: center;">
+        <div class="textcenter">
+            <p>Capito come scritto è il tempo di eseguirlo, clicco sul tasto verde "RUN" oppure F9 ed eseguo.</p>
+        </div>
+        <div class="immagineCenter">
             <img src="image/runProgram.png" alt="Immagine in caricamento..." width="775" height="172">
         </div>
-
+        <p>Avviato il programma apparirà una finestra nera, quella è la console basata su riga di codice; Coma hai
+            notato il "cout" ha scritto "hello World!" e sotto c'è scritto che il programma è finito correttamente senza
+            errori.</p>
+    </div>
+    <div class="paragrafoQuattro">
+        <h2>Lettura e Scrittura</h2>
+        <div class="textcenter">
+            <p>Capiamo come leggere o scrivere nel programma...</p>
+            <div class="immagineCenter">
+                <img src="image/Program1.png" alt="Immagine in caricamento..." width="572" height="292">
+            </div>
+            <p>Sono due i comandi fondamentali per leggere e scrivire. <br>Leggere: "Cout
+                << " Che abbiamo già trattato <br> Scrittura: Il comando " Cin>> " indica che le informazioni in
+                    questione
+                    devono essere inserite dal programmatore durante lo svolgimento del programma, in altre parole
+                    chiediamo
+                    dati durante lo svolgimento del programma; La sintassi è: <b>"cin>>
+                        variabile"</b>.
+            </p>
+        </div>
     </div>
 </body>
 
 <style>
-    /* Stili per il corpo della pagina */
+    /*Stili per il corpo della pagina */
     body {
         margin-top: 0;
         background-color: rgb(228, 228, 228);
@@ -236,6 +271,19 @@
 
     b {
         color: rgb(122, 1, 187);
+    }
+
+    .immagineCenter {
+        text-align: center;
+    }
+
+    .barrafinale {
+        height: 88%;
+        width: 12.5%;
+    }
+
+    .textcenter {
+        text-align: center;
     }
 </style>
 
