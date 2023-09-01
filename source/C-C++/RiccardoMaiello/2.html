@@ -56,12 +56,46 @@
     <div class="paragrafoDue">
         <h2>Caratteristiche delle variabili</h2>
         <p>Come detto una variabile ha varie Caratteristiche:</p>
-        <p>Tipo: durante la fare della dichiarazione diciamo che tipo di dati quella variabile conterrà.<br>Nome: il nome di una variabile deve essere unico, non ambiguo e senza spazi.<br>Valore: sicuramente un variabile è creata per avere un dato.</p>
-        <p>Nel caso delle variabili constanti <b>non</b> accettano cambiamenti nel valore durante il corso del programma, accetta il volore solo durante la dichiarazione.</p>
+        <p>Tipo: durante la fare della dichiarazione diciamo che tipo di dati quella variabile conterrà.<br>Nome: il
+            nome di una variabile deve essere unico, non ambiguo e senza spazi.<br>Valore: sicuramente un variabile è
+            creata per avere un dato.</p>
+        <p>Nel caso delle variabili constanti <b>non</b> accettano cambiamenti nel valore durante il corso del
+            programma, accetta il volore solo durante la dichiarazione.</p>
     </div>
     <div class="paragrafoTre">
-        <h2>Dichiarazione, Definizione e Uso delle variabili in C++</h2>
-        <p></p>
+        <h2>Dichiarazione e Definizione delle variabili in C++</h2>
+        <p>Ogni variabile in C++ deve essere definita prima del suo utilizo, con "definizione" si intende un nome
+            univoco e tipo.</p>
+        <div class="immagineCenter">
+            <img src="image/Program2.png" alt="Immagine in caricamento..." width="572" height="325">
+        </div>
+        <p>Vediamo questo semplice esempio, nella riga 7 ho dichiarato una variabile; <br> la sintassi è: <b>" tipo
+                nome_variabile ; "</b> Che cos'è un tipo? è che tipo di valori quella variabile conterrà: <br>int -->
+            intero (1 , 6 , 7 , 14 ecc..)<br>float --> variabili con la virgola (14.958 , 8.1 ecc...)<br>bool -->
+            variabili con solo due valori (true o false) espressi anche come 0 e 1 <br> E cos'è un nome?
+            diamo un nome univoco per rivolgersi proprio a quella variabile; ovviamente esistono delle buone regole per
+            scegliere che tipo di nome dare:</p>
+        <p>1. Deve possibilemente descrivere il suo contenuto ("numero Sei" riga 8
+            contiene infatti il numero 6) <br>2. Deve <b>non</b> contenere spazi tra le lettere (scrivere <b
+                style="color: red;">"numero sei" è
+                uno sbaglio</b>
+            non che darebbe errore) <br>3. Se il nome contiene due parole la senconda deve iniziare con la lettera
+            maiuscola o avere in mezzo il trattino basso ( _ ) ("numeroSei" o "numero_sei") per questa regola evita di
+            dare la lettera maiuscola alla prima lettera. <br>4. In progetti con più persone le variabili tendono a
+            essere scritte in linguua inglese.</p>
+        <p>Nella fase di dichiarazione di una variabile è possibile già assegnare un valore, come nalla riga 10.</p>
+        <p>Con le variabili constanti l'uso cambia, esse accentano valori solo nella fase della dichiarazione:</p>
+        <div class="immagineCenter">
+            <img src="image/Program3.png" alt="Immagine in caricamento..." width="582" height="276">
+        </div>
+        <p>Come vedi le variabili constanti sono utitili per valori che non cambiano nel tempo, come il Pi greco un
+            valore fisso che non cambia; <br>La sintassi è: <b>" const tipo_variabile nome_variabile = (valore) ; "</b>
+        </p>
+        <p>Dare un valore dopo la dichiarazione è <b style="color: red;">uno sbaglio</b>.</p>
+    </div>
+    <div class="paragrafoQuattro">
+        <h2>Uso delle variabili in C++</h2>
+        <p>Ora che abbiamo capito come dichiarare e definire una variabile capiamo come usare la stessa variabile</p>
     </div>
 </body>
 
@@ -210,7 +244,7 @@
     <!-- Script JavaScript -->
     window.addEventListener('load', function () {
         const loadingScreen = document.querySelector('.loading-screen');
-        setTimeout(() => { loadingScreen.style.display = 'none'; }, 1000); // Nascondi la schermata di caricamento dopo 1 secondo
+        setTimeout(() => { loadingScreen.style.display = 'none'; }, 1000);
     });
 </script>
 
