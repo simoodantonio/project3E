@@ -1,0 +1,206 @@
+<!DOCTYPE html> <!-- Definizione del tipo di documento come HTML5 -->
+
+<html lang="it">
+<!-- Inizio del documento HTML con dichiarazione della lingua italiana per servizi come google traduttore ecc...-->
+
+<head>
+    <!-- Intestazione del documento, contiene metadati e collegamenti a fogli di stile -->
+    <meta charset="UTF-8"> <!-- Imposta l'encoding dei caratteri a UTF-8 -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!-- Specifica la compatibilità con Internet Explorer -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Imposta la visualizzazione responsive -->
+    <title>Change Me</title> <!-- Titolo della pagina visualizzato nella scheda del browser -->
+    <link rel="shortcut icon" href="image/icon.ico" /> <!-- Collegamento all'icona del sito nella scheda del browser -->
+</head>
+
+<body>
+    <div class="loading-screen" style="text-align: center;">
+        <!-- Immagine di caricamento con testo alternativo -->
+        <div class="distacco" style="border-top: 15%;">
+            <img src="image/loading.gif" alt="Schermata di caricamento..." style="margin-bottom: 50%;">
+        </div>
+    </div>
+    <!-- Il corpo del documento HTML -->
+    <div class="mainBoxTitle">
+        <div class="box" style="border-top-left-radius: 0px; background-color: rgb(156, 1, 187);">
+            <a href="CHANGE_ME" class="link">
+                <!--  link che porta a "main.html" con la classe "link" -->
+                <img src="image/arrowBack.png" alt="Torna indietro" width="100" height="100" style="margin-top: 9%;">
+                <!-- Un'immagine di una freccia che punta indietro e con testo alternativo "Torna indietro" e alcune dimensioni e stili -->
+            </a>
+        </div>
+        <div class="title">
+            <!-- Div con la classe "title" -->
+            <div class="link" style="background-color: rgb(156, 1, 187);">
+                <!-- Un div con la classe "link" e uno stile CSS -->
+                <a href="main.html" class="text-center" style="color: rgba(0, 0, 0, 0.80);">TITLE H1</a>
+                <!-- Un link senza attributo "href" con il testo del titolo -->
+            </div>
+        </div>
+        <div class="box2" style="border-top-right-radius: 0px; background-color: rgb(156, 1, 187);">
+            <!-- Ancora un div con la classe "box2" e stili CSS -->
+            <a href="CHANGE_ME" class="link" style="text-align: right;">
+                <img src="image/advance.png" alt="Argomento successivo" width="100" height="100"
+                    style="margin-top: 9%;">
+            </a>
+            <!-- Un link vuoto senza attributo "href" solo per copiare lo stile -->
+        </div>
+    </div>
+</body>
+
+<style>
+    /*Stili per il corpo della pagina */
+    body {
+        margin-top: 0;
+        background-color: rgb(228, 228, 228);
+    }
+
+    /* Stili per la barra del titolo */
+    .mainBoxTitle {
+        margin-bottom: 2.5%;
+        display: flex;
+        height: 150px;
+    }
+
+    /* Stili per i contenitori "box" e "box2" */
+    .box,
+    .box2 {
+        display: block;
+        border: solid rgba(0, 0, 0, 0.6) 6px;
+        background-color: rgb(122, 1, 187);
+        box-shadow: 0px 10px rgba(0, 0, 0, 0.8);
+    }
+
+    /* Altri stili specifici per "box" */
+    .box {
+        border-right: none;
+        border-radius: 10% 0px 0px 10%;
+    }
+
+    /* Altri stili specifici per "box2" */
+    .box2 {
+        border-left: none;
+        border-radius: 0px 10% 10% 0px;
+    }
+
+    /* Stili per gli elementi all'interno di ".mainBoxTitle" */
+    .mainBoxTitle .box,
+    .mainBoxTitle .box2 {
+        height: 92%;
+        width: 12.5%;
+    }
+
+    /* Stili per il titolo centrale */
+    .title {
+        text-align: center;
+        height: 92%;
+        width: 75%;
+        border-top: solid rgba(0, 0, 0, 0.6) 6px;
+        border-bottom: solid rgba(0, 0, 0, 0.6) 6px;
+        background-color: rgb(122, 1, 187);
+        box-shadow: 0px 10px rgba(0, 0, 0, 0.80);
+    }
+
+    /* Stili per i link */
+    .link {
+        height: 100%;
+        width: 100%;
+        font-size: xxx-large;
+        display: block;
+        font-weight: bolder;
+    }
+
+    /* Stili per i link quando sono visitati */
+    a.link:-webkit-any-link {
+        color: whitesmoke;
+        text-decoration: none;
+    }
+
+    /* Stili per i link generici */
+    a:-webkit-any-link {
+        color: whitesmoke;
+        text-decoration: none;
+    }
+
+    /* Stili per i link nei contenitori "link" */
+    .link a {
+        display: block;
+        user-select: none;
+    }
+
+    /* Stili per la schermata di caricamento */
+    .loading-screen {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #FCFCFF;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 10;
+    }
+
+    /* Stili per l'immagine nella schermata di caricamento */
+    .loading-screen img {
+        max-width: 100%;
+        max-height: 80vh
+    }
+
+    /* Stili per il testo centrato */
+    .text-center {
+        display: flex !important;
+        justify-content: center;
+        text-align: center;
+        height: 100%;
+        flex-direction: column-reverse;
+    }
+
+    /* Stili per i paragrafi */
+    p {
+        font-size: x-large;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        color: rgb(44, 44, 44) !important;
+    }
+
+    h2 {
+        color: rgb(122, 1, 187);
+        text-align: center;
+        font-size: xx-large;
+    }
+
+    b {
+        color: rgb(122, 1, 187);
+    }
+
+    .immagineCenter {
+        text-align: center;
+    }
+
+    .barrafinale {
+        height: 88%;
+        width: 12.5%;
+    }
+
+    .textcenter {
+        text-align: center;
+    }
+</style>
+
+<script>
+    // Pagina dello script per la pagina di caricamento
+    <!-- Script JavaScript -->
+    window.addEventListener('load', function () {
+        const loadingScreen = document.querySelector('.loading-screen');
+        setTimeout(() => { loadingScreen.style.display = 'none'; }, 1000);
+    });
+</script>
+
+</html>
+
+Da no copiare
+
+<div class="immagineCenter">
+    <img src="image/Program6.png" alt="Immagine in caricamento..." width="575" height="362">
+</div>
