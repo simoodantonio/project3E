@@ -69,3 +69,76 @@ figcaption{
     font-weight: 400;
     height: 100%;
 }
+
+.boxCenter{
+    display: flex;
+    width: 100%;
+    height: 48.7805%;
+    margin: 35px 0px;
+    flex-wrap: wrap;
+    align-content: flex-start;
+}
+
+.boxCenter .box{
+    display: block;
+    width: 10%;
+    height: 20%;
+}
+
+.boxBubble{
+    display: block;
+    margin: auto;
+    width: 10%;
+    height: 29%;
+    background-color: aqua;
+    border-radius: 100%;
+}
+
+.boxBubble-1{
+    display: block;
+    width: 21%;
+    height: 60%;
+    background-color: aqua;
+    border-radius: 100%;
+}
+
+.boxBubble-2{
+    display: block;
+    width: 14%;
+    height: 40%;
+    background-color: aqua;
+    border-radius: 100%;
+}
+
+.boxBubble-3{
+    display: block;
+    border-radius: 100%; 
+    background-color: aqua; 
+    width: 6.9%;
+    height: 20%;
+}
+
+.boxBubble:hover,
+.boxBubble-1:hover,
+.boxBubble-2:hover,
+.boxBubble-3:hover{
+    cursor: pointer;
+}
+
+.boxBubble:hover{
+    width: 19%;
+    height: 58%;
+    transition: 1s;
+}
+
+.boxBubble-1:hover{
+    width: 30%;
+    height: 80%;
+    transition: 1s;
+}
+
+.boxBubble-2:hover{
+    width: 19%;
+    height: 55%;
+    transition: 1s;
+}
