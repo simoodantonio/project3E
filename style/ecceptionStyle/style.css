@@ -1,6 +1,6 @@
 body{
     margin-top: 0px;
-    height: 99vh;
+    height: 100vh;
     background-color: seashell;
 }
 
@@ -27,16 +27,19 @@ body{
 }
 
 .link{
+    box-sizing: content-box;
     display: block;
-    width: 100%;
-    height: 100%;
-    z-index: -10;
+    z-index: 1;
+    position: absolute;
+    width: 9.86vw;
+    height: 18.2926vh;
 }
 
 figure{
     margin:9% 0%;
     height: 50%;
     width: 100%;
+    position: 0;
 }
 
 figure img{
@@ -53,6 +56,16 @@ figcaption{
 .text-center{
     display: flex;
     justify-content: center;
-    text-align: center;
+    align-items: center;
+    justify-content: center;
 
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+.title{
+    font-family: 'Roboto', sans-serif;
+    font-size: xx-large;
+    font-weight: 400;
+    height: 100%;
 }
