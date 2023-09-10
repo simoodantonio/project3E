@@ -33,6 +33,8 @@ body{
     position: absolute;
     width: 9.86vw;
     height: 18.2926vh;
+    text-decoration: none;
+    color: black;
 }
 
 figure{
@@ -51,14 +53,6 @@ figcaption{
     width: 70%;
     font-size: larger;
     font-weight: bolder;
-}
-
-.text-center{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    justify-content: center;
-
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
@@ -141,4 +135,26 @@ figcaption{
     width: 19%;
     height: 55%;
     transition: 1s;
+}
+
+.text-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.text{
+    font-size: xx-large;
+    font-weight: 500;
+}
+
+.boxBubble-3 .text {
+    font-size: large;
+}
+
+
+.boxBubble-1 .link{
+    width: 20.71508vw;
+    height: 29.2683vh;
 }
