@@ -1,0 +1,28 @@
+.body{
+    margin-top: 0px;
+    height: 100vh;
+    background-color: seashell;
+}
+
+.box-title-2{
+    
+}
+
+.box-text{
+    display: block;
+    border: solid 2px rgba(64, 63, 63, 0.499);
+    width: 95%;
+    height: auto;
+    margin: 5% 2.5%;
+    background-color: aquamarine;
+    box-shadow: inset 0px 0px 13px 5px rgba(64, 63, 63, 0.499);
+}
+
+.text{
+    margin: 31.8px 50px;
+    text-align: justify;
+}
+
+.text::first-letter{
+    font-size: xxx-large;
+}
