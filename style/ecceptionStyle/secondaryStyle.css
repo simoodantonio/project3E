@@ -4,10 +4,6 @@
     background-color: seashell;
 }
 
-.box-title-2{
-    
-}
-
 .box-text{
     display: block;
     border: solid 2px rgba(64, 63, 63, 0.499);
@@ -25,4 +21,11 @@
 
 .text::first-letter{
     font-size: xxx-large;
+}
+
+.title-2{
+    width: 95%;
+    height: auto;
+    font-size: xx-large;
+    margin: 0% 2.5%;
 }
