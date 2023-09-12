@@ -1,5 +1,7 @@
 POO - Punti da trattare:
 
+//Francesco Maffei
+
 1. Progettazione di una classe con class diagram UML
 2. Istanze di una classe (oggetti) e metodi costruttori (overloading dei costruttori)
 3. Stato di un oggetto
