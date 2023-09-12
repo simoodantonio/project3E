@@ -1,4 +1,6 @@
 POO Java - Punti da trattare:
 
+//Alessandro Bardi
+
 1. Classe String
 2. Metodi statici
