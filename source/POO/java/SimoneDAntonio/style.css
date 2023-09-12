@@ -1,0 +1,139 @@
+/* Style "file.html" */
+
+.header {
+    background-color: #94bfb3ae;
+    padding: 15px;
+    text-align: center;
+    border-radius: 5px;
+    height: 50px;
+    width: 95%;
+    margin: 0 auto;
+    margin-top: 15px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+.header a {
+    margin: 0 180px;
+    font-size: 25px;
+    color: #5f897d;
+}
+
+.header a:first-child {
+    margin-left: 0;
+}
+
+.header a:last-child {
+    margin-right: 0;
+}
+
+/* Style "index.html" */
+
+.boxs {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.boxI-O {
+    background-color: #1ae6f9;
+    color: #2b2880;
+    padding: 15px;
+    text-align: center;
+    border-radius: 5px;
+    height: 500px;
+    width: 20%;
+    margin-top: 30px;
+    float: left;
+    text-decoration: none;
+    transition: .3s;
+}
+
+.boxI-O:hover {
+    transition: .3s;
+    background-color: #d53030ae;
+    padding: 2%;
+}
+
+.boxI-O:hover p {
+    transition: .3s;
+    color: black;
+}
+
+.box-scanner {
+    background-color: #30d549ae;
+    color: #34712b;
+    padding: 15px;
+    text-align: center;
+    border-radius: 5px;
+    height: 500px;
+    width: 20%;
+    margin-top: 30px;
+    float: left;
+    margin-left: 7%;
+    text-decoration: none;
+    transition: .3s;
+}
+
+.box-scanner:hover {
+    transition: .3s;
+    background-color: #d53030ae;
+    padding: 2%;
+}
+
+.box-scanner:hover p{
+    transition: .3s;
+    padding: 2%;
+    color: black;
+    font-size: larger;
+}
+
+.box-file {
+    background-color: #d5bc30ae;
+    color: #787a34;
+    padding: 15px;
+    text-align: center;
+    border-radius: 5px;
+    height: 500px;
+    width: 20%;
+    margin-top: 30px;
+    float: left;
+    margin-left: 7%;
+    transition: .3s;
+    text-decoration: none;
+}
+
+.box-file:hover {
+    transition: .3s;
+    background-color: #d53030ae;
+    padding: 2%;
+}
+
+.box-file:hover p{
+    transition: .3s;
+    padding: 2%;
+    color: black;
+}
+
+/* style "scanner.html" */
+
+.pop-up {
+    z-index: -1; 
+    background-color: grey; 
+    height: 70px; 
+    width: 100px; 
+    position: absolute; 
+    margin-top: -110px; 
+    margin-left: 320px; 
+    border-radius: 20px;
+    opacity: 0;
+    transition: .3s;
+}

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>I/O in Java</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body style="background-color: whitesmoke;">
+
+  <div class="header">
+    <a href="index.html">Home</a>
+    <a href="scanner.html">Classe Scanner</a>
+    <a href="files.html">I File in Java</a>
+  </div>
+  <h1>Stream di I/O e l'astrazione in Java</h1>
+
+  <p>All'interno di un programma gli stream di input/output (I/O) rappresentano un modo per leggere e scrivere dati. Un'operazione di I/O coinvolge un flusso di dati tra una sorgente (fase di input) e una destinazione (fase di output).</p>
+
+  <h2>Stream di I/O in Java</h2>
+
+  <p>In Java, gli stream di I/O sono rappresentati come flussi di byte. Rappresentandoli con uno schema in cui si deve inserire il proprio nome:</p>
+  <div style="display: flex;
+              height: 40;
+              width: 25%;
+              border-width: 1px;
+              border-style: solid;
+              border-color: black;
+              background-color: aliceblue;"
+              >
+      <div style="display: flex; justify-items: center; flex-direction: column; align-items: center; width: 60px; margin-left: 10px;">
+        <div style="text-align: center;
+                    height: 60px;
+                    margin: 5px;
+                    width: 60px;
+                    align-items: center;
+                    padding: 5px;
+                    background-image: url(./assets/pngwing.com-3.png);
+                    background-size: 70px, 70px;"
+                    >
+          <p style="font-size: xx-small; ">(Sorgente)</p>
+          <p style="margin-top: -6px">Nome |</p>
+        </div>
+        <img style="width: 70%; height: 30%;" src="./assets/kisspng-computer-keyboard-computer-icons-computer-mouse-keyboard-5acc9f9a4be075.2717214615233596423108.png" alt="">
+      </div>
+      <div style="display: flex; flex-direction: column; margin-left: 4px; align-items: center; margin-top: -5px;">
+        <p style="margin-left: 15px; font-size: 10px;">Stream</p>
+        <img style="width: 45px; height: 45px; margin-left: 15px; margin-top: -18px;" src="./assets/right-arrow.png">  
+        <p style="margin-left: 15px; margin-top: -8px; font-size: 13px;">Buffer</p>
+        <p style="margin-left: 15px; margin-top: -12px; font-size: 10px;">Lettura</p>
+      </div>
+      <p style="border-width: 1px; border-color: black; border-style: solid; border-radius: 100px; height: 20px; padding: 5px; margin-left: 10px;">App Java</p>
+      <div style="display: flex; flex-direction: column; align-items: center; margin-top: -5px;">
+        <p style="margin-left: 15px; font-size: 10px;">Stream</p>
+        <img style="width: 45px; height: 45px; margin-left: 15px; margin-top: -18px;" src="./assets/right-arrow.png">
+        <p style="margin-left: 15px; margin-top: -8px; font-size: 13px;">Buffer</p>
+        <p style="margin-left: 15px; margin-top: -12px; font-size: 10px;">Scrittura</p>
+      </div>
+      <div style="text-align: center;
+                    height: 60px;
+                    margin: 5px;
+                    width: 60px;
+                    align-items: center;
+                    padding: 5px;
+                    background-image: url(./assets/monitor.png);
+                    background-size: 70px, 70px;
+                    margin-left: 15px;"
+                    >
+          <p style="font-size: xx-small; ">(Destinazione)</p>
+          <p style="margin-top: -6px">Nome</p>
+        </div>
+  </div>
+
+
+  <p>Ci sono due stream predefiniti importanti: System.in e System.out.</p>
+
+  <h3>System.in</h3>
+
+  <p>System.in è uno stream di input standard predefinito in Java. Rappresenta l'input da tastiera. È possibile leggere i dati da System.in utilizzando la classe Scanner, di cui parleremo dopo. Ad esempio:</p>
+
+  <pre>
+    import java.util.Scanner;
+
+    public class Main {
+      public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Inserisci un numero intero: ");
+        int numero = scanner.nextInt();
+        System.out.println("Hai inserito: " + numero);
+      }
+    }
+  </pre>
+
+  <h3>System.out</h3>
+
+  <p>System.out è uno stream di output standard predefinito in Java. Rappresenta l'output su console. È possibile scrivere dati su System.out utilizzando il metodo println() o print(). Ad esempio:</p>
+
+  <pre>
+    public class Main {
+      public static void main(String[] args) {
+        System.out.println("Questo è un messaggio di output.");
+        int numero = 42;
+        System.out.print("Il numero è: " + numero);
+      }
+    }
+  </pre>
+</body>
+</html>
