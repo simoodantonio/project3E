@@ -1,0 +1,6 @@
+POO - Punti da trattare:
+
+1. Paradigma Object-Oriented e approccio bottom-up
+2. Principi della programmazione orientata agli oggetti
+3. Definizione di classe e TDA (Tipi di Dati Astratti)
+4. Attributi e metodi di una classe
