@@ -1,0 +1,8 @@
+Algoritmi e Flow-Chart - Punti da trattare:
+
+1. Programmazione strutturata: Teorema di Bohm-Jacopini e costrutti di controllo fondamentali:
+    -costrutto di sequenza
+    -costrutto di selezione
+    -costrutto di iterazione
+
+2. operatori booleani(AND,NOT,OR)

@@ -1,0 +1,6 @@
+POO Java - Punti da trattare:
+
+1. portabilità dei programmi, JVM e bytecode 
+2. tipi primitivi e rappresentazione in memoria 
+3. definizione di una classe 
+4. metodi costruttori e metodi accessori 

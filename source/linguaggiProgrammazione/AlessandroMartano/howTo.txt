@@ -1,0 +1,5 @@
+Linguaggi di programmazione - Punti da trattare:
+
+1. Fase di sviluppo di un programma 
+2. Traduttori: intepreti e compilatori 
+3. Ambienti di sviluppo Integrati (IDE) 
