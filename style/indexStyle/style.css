@@ -39,3 +39,63 @@ body{
     align-items: center;
     justify-content: center;
 }
+
+.box > a{
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin-top: 6.277211238293444vh;
+    font-size: larger;
+    font-weight: bold;
+}
+
+.box > a:link{
+    text-decoration: none;
+    color: black;
+}
+
+.menu {
+    display: block;
+    list-style: none;
+    padding: 0;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    opacity: 0%;
+    margin: 1.5% 0 0 40%;
+    width: 50%;
+    transition: .5s;
+}
+
+.homeBar{
+    opacity: 100%;
+    transition: 1S;
+}
+
+.box a:hover{
+    cursor: pointer;
+}
+
+a:hover + .menu{
+    display: block;
+    opacity: 100%;
+    transition: .5s;
+    cursor: pointer;
+}
+
+.menu li {
+    background-color: transparent;
+}
+
+.menu li:hover {
+    cursor: pointer;
+    background-color: black;
+}
+
+li:hover a {
+    color: white;
+}
+
+a:visited{
+    text-decoration: none;
+    color: black;
+}
