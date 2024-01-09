@@ -1,0 +1,160 @@
+body{
+    margin-top: 0px;
+    height: 100vh;
+    background-color: seashell;
+}
+
+.header{
+    background-color: rgb(255, 255, 255);
+    width: 100%;
+    height: 18.29%;
+    border-top:0px;
+    border-radius: 0% 0% 14% 14%;
+    display: flex;
+    box-shadow: 0px 12px 10px 0px #000000;
+}
+
+.boxTitle{
+    height: 100%;
+    width: 80%;
+    text-align: center;
+
+}
+
+.box{
+    height: 100%;
+    width: 10%;
+}
+
+.link{
+    box-sizing: content-box;
+    display: block;
+    z-index: 1;
+    position: absolute;
+    width: 9.86vw;
+    height: 18.2926vh;
+    text-decoration: none;
+    color: black;
+}
+
+figure{
+    margin:9% 0%;
+    height: 50%;
+    width: 100%;
+    position: 0;
+}
+
+figure img{
+    margin: 0% 15%;
+}
+
+figcaption{
+    margin: 0% 15%;
+    width: 70%;
+    font-size: larger;
+    font-weight: bolder;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+.title{
+    font-family: 'Roboto', sans-serif;
+    font-size: xx-large;
+    font-weight: 400;
+    height: 100%;
+}
+
+.boxCenter{
+    display: flex;
+    width: 100%;
+    height: 48.7805%;
+    margin: 35px 0px;
+    flex-wrap: wrap;
+    align-content: flex-start;
+}
+
+.boxCenter .box{
+    display: block;
+    width: 10%;
+    height: 20%;
+}
+
+.boxBubble{
+    display: block;
+    margin: auto;
+    width: 10%;
+    height: 29%;
+    background-color: aqua;
+    border-radius: 100%;
+}
+
+.boxBubble-1{
+    display: block;
+    width: 21%;
+    height: 60%;
+    background-color: aqua;
+    border-radius: 100%;
+}
+
+.boxBubble-2{
+    display: block;
+    width: 14%;
+    height: 40%;
+    background-color: aqua;
+    border-radius: 100%;
+}
+
+.boxBubble-3{
+    display: block;
+    border-radius: 100%; 
+    background-color: aqua; 
+    width: 6.9%;
+    height: 20%;
+}
+
+.boxBubble:hover,
+.boxBubble-1:hover,
+.boxBubble-2:hover,
+.boxBubble-3:hover{
+    cursor: pointer;
+}
+
+.boxBubble:hover{
+    width: 19%;
+    height: 58%;
+    transition: 1s;
+}
+
+.boxBubble-1:hover{
+    width: 30%;
+    height: 80%;
+    transition: 1s;
+}
+
+.boxBubble-2:hover{
+    width: 19%;
+    height: 55%;
+    transition: 1s;
+}
+
+.text-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.text{
+    font-size: xx-large;
+    font-weight: 500;
+}
+
+.boxBubble-3 .text {
+    font-size: large;
+}
+
+
+.boxBubble-1 .link{
+    width: 20.71508vw;
+    height: 29.2683vh;
+}

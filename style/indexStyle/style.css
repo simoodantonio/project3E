@@ -1,72 +1,41 @@
-.homeBar {
-    display: flex;
-    align-items: center;
-    margin: 0 1.5vw;
-    height: 15vh;
-    background-color: #fff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    z-index: 1;
-    position: sticky;
-    top: 0;
-    opacity: 0%;
+body{
+    margin-top: 0px;
+    height: 100vh;
+    background-color: seashell;
 }
-.box {
-    display: block;
-    width: 20%;
+
+.header{
+    background-color: rgb(255, 255, 255);
+    width: 100%;
+    height: 18.29%;
+    border-top:0px;
+    border-radius: 0% 0% 14% 14%;
+    display: flex;
+    box-shadow: 0px 12px 10px 0px #000000;
+}
+
+.boxTitle{
+    height: 100%;
+    width: 80%;
+    text-align: center;
+
+}
+
+.box{
+    height: 100%;
+    width: 10%;
+}
+
+.title{
+    font-family: 'Roboto', sans-serif;
+    font-size: xx-large;
+    font-weight: 400;
     height: 100%;
 }
 
-.box > a{
-    display: block;
-    width: 100%;
-    text-align: center;
-    margin-top: 6.277211238293444vh;
-    font-size: larger;
-    font-weight: bold;
-}
-
-.box > a:link{
-    text-decoration: none;
-    color: black;
-}
-
-.menu {
-    display: block;
-    list-style: none;
-    padding: 0;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    background-color: #fff;
-    opacity: 0%;
-    margin: 1.5% 0 0 40%;
-    width: 50%;
-    transition: .5s;
-}
-
-.homeBar{
-    opacity: 100%;
-    transition: 1S;
-}
-
-.box a:hover{
-    cursor: pointer;
-}
-
-a:hover + .menu{
-    display: block;
-    opacity: 100%;
-    transition: .5s;
-    cursor: pointer;
-}
-
-.menu li {
-    background-color: transparent;
-}
-
-.menu li:hover {
-    cursor: pointer;
-    background-color: black;
-}
-
-li:hover a {
-    color: white;
+.text-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: center;
 }
