@@ -1,69 +1,92 @@
-<<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <title>Documets</title>
+    <title>Documents</title>
 </head>
+
 <body>
-<hgroup>
-    <h1>
-        <strong>
-            Le Classi
-        </strong>
-    </h1>
-</hgroup>
-<p>
-    Una classe &egrave; la descrizione astratta di un tipo di dato e descrive una famiglia di oggetti con caratteristiche e comportamenti simili(stessi attributi,stesse operazioni).
-    -Nei linguaggi di programmazione, classe viene dichiarata con la parola class, e al suo interno possiamo specificare il tipo di visibilità di dati:
+    <hgroup>
+        <h1>
+            <strong>
+                Le Classi
+            </strong>
+        </h1>
+    </hgroup>
+    <p>
+        Una classe &egrave; la descrizione astratta di un tipo di dato e descrive una famiglia di oggetti con
+        caratteristiche e comportamenti simili(stessi attributi,stesse operazioni).
+        -Nei linguaggi di programmazione, classe viene dichiarata con la parola class, e al suo interno possiamo
+        specificare il tipo di visibilità di dati:
 
-</p>
+    </p>
 
-<p>
+    <p>
 
-    -public:permette l’utilizzo di variabili e metodi dall’esterno;
-    -private:nasconde metodi e codice che risulteranno inutilizzabili;
-    -protected:dati e codici nascosti ma visibili da chi li eredita.
+        -public:permette l’utilizzo di variabili e metodi dall’esterno;<br>
+        -private:nasconde metodi e codice che risulteranno inutilizzabili;<br>
+        -protected:dati e codici nascosti ma visibili da chi li eredita.
 
-    esempio in Java:
-    public class Rettangolo{
-    private int base;
-    private int altezza;
-    //metodi vari
-    public int calcolaPerimetro(){
-    return 2*(base + altezza);
-    }
-    public int calcolaArea(){
-    return base * altezza;
+        esempio in Java:
+    </p>
+    <pre>
+    <code>
+        public class Rettangolo{
+            private int base;
+            private int altezza;
+            //metodi vari
+        }
+
+        public int calcolaPerimetro(){
+            return 2*(base + altezza);
+        }
+
+        public int calcolaArea(){
+            return base * altezza;
+        }
+    </code>
+
+</pre>
+
+    <p>
+
+        I costruttori inizializzano subito un oggetto al momento della creazione, esso &egrave; un metodo particolare
+        che si distingue dagli altri per 3 elementi:<br>
+        -ha lo stesso nome della classe; <br>
+        -non ha tipo di ritorno; <br>
+        -ha visibilità pubblica; <br><br>
+        I metodi get/set, sono importanti per un programma in java: <br>
+        -Il metodo get, restituisce il valore dell’attributo. <br>
+        -il metodo set, ha lo scopo di impostare un nuovo valore all’attributo. <br>
+
+        <br>
+        Esempio in c++:
+    </p>
+
+    <pre>
+        <code>
+            double getBase(){
+                return base;
+            }
+        
+            void setBase(double valore){
+                base = valore;
+            }
+
+            double getAltezza(){
+                return altezza;
+            }
+
+            void setAltezza(double valore){
+                altezza = valore;
+            }
+        </code>
+    </pre>
 
 
-</p>
 
-<p>
-
-    I costruttori inizializzano subito un oggetto al momento della creazione, esso &egrave; un metodo particolare che si distingue dagli  altri per 3 elementi:
-    -ha lo stesso nome della classe;
-    -non ha tipo di ritorno;
-    -ha visibilità pubblica;
-    I metodi get/set, sono importanti per un programma in java:
-    -Il metodo get, restituisce il valore dell’attributo.
-    -il metodo set, ha lo scopo di impostare un nuovo valore all’attributo.
-
-    esempio in c++:
-    double getBase(){
-    return base;
-    }
-    void setBase(double valore){
-    base = valore;
-    }
-
-    double getAltezza(){
-    return altezza;
-    }
-    void setAltezza(double valore){
-    altezza = valore;
-    }
-
-</p>
 
 </body>
+
 </html>
