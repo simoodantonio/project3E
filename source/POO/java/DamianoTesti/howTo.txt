@@ -1,0 +1,5 @@
+POO Java - Punti da trattare:
+
+1. Rappresentazione dei tipi primitivi (area Stack)
+2. Identificativo di un oggetto come riferimento all'oggetto
+3. Rappresentazione degli oggetti (area Stack e area Heap)

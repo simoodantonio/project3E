@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Complessità Computazionale</title>
+</head>
+<body style="font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif">
+    <h1 style="text-align: center; color: red">Complessità Computazionale</h1>
+    <h2 style="text-align: center;"><em>Ferreira Natan Luis Carlos 4E</em></h2>
+    <h2>Complessità Computazionale</h2>
+    <p style="font-size: 20px">La complessit&agrave computazionale (di calcolo) di un algoritmo &egrave una misura della sua efficienza e pu&ograve essere:<br>
+    <ul style="font-size: 20px"><li>TEMPORALE: il tempo di elaborazione necessario all algoritmo per trovare la soluzione;<br></li>
+        <li>SPAZIALE: la quantit&agrave di memoria richiesta nel corso dell elaborazione dell algoritmo, misurata in byte, per la memorizzazione delle informazioni temporanee;<br></li>
+        <li>di I/O: il tempo necessario per trasferimento dei dati da e verso le periferiche.<br></li></ul>
+    <p style="font-size: 20px">Tipicamente per stimare la complessit&agrave di un algoritmo si considera la sola complessit&agrave temporale T(n), dove n
+        rappresenta la dimensione dei dati ricevuti in input.<br></p>
+
+    <h2>Ipotesi e modello RAM (Random Access Machine)</h2>
+    <p style="font-size: 20px">Le ipotesi da tenere in considerazione nel calcolo della complessita’ sono:</p>
+    <p style="font-size: 19px"><strong>INDIPENDENZA DAL SISTEMA DI ELABORAZIONE</strong></p>
+    <p style="font-size: 20px">l efficienza di esecuzione sicuramente dipende dalla macchina su cui l algoritmo viene eseguito, ed in particolare
+        dipende dal processore, dal tipo di architettura (CISC/RISC), dal compilatore stesso (la cui traduzione in codice macchina
+        pu&ograve essere pi&ugrave o meno efficiente).
+        Di conseguenza, la valutazione della complessit&agrave dell algoritmo non pu&ograve dipendere dall architettura del calcolatore;</p>
+    <p style="font-size: 19px"><strong>DIPENDENZA DAI DATI IN INGRESSO</strong></p>
+    <p style="font-size: 20px">- DIPENDENZA DAL VALORE DATI IN INGRESSO: il tempo di esecuzione varia al variare del valore assunto dati
+        di input.<br>
+        - DIPENDENZA DALLA DIMENSIONE DEI DATI DI INGRESSO: il tempo di esecuzione spesso dipende dalla
+        quantita’ (numero) dei dati ricevuti in input.<br><br>
+        Vista l’indipendenza dall’architettura del sistema, nel valutare la complessita’ temporale T(n), si assume che venga
+        utilizzato il modello computazionale RAM - (Ramdom Access Machine), caratterizzato da: <ul style="font-size: 20px"> <li>Monoprocessore senza parallelismo;</li>
+        <li>ISA (Istruction Set Architecture) con istruzioni semplici (operazioni di assegnamento, aritmetiche, logiche e relazionali)
+        aventi costo unitario.</li></ul>
+
+    <p style="font-size: 20px">Inoltre, vista la dipendenza dalla dimensione dei dati di ingresso, nel calcolo T(n) si considerano tre casi possibili:
+        CASO MIGLIORE, corrispondente alla configurazione dei dati di input che danno luogo al valore minimo di T(n);
+        CASO PEGGIORE, corrispondente alla configurazione dei dati di ingresso che danno luogo al valore massimo di T(n);
+        CASO MEDIO, che corrisponde al comportamento medio di T(n) al variare della configurazione dei dati di ingresso.
+        Ci sono algoritmi in cui il tempo T(n) e’ indipendente dai dati di ingresso: per quest’ultimi T(n) avra’ lo stesso valore nel
+        caso migliore, peggiore e medio.</p><br>
+
+    <h2>Notazione Asintotiche</h2>
+    <p style="font-size: 20px">Nell’analisi della complessita’ temporale T(n), si vuole verificare il comportamento dell’algoritmo facendo riferimento ad
+    una dimensione n variabile e non per una prefissata dimensione n.
+    Poiche’ T(n) cresce al crescere di n, quello che si fa e’ un’ANALISI AL LIMITE, cioe’ si studia il comportamento
+    dell’algoritmo per valori di n sufficientemente grandi.<br><br>Si parla, in tal senso, di NOTAZIONE ASINTOTICA, dal termine asintoto, utilizzato in matematica per indicare una curva
+        alla quale una data funzione ci si avvicina senza mai toccarla (analisi al limite).
+        Per poter affermare che un algoritmo ha un certo comportamento asintotico, bisogna verificare il suo andamento sia nel
+        caso migliore che nel caso peggiore.</p>
+
+    <h2 style="font-size: 25px"><em>Notazione O (O grande) - Limite asintotico SUPERIORE</em> </h2>
+    <p style="font-size: 20px">T(n) e’ un O(g(n)), e cioe’ g(n) e’ un limite asintotico superiore di T(n), se:</p>
+    <img src="immagini/superiore.jpg">
+    <p style="font-size: 20px">In altre parole, T(n) e’ un O(g(n)) se esistono una costante c e un numero n0 positivi, tali che per ogni n ≤ n0, T(n) si
+        trova al di sotto della funzione c · g(n).
+        Poiche’ per ogni funzione T(n) possono esistere piu’ funzioni O(g(n)), si considerera la g(n) piu’ vicina a T(n), ossia la
+        piu’ piccola delle g(n).</p>
+    <h2 style="font-size: 25px"><em>Notazione Ω (omega) - Limite asintotico INFERIORE</em> </h2>
+    <p style="font-size: 20px">T(n) e’ un Ω(g(n)), e cioe’ g(n) e’ un limite asintotico inferiore di T(n), se:</p>
+    <img src="immagini/inferiore.jpg">
+    <p style="font-size: 20px">In altre parole, T(n) e’ un Ω(g(n)) se esistono una costante c e un numero n0 positivi, tali che per ogni n ≤ n0, T(n) si
+        trova al di sopra della funzione c · g(n).<br>
+        Se esistono piu’ funzioni Ω(g(n)) per T(n), si considera la piu’ grande delle g(n).</p>
+
+    <h2 style="font-size: 25px"><em>Notazione Θ (teta) - Limite asintotico STRETTO</em> </h2>
+    <p style="font-size: 20px">T(n) e’ un Θ(g(n)), e cioe’ g(n) e’ un limite asintotitico stretto di T(n), se:</p>
+    <img src="immagini/stretto.jpg">
+    <p style="font-size: 20px">In altri termini, T(n) e’ un Θ(g(n)) se e’ contemporaneamente un O(g(n)) e un Ω(g(n)).
+        Pertanto, T(n) e’ un Ω(g(n)) se esistono due costanti c1 ec2 e un numero n0 positivi, tali che per ogni n ≤ n0, T(n) si
+        trova al di sopra della funzione c1 · g(n) al di sotto della funzione c2 · g(n)</p>
+    <h2>Classi di Complessità</h2>
+    <div style="position: absolute; top: 2838px; left: 550px; right: 100px "> <p style="font-size: 20px"> Complessita’ costante O(1)<br><br>
+        Complessita’ logaritmica O(log2n)<br><br>
+        Complessita’ lineare O(n)<br><br>
+        Complessita’ quadratica O(n2)<br><br>
+        Complessita’ polinomiale O(nk), k>1<br><br>
+        Complessita’ esponenziale O(kn)<br><br>
+        Complessita’ fattoriale O(n!)
+    </p></div>
+
+    <img src="immagini/classi.jpg">
+
+    <p style="font-size: 25px; text-align: center"><a href="http://localhost:63342/Algoritmi%20notevoli/Algoritmi%20notevoli.html?_ijt=1ei24234qceuhnk07leurdciue&_ij_reload=RELOAD_ON_SAVE"><--- Pagina precedente</a></p>
+
+
+
+
+
+
+
+
+</body>
+</html>

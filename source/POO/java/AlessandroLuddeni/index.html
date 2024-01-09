@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="description" content="Le basi della Programmazione Orientata agli Oggetti in Java">
+        <meta name="keywords" content="OOP,POO,Java">
+        <meta name="author" content="Luddeni Alessandro">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Programmazione Orientata agli Oggetti in Java</title>
+
+        <style>
+            /*Colore dello sfondo (background)*/
+            body {
+                background:linear-gradient(to top, rgb(15, 85, 143), rgb(90, 36, 134));
+                background-repeat: no-repeat;
+                background-attachment: fixed;
+            }
+
+            /*Stile del titolo principale: PROGRAMMAZIONE ORIENTATA AGLI OGGETTI IN JAVA*/
+            h1 {
+                color:black;
+                font-size: 50px;
+                font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                background-color: gainsboro;
+                width: fit-content;
+                padding: 20px;
+                border-radius: 15px;
+            }
+
+            /*Stile del sottotitolo: Portabilità di un programma, Java Virual Machine e bytecode*/
+            h2 {
+                color: black;
+                font-size: 35px;
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                background-color: gainsboro;
+                width: fit-content;
+                padding: 10px;
+                border-radius: 10px;
+            }
+
+            h3 {
+                color: white;
+                font-size: 25px;
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            }
+
+            p {
+                color: white;
+                font-size: 20px;
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            }
+
+            li {
+                color: white;
+                font-size: 20px;
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            }
+
+            img {
+                width: 240px;
+                height: 135px;
+                border-radius: 10px;
+                transition-duration: 0.5s;
+            }
+
+            img:hover {
+                width: 480px;
+                height: 270px;
+                transition-duration: 0.5s;
+            }
+
+            table {
+                background: linear-gradient(to top, rgb(0, 0, 0), rgb(80, 80, 80));
+                border-style: solid;
+                border-width: 4px;
+                border-color: lightgray;
+                transition: 0.5s;
+            }
+
+            table:hover {
+                border-color: gold;
+                transition: 0.5s;
+            }
+
+            table:active {
+                border-color: greenyellow;
+                transition: 0.5s;
+            }
+
+            th {
+                color: white;
+                font-size: 20px;
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            }
+
+            td {
+                color: white;
+                font-size: 20px;
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            }
+
+            div {
+                border-style: inset;
+                background: linear-gradient(to top, rgb(0, 0, 0), rgb(80, 80, 80));
+            }
+
+            code {
+                color: gold;
+                font-size: 18px;
+                font-weight: bold;
+            }
+            
+            span {
+                text-decoration: greenyellow;
+            }
+        </style>
+    </head>
+
+    <body>
+        <h1>PROGRAMMAZIONE ORIENTATA AGLI OGGETTI IN JAVA</h1>
+        <h2>Portabilità di un Programma, Java Virtual Machine e Bytecode</h2>
+        <h3>Portabilità di un Programma</h3>
+        <p>
+            La <b>portabilità</b> di un linguaggio di programmazione è la capacità di quel linguaggio nell'eseguire i propri programmi su diverse piattaforme e sistemi operativi.
+        </p>
+        <p>
+            Il codice scritto nel linguaggio di programmazione viene <b>compilato</b> traducendolo in <b>linguaggio macchina</b>, ovvero un tipo di linguaggio scritto in <b>sistema binario</b> comprensibile solo dal <b>processore</b>. Il risultato di questa compilazione è il codice compilato, o <b>eseguibile <i>(.exe)</i></b>.<br/>
+            La compilazione di un programma varia a seconda di quale <strong>sistema operativo</strong> si sta utilizzando durante questa fase, ciò limita l'utilizzo del codice compilato, che può essere utilizzato solamente da altri utenti che utilizzano lo stesso sistema operativo nel quale è stato compilato il programma. Questo accade perché ogni sistema operativo ha il proprio stile di compilazione.
+        </p>
+        <h3>Bytecode</h3>
+        <p>
+            Per ovviare al problema precedentemente elencato, Java utilizza un approccio di compilazione più complesso che aggiunge un ulteriore livello di processazione: l'<b>interpretazione</b>.<br/>
+            Nella fase tra <b>compilazione</b> e <b>interpretazione</b> il formato del programma sarà diverso sia da Java che dall'<i>assembler</i>, detto <b><i>bytecode</i></b>. Questo <i>bytecode</i> è un linguaggio ad alto livello, indipendente dalla piattaforma, che viene poi eseguito dall'interpete, ovvero la <b><i>Java Virtual Machine</i> (JVM)</b>.<br/>
+        </p>
+        <h3>Java Virtual Machine (JVM)</h3>
+        <p>
+            La <b><i>Java Virtual Machine</i></b> è un programma scritto in un linguaggio che però è dipendente dalla piattaforma che si sta utilizzando. Il codice quindi è portabile, a costo però che ci sia installata una <i>Java Virtual Machine</i>. Questo garantisce di non dover più ricompilare il codice per ogni piattaforma.<br/>
+            La <i>Java Virtual Machine</i> è, quindi, un <b>interprete</b> con la funzione di <b>traduzione</b> applicata al <i>bytecode</i>.
+        </p>
+        <h2>Tipi Primitivi e Rappresentazione in Memoria</h2>
+        <h3>Tipi Primitivi</h3>
+        <p>
+            I <b>tipi primitivi</b> e i <b>riferimenti a oggetti</b> sono i due tipi di dati presenti in Java. Il confronto tra questi due tipi potrebbe essere un po' confusionario, perciò paragoneremo i tipi primitivi con i riferimenti a oggetti che puntano a un'istanza di una <b><i>Wrapper Class</i></b>, ovvero una classe che permette di utilizzare i tipi di dato primitivi come oggetto.<br/>
+            Ogni tipo primitivo ha la sua corrispondente <i>wrapper class</i>:
+            <table>
+                <thead>
+                    <tr>
+                        <th><b>TIPO PRIMITIVO</b></th>
+                        <th><b><i>WRAPPER CLASS</i></b></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><i>boolean</i></td>
+                        <td><i>Boolean</i></td>
+                    </tr>
+                    <tr>
+                        <td><i>char</i></td>
+                        <td><i>Character</i></td>
+                    </tr>
+                    <tr>
+                        <td><i>byte</i></td>
+                        <td><i>Byte</i></td>
+                    </tr>
+                    <tr>
+                        <td><i>short</i></td>
+                        <td><i>Short</i></td>
+                    </tr>
+                    <tr>
+                        <td><i>int</i></td>
+                        <td><i>Integer</i></td>
+                    </tr>
+                    <tr>
+                        <td><i>long</i></td>
+                        <td><i>Long</i></td>
+                    </tr>
+                    <tr>
+                        <td><i>float</i></td>
+                        <td><i>Float</i></td>
+                    </tr>
+                    <tr>
+                        <td><i>double</i></td>
+                        <td><i>Double</i></td>
+                    </tr>
+                </tbody>
+            </table>
+        </p>
+        <h3>Rappresentazione in Memoria</h3>
+        <p>
+            La distinzione tra i due tipi di dato non varia solo nella loro scrittura, ma anche nel modo in cui vengono salvati in memoria, più precisamente nello <b><i>stack</i></b>, ovvero quella parte di memoria dove vengono memorizzate le <b>variabili locali</b> dei metodi in esecuzione, il <b>valore</b> delle variabili di tipi primitivi e il <b>riferimento</b> delle variabili di tipo classe.
+            Proviamo infatti a definire due variabili:<br/>
+            <div>
+                <pre>
+                    <code>
+                         int x = 5;
+                         Integer y = new Integer(2);
+                    </code>
+                </pre>
+            </div>
+        </p>
+        <p>
+            Si può osservare come la variabile <b>x</b> è un tipo primitivo, mentre la variabile <b>y</b> è un riferimento a un oggetto di classe <b><i>Integer</i></b> contenente un valore intero.<br/>
+            Queste due variabili differiscono anche nella rappresentazione in memoria, infatti la variabile <b>x</b> viene memoriazzata direttamente in una cella di memoria <i>stack</i>, mentre la variabile <b>y</b>, essendo un riferimento a un oggetto, viene memorizzato il riferimento a una cella di memoria <b><i>heap</i></b> nello <i>stack</i>, dove quest'ultima conterrà il valore intero della variabile <b>y</b>. L'<i>heap</i> è quella parte di memoria dove vengono salvate le <b>variabili d'istanza</b>.
+        </p>
+        <p>
+            Per comprendere meglio quali sono le differenze tra queste due variabili ed evitare errori, si può dare un'occhiata ai seguenti esempi di codice:
+            <div>
+                <pre>
+                    <code>
+                        public class Esempio1 {
+                            public static void main(String args[]) {
+                                int x = 5;
+                                int y = x;
+    
+                                System.out.println("x vale: " + x);
+                                System.out.println("y vale: " + y);
+    
+                                y = 2;
+    
+                                System.out.println("x vale: " + x);
+                                System.out.println("y vale: " + y);
+                            }
+                        }
+                    </code>
+                </pre>
+            </div>
+        </p>
+        <p>
+            <b>Output del codice:</b>
+            <div>
+                <pre>
+                    <code>
+                        x vale: 5
+                        y vale: 5
+                        x vale: 5
+                        y vale: 2
+                    </code>
+                </pre>
+            </div>
+        </p>
+        <p>
+            Dato che le variabili <b>x</b> e <b>y</b> sono di tipo primitivo <b>int</b>, la loro locazione in memoria è nello <i>stack</i> e ciascuna occuperà una cella di memoria. Cambiando il valore della variabile <b>y</b> si andrà a modificare il valore nella cella di memoria occupata dalla variabile stessa.
+        </p>
+        <p>
+            Visto che sappiamo ora come le variabli di tipo primitivo si comportano, passiamo a un esempio con variabili che si riferiscono a oggetti:
+            <div>
+                <pre>
+                    <code>
+                        import java.awt.Dimension;
+    
+                        public class Esempio2 {
+                            public static void main(String args[]) {
+                                Dimension x = new Dimension(5, 5);
+                                Dimension y = x;
+    
+                                System.out.println("Le dimensioni di x equivalgono a: " + x);
+                                System.out.println("Le dimensioni di y equivalgono a: " + y);
+    
+                                y.setSize(2, 2);
+    
+                                System.out.println("Le dimensioni di x equivalgono a: " + x);
+                                System.out.println("Le dimensioni di y equivalgono a: " + y);
+                            }
+                        }
+                    </code>
+                </pre>
+            </div>
+        </p>
+        <p>
+            <b>Output del codice: </b>
+            <div>
+                <pre>
+                    <code>
+                        Le dimensioni di x equivalgono a: java.awt.Dimension[width=5,height=5]
+                        Le dimensioni di y equivalgono a: java.awt.Dimension[width=5,height=5]
+                        Le dimensioni di x equivalgono a: java.awt.Dimension[width=2,height=2]
+                        Le dimensioni di y equivalgono a: java.awt.Dimension[width=2,height=2]
+                    </code>
+                </pre>
+            </div>
+        </p>
+        <p>
+            Se si guarda attentamente l'output di entrambi i codici, si può notare come la terza riga del secondo sia cambiata. Ciò accade perché le variabili si riferiscono a oggetti, quindi la loro locazione in memoria è nello <i>stack</i> e il valore lì presente è il riferimento alla corrispondente cella di memoria <i>heap</i> contenente il loro valore. La variabile <b>y</b>, avente lo stesso valore della variabile <b>x</b>, si riferisce alla stessa cella di memoria <i>heap</i>. In poche parole sono due variabili differenti che si riferiscono alla <b>stessa cella di memoria <i>heap</i></b>. Dato ciò, se si modifica il valore di una di queste due variabili, si andrà a modificare anche l'altra.
+        </p>
+        <p>
+            Visto che ora sappiamo come si comportano le variabili che si riferiscono a oggetti, passiamo al seguente esempio:
+            <div>
+                <pre>
+                    <code>
+                        public class Esempio3 {
+                            public static void main(String args[]) {
+                                Integer x = new Integer(5);
+                                Integer y = x;
+    
+                                System.out.println("x vale: " + x);
+                                System.out.println("y vale: " + y);
+    
+                                y = 2;
+    
+                                System.out.println("x vale: " + x);
+                                System.out.println("y vale: " + y);
+                            }
+                        }
+                    </code>
+                </pre>
+            </div>
+        </p>
+        <p>
+            <b>Output del codice:</b>
+            <div>
+                <pre>
+                    <code>
+                        x vale: 5
+                        y vale: 5
+                        x vale: 5
+                        y vale: 2
+                    </code>
+                </pre>
+            </div>
+        </p>
+        <p>
+            Nonostante le variabili si riferiscono a oggetti e sono state utilizzate nello stesso modo del secondo esempio, l'output di questo codice è diverso dal precedente.
+            Questo è dovuto al fatto che la classe <b><i>Integer</i></b>, come tutte le altre <b><i>Wrapped Class</i></b>, è stata implementata in modo tale da creare un nuovo oggetto quando si assegna a quello precedente il valore di un intero. In questo caso, quando è stato assegnato alla variabile <b>y</b> il valore intero <b>2</b>, è stato creato un nuovo oggetto di tipo <b><i>Integer</i></b> al quale viene passato il valore <b>2</b>.<br/>
+            Sapere come si comportano questi due tipi di variabili ci aiuta nella programmazione e nell'impostazione delle variabili.
+        </p>
+        <p>
+            Un altro errore frequente quando si adoperano questi due tipi di variabili è nella loro comparazione:
+            <div>
+                <pre>
+                    <code>
+                        public class Esempio4 {
+                            public static void main(String args[]) {
+                                Integer x = new Integer(5);
+                                Integer y = x;
+    
+                                System.out.println("x vale: " + x);
+                                System.out.println("y vale: " + y);
+    
+                                y = 5;
+    
+                                System.out.println("x vale: " + x);
+                                System.out.println("y vale: " + y);
+    
+                                if (x == y)
+                                    System.out.println("x e y sono uguali");
+                                else
+                                    System.out.println("x e y sono diversi");
+                            }
+                        }
+                    </code>
+                </pre>
+            </div>
+        </p>
+        <p>
+            <b>Output del codice:</b>
+            <div>
+                <pre>
+                    <code>
+                        x vale: 5
+                        y vale: 5
+                        x vale: 5
+                        y vale: 5
+                        x e y sono diversi
+                    </code>
+                </pre>
+            </div>
+        </p>
+        <p>
+            Anche se a primo impatto l'output del codice può sembrare strano, se abbiamo capito il ragionamento del codice precedente dovremmo capire anche questo.<br/>
+            Abbiamo assegnato alla variabile <b>y</b> il valore intero <b>5</b>, creando quindi un nuovo oggetto. Anche se questi due oggetti hanno valore identico, si riferiscono a due celle di memoria <b><i>heap</i></b> differenti, pertanto, quando il codice esegue l'istruzione di <b>comparazione (x == y)</b>, che non compara il valore in se ma in questo caso il riferimento, ci darà come output <b><i>x e y sono diversi</i></b>.
+        </p>
+        <h2>Definizione di una Classe</h2>
+        <h3>Classi e Oggetti</h3>
+        <p>
+            Una <b>classe</b> è un tipo di struttura che descrive un insieme di oggetti con comportamenti simili.
+            Un <b>oggetto</b> è un'<b>istanza</b> della classe ed è definito da:
+            <ul>
+                <li>
+                    <b>Attributi:</b> sono le <b>caratteristiche</b> che definiscono il proprio <b>stato</b>, quindi <b>variabili</b> o <b>costanti</b>.
+                </li>
+                <li>
+                    <b>Metodi:</b> sono i <b>comportamenti</b> o <b>azioni</b>, quindi <b>funzioni</b>.
+                </li>
+            </ul>
+        </p>
+        <p>
+            Lo <b>stato</b> di un oggetto è l'insieme dei valori, ovvero attributi, delle sue proprietà in un determinato istante di tempo.
+        </p>
+        <h3>Definizione di una Classe</h3>
+        <p>
+            All'interno di una classe è possibile specificare la <b>visibilità</b> dei dati, che può appunto essere di tre tipi:
+            <ul>
+                <li>
+                    <b><i>Private:</i></b> il codice viene nascosto rendendolo inutilizzabile.
+                </li>
+                <li>
+                    <b><i>Protected:</i></b> il codice viene nascosto rendendolo visibile solo da chi lo eredita.
+                </li>
+                <li>
+                    <b><i>Public:</i></b> il codice può essere utilizzato da tutti.
+                </li>
+            </ul>
+        </p>
+        <p>
+            Solitamente, tutte le classi vengono definite con la visibilità <b><i>Public</i></b>, insieme a tutti i metodi presenti al loro interno, mentre gli attributi hanno una visibilità <b>Private</b>.<br/>
+            Un esempio di <b>definizione di una classe</b> è il seguente:
+            <div>
+                <pre>
+                    <code>
+                        public class Rettangolo {
+                            <i>//Attributi</i>
+                            private int base;
+                            private int altezza;
+    
+                            <i>//Metodi</i>
+                            public int perimetroRettangolo() {
+                                return (base + altezza) * 2;
+                            }
+    
+                            public int areaRettangolo() {
+                                return base * altezza;
+                            }
+                        }
+                    </code>
+                </pre>
+            </div>
+        </p>
+        <p>
+            Durante la programmazione orientata agli oggetti e, quindi, durante la definizione di una o anche più classi è molto utile utilizzare un <b>UML</b>, un linguaggio di programmazione basato proprio sul paradigma della programmazione orientata agli oggetti utilizzato per la <b>visualizzazione</b>, tramite uso di <b>schemi, modelli visuali</b> e <b>documentazione</b> di un programma anche complesso.<br/>
+            Utilizzando la classe Rettangolo citata precedentemente, creiamo uno schema di quest'ultima in un UML (più precisamente, StarUML):<br/>
+            <br/>
+            <img src="img/classeRettangoloEsempioHTML.png" alt="Image not found :/">
+        </p>
+        <p>
+            <ul>
+                <li>
+                    <b>Prima Sezione:</b> contiene il <b>nome</b> della classe, ovvero il <b>tipo</b> degli oggetti di quella classe (è importante ricordare che il nome delle classi deve sempre avere la lettera iniziale <b>maiuscola</b>).
+                </li>
+                <li>
+                    <b>Seconda Sezione:</b> contiene gli <b>attributi</b> della classe che possono essere <b>Public (simbolo +)</b>, <b>Protected (simbolo #)</b> oppure, come in questo caso, <b>Private (simbolo -)</b>.
+                </li>
+                <li>
+                    <b>Terza Sezione:</b> contiene i <b>metodi</b> della classe che possono essere, come in questo caso, <b>Public (simbolo +)</b>, <b>Protected (simbolo #)</b> oppure <b>Private (simbolo -)</b>. I metodi non contengono le istruzioni ma viene visualizzato solo il tipo, il nome ed eventuali <b>parametri di ingresso</b>.
+                </li>
+            </ul>
+        </p>
+        <h2>Metodi Costruttori e Metodi Accessori</h2>
+        <h3>Metodi Costruttori</h3>
+        <p>
+            I <b>metodi costruttori</b> sono dei particolari tipi di funzione che hanno lo scopo di, appunto, "costruire" una variabile, definendo il suo valore.<br/>
+            Utilizzando la classe Rettangolo degli esempi precedenti, implementiamo anche il metodo <b>costruttore con zero parametri di ingresso:</b>
+            <div>
+                <pre>
+                    <code>
+                        public class Rettangolo {
+                            private int base;
+                            private int altezza;
+    
+                            public Rettangolo() {
+                                base = 5;
+                                altezza = 2;
+                            }
+    
+                            public int perimetroRettangolo() {
+                                return (base + altezza) * 2;
+                            }
+    
+                            public int areaRettangolo() {
+                                return base * altezza;
+                            }
+                        }
+    
+                        public class Main {
+                            public static void Main(String args[]) {
+                                Rettangolo r = new Rettangolo();
+    
+                                System.out.println("Perimetro: " + r.perimetroRettangolo());
+                                System.out.println("Area: " + r.areaRettangolo());
+                            }
+                        }
+                    </code>
+                </pre>
+            </div>
+        </p>
+        <p>
+            <b>Output del codice:</b>
+            <div>
+                <pre>
+                    <code>
+                        Perimetro: 14
+                        Area: 10
+                    </code>
+                </pre>
+            </div>
+        </p>
+        <p>
+            L'unico problema di questo codice è che non si possono mettere i valori che vogliamo. Questo accade perché, nella scrittura del <b>metodo costruttore</b>, non abbiamo inserito <b>parametri di ingresso</b>.<br/>
+            Utilizzando la classe Rettangolo degli esempi precedenti, implementiamo anche il metodo <b>costruttore con due parametri di ingresso:</b>
+            <div>
+                <pre>
+                    <code>
+                        public class Rettangolo {
+                            private int base;
+                            private int altezza;
+    
+                            public Rettangolo(int b, int a) {
+                                base = b;
+                                altezza = a;
+                            }
+    
+                            public int perimetroRettangolo() {
+                                return (base + altezza) * 2;
+                            }
+    
+                            public int areaRettangolo() {
+                                return base * altezza;
+                            }
+                        }
+    
+                        public class Main {
+                            public static void Main(String args[]) {
+                                Rettangolo r = new Rettangolo(3, 7);
+    
+                                System.out.println("Perimetro: " + r.perimetroRettangolo());
+                                System.out.println("Area: " + r.areaRettangolo());
+                            }
+                        }
+                    </code>
+                </pre>
+            </div>
+        </p>
+        <p>
+            <b>Output del codice:</b>
+            <div>
+                <pre>
+                    <code>
+                        Perimetro: 20
+                        Area: 21
+                    </code>
+                </pre>
+            </div>
+        </p>
+        <h3>Metodi Accessori</h3>
+        <p>
+           I <b>metodi accessori</b> sono dei particolari tipi di metodi che possono andare a <b>leggere o modificare</b> un singolo valore di una variabile.<br/>
+           I metodi accessori sono due:
+           <ul>
+                <li>
+                    <b>Metodo <i>Getter</i>:</b> metodo che permette di <b>leggere</b> il valore di una variabile. Questi metodi <b>non</b> hanno parametri di ingresso e ritornano il valore della variabile.
+                    Utilizzando la classe Rettangolo degli esempi precedenti, visualizziamo un esempio di un <b>metodo <i>getter</i>:</b>
+                    <div>
+                        <pre>
+                            <code>
+                                public int getBase() {
+                                    return base;
+                                }
+
+                                public int getAltezza() {
+                                    return altezza;
+                                }
+                            </code>
+                        </pre>
+                    </div>
+                </li>
+                <li>
+                    <b>Metodo <i>Setter</i>:</b> metodo che permette di <b>scrivere</b> un nuovo valore di una variabile. Questi metodi sono di tipo <b><i>void</i></b> e hanno come parametri di ingresso il <b>nuovo valore</b> della variabile che verrà sostituito a quello precedente.
+                    Utilizzando la classe Rettangolo degli esempi precedenti, visualizziamo un esempio di un <b>metodo <i>setter</i>:</b>
+                    <div>
+                        <pre>
+                            <code>
+                                public void setBase(int b) {
+                                    base = b;
+                                }
+
+                                public void setAltezza(int a) {
+                                    altezza = a;
+                                }
+                            </code>
+                        </pre>
+                    </div>
+                </li>
+           </ul>
+        </p>
+        <p>
+            Utilizzando la classe Rettangolo degli esempi precedenti, implementiamo anche il metodo <b>costruttore con due parametri di ingresso</b> ed entrambi i <b>metodi accessori:</b>
+            <div>
+                <pre>
+                    <code>
+                        public class Rettangolo {
+                            private int base;
+                            private int altezza;
+                        
+                            public Rettangolo(int b, int a) {
+                                base = b;
+                                altezza = a;
+                            }
+                            
+                            public int getBase() {
+                                return base;
+                            }
+                            
+                            public void setBase(int b) {
+                                base = b;
+                            }
+                            
+                            public int getAltezza() {
+                                return altezza;
+                            }
+                            
+                            public void setAltezza(int a) {
+                                altezza = a;
+                            }
+                            
+                        
+                            public int perimetroRettangolo() {
+                                return (base + altezza) * 2;
+                            }
+                        
+                            public int areaRettangolo() {
+                                return base * altezza;
+                            }
+                        }
+    
+                        public class Main {
+                            public static void main(String[] args) {
+                                Rettangolo r = new Rettangolo(5, 2);
+                            
+                                System.out.println("Perimetro: " + r.perimetroRettangolo());
+                                System.out.println("Area: " + r.areaRettangolo());
+                            
+                                r.setBase(3);
+                                System.out.println("Nuovo valore della base: " + r.getBase());
+                                r.setAltezza(7);
+                                System.out.println("Nuovo valore dell'altezza: " + r.getAltezza());
+                            
+                                System.out.println("Perimetro con i nuovi valori: " + r.perimetroRettangolo());
+                                System.out.println("Area con i nuovi valori: " + r.areaRettangolo());
+                            }
+                        }
+                    </code>
+                </pre>
+            </div>
+        </p>
+        <p>
+            <b>Output del codice:</b>
+            <div>
+                <pre>
+                    <code>
+                        Perimetro: 14
+                        Area: 10
+                        Nuovo valore della base: 3
+                        Nuovo valore dell'altezza: 7
+                        Perimetro con i nuovi valori: 20
+                        Area con i nuovi valori: 21
+                    </code>
+                </pre>
+            </div>
+        </p>
+    </body>
+</html>

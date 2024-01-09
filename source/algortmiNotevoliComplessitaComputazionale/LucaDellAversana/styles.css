@@ -1,0 +1,147 @@
+body {
+    background-image: url("images/background.png");
+    background-attachment: fixed;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+h1, h2 {
+    color:#2D7AD6;
+    margin-left: 10px;
+}
+
+p, ul {
+    margin-left: 10px;
+}
+
+img {
+    width:40%; 
+    height:40%;
+    margin: 10px;
+}
+
+code {
+    color: white;
+    background-color: #ffffff32;
+    font-size: 110%;
+    display: block;
+    width: fit-content;
+    
+    padding: 10px;
+    margin-left: 10px;
+
+    border: 1px solid #999;
+    border-radius: 3px;
+}
+
+table {
+    border-collapse: collapse;
+    margin: 10px;
+    display: inline;
+}
+
+td {
+    border: 2px solid #ffffff;
+    text-align: center;
+    padding: 8px;
+    width: 20px;
+    height: 20px;
+}
+
+td.selezionata {
+    border-width: 3.5px;
+    background-color: rgba(255, 255, 0, 0.189);
+}
+
+/* div.container {
+    width: 1000px;
+    margin: 100px 100px 100px 10px;
+
+    background-color: rgba(255, 255, 255, 0);
+    border-radius: 10px;
+
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+} */
+
+div.container {
+    width: 1000px;
+    margin: 100px auto;
+
+    background-color: rgba(255, 255, 255, 0);
+    border-radius: 10px;
+
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+
+div.sommario {
+    width: 400px;
+    height: fit-content;
+    margin: 100px 0px 100px 10px;
+
+    background-color: rgb(255, 0, 0);
+    border-radius: 10px;
+
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+
+header {
+    width: 100%;
+    background-color: #343541;
+
+    padding: 5px 20px 30px;
+    border-radius: 10px;
+
+    position: sticky;
+    top: 0;
+
+    text-align: center;
+}
+
+main {
+    width: 100%;
+    background-color: #5e5f68;
+    color:white;
+
+    padding: 15px 20px 10px;
+    margin: -10px auto;
+}
+
+footer {
+    width: 100%;
+    background-color: #9a9a9c;
+
+    padding: 5px 20px 5px;
+    border-radius: 10px;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+.definizione {
+    display: block;
+    background-color: #4973a5;
+
+    padding: 5px 8px;
+}
+
+.button {
+    text-decoration: none;
+    text-align: center;
+    display: inline;
+    margin: 10px;
+    padding: 5px 10px;
+
+    border: 1px solid #2D7AD6;
+    border-radius: 10px;
+}
+
+a.button {
+    background-color: #2D7AD6;
+    color: black;
+}
+
+p.button, a:hover {
+    background-color: rgba(255, 255, 255, 0);
+    color: #2D7AD6;
+}

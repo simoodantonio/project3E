@@ -1,0 +1,6 @@
+POO C++ - Punti da trattare:
+
+1. Definizione di una classe 
+2. Sezione pubblica e privata 
+3. Metodi costruttori e metodi accessori (getter/setter) 
+4. Instanziare un oggetto 
