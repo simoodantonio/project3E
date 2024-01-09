@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<l>
+    <p>LA RICORSIONE:</p>
+        <li>La ricorsione è una tecnica di programmazione presente in vari linguaggi per ridurre il numero
+             di righe che devono essere scritte, effettuare compiti complessi e migliorare l'efficienza del codice. 
+        </li>In informatica teorica sono tanti gli algortimi che funzionano con la ricorsione, per esempio le torri di Hanoi. </li>
+    </li> Grazie alla ricorsione si possono generare facilmente strutture di dati che si rappresentano visivamente come pattern ripetuti più volte</li>
+    </li> Esempi di ricorsione:</li>
+            <ul>
+                <li>I triangoli di Sierpinski</l>
+                <li>La curva di Koch</li>
+            </ul>
+    <li>RISOLVERE UN PROBLEMA CON UN APPROCIO RICORSIVO SIGNIFICA:</li>
+        <ul>
+            <li>Indentificare un caso base la cui soluzione è nota.</li>
+            <li> Riuscire a esprimere la soluzione al caso generico n in termini dello stesso problema
+              in uno o più casi semplici (n-1, n-2 ...). </li>
+        </ul>
+
+    <p>PRINCIPIO DI INDUZIONE:</p>
+        <li>Il principio di induzione è un enunciato sui numeri naturali che in matematica viene usato nelle dimostrazioni,
+        </li> per provare che una certa proprietà è valida per tutti i numeri interi.</li>
+        </li>Il principio di induzione mi permette di dimostrare una proposizione o un teorema in un insieme composto
+            da elementi infiniti nell'insieme dei numeri naturali, senza doverlo dimostrare per ogni singolo elemento.</li>
+            
+            <ul>
+
+            </ul>
+        </li>DIMOSTRAZIONE DEL PRINCIPIO DI INDUZIONE:</li>
+            <ul>
+                </li>Consideriamo una proposizione P(n) dove n è un numero naturale e un numero iniziale n0, Abbiamo:
+                <li>Base induttiva: Se la proposizione P(n0) è vera</li>
+                <li>Tesi: Suppongo vera per ipotesi P(n)</li>
+                <li>Passo induttivo: Se è vera anche la proposizione P(n+1) allora la tesi P(n) è vera per 
+                    ogni numero naturale n >= n0.
+                </li>
+             </ul>
+            </li>ESEMPIO PRATICO DI QUELLO CHE ABBIAMO DETTO:</li>
+            <ul></ul>
+                     <li>Dobbiamo dimostrare che la proposizione P(n) è divisibile per 6 per ogni n >=1
+                        dove n è un qualsiasi numero naturale maggioe o uguale a 1 </li>
+                    <li> P(n) := n^3 + 5n</li>
+                    <li>Come prima cosa verifichiamo se la base dell'induzione è vera per l'elemento più piccolo dell'insieme</li>
+                    <li>Sostituisco P(n)  + con n = 1</li>
+                    <li> P(1) = (1)^3 + 5(1)  =>  P(1) = 1 + 5    =>   P(1) = 6</li>
+                    <li>La base dell'induzione è vera perché 6 è divisibile per 6</li>
+                    <ul></ul>
+                    </li> La prima condizione dei principi di induzione è soddisfatta</li>
+                    
+                </ul>
+            <ul>
+
+            </ul>
+                </li>ADESSO VERIFICHIAMO IL PASSO INDUTTIVO</li>
+                <ul>
+                    <li> Secondo il principio di induzione matematica dei numeri naturali se P(n) è vera
+                          allora P(n+1) è vera.</li>
+                    </li>La tesi da dimostrare è : P(n+1) := (n+1)^3 + 5(n+1)  dove n+1 è il successivo di n.</li>
+                    <li> 1) P(n+1) := (n+1)^3 + 5(n+1)</li>
+                    <li> 2) P(n+1) := n^3 + 3n^2 + 3n + 1 + 5n + 5 </li>
+                    <li> 3) P(n+1) := (n^3 +5n) + 3n^2 + 3n +1 + 5 </li>
+                </li>Adesso la proposizione è scomposta in due parti</li>
+                    <li> La componente P(n) sappiamo che si può dividere per 6 dall'ipotesi iniziale</li>
+                    <li>Devo dimostrare che lo sia anche il resto dell'espressione ossia 3n^2 + 3n + 1 + 5</li>
+                    <li>P(n + 1) := P(n) + 3n(n + 1) + 6</li>
+                    </ul></ul>
+            </li>CON QUESTA ULTIMA FORMA POSSIAMO AFFERMARE CHE: </li>
+                <ul></ul>
+                <li>La seconda componente 3n(n + 1) è divisibile per 6 perché n(n + 1) è sicuramente superiore a 1</li>
+                <li>La terza componente ossai +6 è ovviamnete divisibile per 6 </li>
+                <ul></ul>
+        </li>Quindi anche la seconda condizione del principio di induzione è soddisfatta</li>
+                <li>P(n + 1) := P(n) => vera per ipotesi iniziale      3n(n + 1) =>   vera        + 6 => vera</li>
+                </ul>
+        <ul></ul>
+
+        <p> GESTIONE DELLA MEMORIA ED IL SUO MODELLO A RUN-TIME:</p>
+            <li> La gestione della memoria è un concetto importante nella programmazione e nell'esecuzione di programmi informatici. Questo processo coinvolge l'allocazione, l'utilizzo e la liberazione delle risorse
+            di memoria.
+            </li>Il modello a run-time nella gestione della memoria si riferisce a strategie e a delle tecniche utilizzate durante l'esecuzione per gestire la memoria e garantirne un uso efficiente.</li>
+                <ul></ul>
+            
+            <li>Ci sono diversi concetti chiave legati alla gestione della memoria e al modello a run-time:</li>
+            
+                 <li>ALLOCAZIONE DELLA MEMORIA:</li>
+                 <li>In genere un programma ha bisogno di memoria per archiviare dati e istruzione. Ci sono diversi modi in cui la memoria può essere allocata come: </li>
+                <ul>
+
+                    <li>ALLOCAZIONE STATICA: Avvieve in fase di compilazione</li>
+                    <li>ALLOCAZIONE DINAMICA: In fase di run-time</li>
+                </ul>
+            </li>DEALLOCAZIONE DELLA MEMORIA:</li>
+            <li>dopo aver utilizzato la memoria è importante liberarla per evitare sprechi e fughe di memeoria. Di solito per deallocare la memoria si usano le fuzioni 'free()' in C o 'delete()' in C++</li>
+        </li>GESTIONE DELLA FRAMMENTAZIONE:</li>
+        </li> La memoria puo essere frammenata nel corso dell'esecuzione del programma, portando a spazi vuoti tra le aree allocate. La frammentazione serve a minimizzare gli effetti negativi sulla disponibilità della memoria</li>
+                 <li>PAGING E SEGMENTAZIONE:</li> 
+    </li> I sistemi operativi avanzati utilizzano spesso tecniche di paging e segmentazione per gestire la memoria in modo più efficiente. Il paging sidduvide la memoria fisica da quella virtuale in pagine, mentre la segmentazione divide il programma in segmenti logici come il codice, i dati e lo stack. </li>
+            <li>MEMORIA VIRTUALE:</li>
+</li> La memoria virtuale serve ai programmi per accedere ad una quantità di memoria maggiore di quella fisicamnete presente nel sistema. Questo avviene cpn la combinazione di memoria fisica e paging. Un uso intelligente della memoria virtuale può migliorare l'efficienza dell'allocazione e dell'utilizzo della memoria.</li>
+            <li>CACHE:</li>
+</li>L'uso della cache è una parte importante nella gestione della memoria. Le cache sono piccole aree di memoria veloce che conservano copie dei dati spesso utilizzate , riducendo il tempo di accesso ai dati migliiorando le prestazioni complessive del sistema</li>
+            <li>STRATEGIE DI RIMPIAZZAMENTO:</li>
+            </li>Quando la memoria è piena e viene richiesta un'allocazione di una nuova memoria, bisogna decidere quali dati vengono rimossi dalla memoria per fare sazio a quelli nuovi. Questo comporta l'uso di strategie di rimpiazzamento come la "Least Recently Used" (LRU) che seleziona i dti meno usati</li>
+            <li>GESTIONE DELLE FUGHE DI MEMORIA:</li>
+        </li> Una fuga di memoria avviene quando un programma non rilascai la memoria precedentemente allocata causando un accumolo progressivo di memoria non utilizzata. Questo può causare problemi di prestazioni e esaurimento delle risorse</li>
+            <li>PROFILING DELLA MEMORIA:</li>
+    </li>È importante il monitoraggio della memoria da parte del programma per individuare potenziali problemi e ottimizzazioni . Gli strumenti di profiling possono aiutare a identificare aree di codice che utilizzano troppa memoria o causano frammentazione.</li>
+
+            </ul>
+            <ul></ul>
+            <li>Nella gestione della memeoria di un programma sono coinvolti diversi tipi di aree di memoria, ogniuno con un proprio scopo. Le principali aree di memoria coinvolte sono:</li>
+            <ul>
+                <li>AREA DEL CODICE (Code Segment o Text Segment):</li>
+                <ul>
+                    <li>Questa area contiene il codice eseguibile del programma, ovvero le istruzioni che devono essere eseguite dal processore</li>
+                    <li>Il codice èdi solito di sola lettura e viene condiviso tra tutte le istanze del programma in cui viene eseguito</li>
+                    <li>Le istruzioni vengono caricate in quest'area dalla memoria del programma e vengono eseguite sequenzialmente dalprocessore.</li>
+                </ul>
+                <li>AREA DEI DATI (Data Segment):</li>
+                <ul>
+                    <li>L'area dei dati è destinata a memoriazzare le variabili globali e statiche del programma, che sono accessibili in tutto il ciclo di vita del codice</li>
+                </li>QUEST'AREA È SUDDIVISA IN DUE CATEGORIE:</li>
+                    <ul>
+                        <li>VARIABILI GLOBALI:</li>
+                    </li>Sono variabili definite al di fuori di qualisiasi funzione ed è accessibile da tutte le prti del programma</li>
+                        <li>VARIABILI STATICHE:</li>
+                </li>Sono variabili definite all'interno di una funzione con una durata di tutto il ciclo del programma</li>
+                
+                </ul>
+            </ul>
+        <li>MODELLO HEAP:</li>
+            <ul>
+                <li>L'heap è un'area di memoria dinamica che viene utilizzata per l'allocazione dimanica dei dati durante l'esecuzione di un programma</li>
+                <li>Le variabili allocate nell'heap rimangono fino a quand non vengono deallocate o fino alla fine del programma</li>
+                <li>L'allozazione nell'heap è gestita manualmente del programmatore utilizzando fuzioni come 'malloc()' in C oppure 'new()' in C++</li>
+            </ul>
+            <li>MODELLO STACK:</li>
+            <ul>
+                <li>Lo stack è una memoria dedicata per chiamare le funzioni e le loro variabili locali</li>
+                <li>Le variabili dello stack sono automaticamnete allocate e deallocate in base al ciclo di vita delle funzioni. Quando una funzione viene chiamata, le sue variabili vengono allocate nello stack e quando la funjzione ritorna</li>
+                <li>La gestione dello stack è molto efficinte ma ha limiti di dimensione e richiede un comportamento di allocazione e deallocazione ben strutturato</li>
+            </ul>
+            
+            </ul>
+            <li>POLITICHE FIFO E LIFO:</li>
+            <ul>
+                <li>FIFO:</li>
+                <ul>
+                    <li>In genere le code sono strutturate sul principio FIFO (First In First Out), ovvero l'elemento inserito per primo è il primo elemento ad uscire dalla lista. Il processo di aggiunta in coda si chiama Enqueue mentre il processo di rimozione di un elemento dalla coda viene denominato Dequeue</li>
+                </ul>
+                <li>LIFO:</li>
+                <ul>
+                    <li>Generalmente gli stack si basano sul principio LIFO (Last In First Out), ovvero l'elemento inserito per ultimo è il primo elemento a uscire dalla lista. Ongi volta che viene aggiunto un elemento, esso va in cima alla pila, ed il primo elemento che viene rimosso appunto è il primo in cima alla pila</li>
+                </ul>
+                
+            </ul>
+            <li>RECORD DI ATTIVAZIONE DELLE FUNZIONI:</li>
+        </li>In informatica il record di attivazione delle funzioni si riferisce ad una struttura di dati utilizzata  per la gestione della memoria di un programma durante l esecuzione di una funzione. Il record contiene informazioni importanti, come i parametri, le variabili locali e altre informazioni di controllo</li>
+            <li>Ecco alcuni esempi di dettagli contenuti nel record di attivazione di una funzione:</li>
+            <ul>
+                <li>INDIRIZZO DI RITORNO:</li>
+                <ul>
+                    <li>Questo indirizzo viene usato dalla memoria per far tornare il programma una volta finita l'secuzione della funzione</li>
+                </ul>
+            </ul>
+        
+</body>
+
+</html>
