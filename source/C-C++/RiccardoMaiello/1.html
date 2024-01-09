@@ -1,39 +1,167 @@
-<!DOCTYPE html>
+<!DOCTYPE html> <!-- Definizione del tipo di documento come HTML5 -->
+
 <html lang="it">
+<!-- Inizio del documento HTML con dichiarazione della lingua italiana per servizi come google traduttore ecc...-->
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Intestazione del documento, contiene metadati e collegamenti a fogli di stile -->
+    <meta charset="UTF-8"> <!-- Imposta l'encoding dei caratteri a UTF-8 -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!-- Specifica la compatibilità con Internet Explorer -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Struttura fondamentale di un programma in C++</title>
-    <link rel="shortcut icon" href="image/icon.ico"/> 
-    <div class="loading-screen">
-        <img src="image/loading.gif" alt="Schermata di caricamento..." style="margin-bottom: 50%;">
-    </div>
+    <!-- Imposta la visualizzazione responsive -->
+    <title>Struttura fondamentale</title> <!-- Titolo della pagina visualizzato nella scheda del browser -->
+    <link rel="shortcut icon" href="image/icon.ico" /> <!-- Collegamento all'icona del sito nella scheda del browser -->
 </head>
 
 <body>
-    <div class="mainBoxTitle">
-        <div class="box"  style="border-top-left-radius: 0px; background-color: rgb(156, 1, 187);"><a class="link"></a></div>
-        <div class="title">
-            <div class="link" style="background-color: rgb(156, 1, 187);"><a class="text-center">Struttura fondamentale di un programma in C++</a></div>
+    <div class="loading-screen" style="text-align: center;">
+        <!-- Immagine di caricamento con testo alternativo -->
+        <div class="distacco" style="border-top: 15%;">
+            <img src="image/loading.gif" alt="Schermata di caricamento..." style="margin-bottom: 50%;">
         </div>
-        <div class="box2"style="border-top-right-radius: 0px; background-color: rgb(156, 1, 187);"><a class="link"></a></div>
     </div>
-
+    <!-- Il corpo del documento HTML -->
+    <div class="mainBoxTitle">
+        <div class="box" style="border-top-left-radius: 0px; background-color: rgb(156, 1, 187);">
+            <a href="main.html" class="link">
+                <!--  link che porta a "main.html" con la classe "link" -->
+                <img src="image/arrowBack.png" alt="Torna indietro" width="100" height="100" style="margin-top: 9%;">
+                <!-- Un'immagine di una freccia che punta indietro e con testo alternativo "Torna indietro" e alcune dimensioni e stili -->
+            </a>
+        </div>
+        <div class="title">
+            <!-- Div con la classe "title" -->
+            <div class="link" style="background-color: rgb(156, 1, 187);">
+                <!-- Un div con la classe "link" e uno stile CSS -->
+                <a class="text-center" style="color: rgba(0, 0, 0, 0.80);">Struttura fondamentale di un programma in C++</a>
+                <!-- Un link senza attributo "href" con il testo del titolo -->
+            </div>
+        </div>
+        <div class="box2" style="border-top-right-radius: 0px; background-color: rgb(156, 1, 187);">
+            <!-- Ancora un div con la classe "box2" e stili CSS -->
+            <a href="2.html" class="link" style="text-align: right;">
+                <img src="image/advance.png" alt="Argomento successivo" width="100" height="100"
+                    style="margin-top: 9%;">
+            </a>
+            <!-- Un link vuoto senza attributo "href" solo per copiare lo stile -->
+        </div>
+    </div>
+    <div class="paragrafoUno">
+        <!-- Un div con la classe "paragrafoUno" -->
+        <h2>IDE</h2>
+        <!-- Un titolo di secondo livello con alcuni stili CSS -->
+        <div class="textcenter">
+            <p>Per iniziare a programmare un nuovo linguaggio si deve capire bene che IDE <em>(Integrated Development
+                    Environment, ovvero ambiente di sviluppo integrato)</em> si deve usare, noi vi consigliamo:</p>
+            <p><a href="https://www.bloodshed.net/" target="_blank"
+                    style="color: black;text-decoration: underline;">"Dev-C++"</a> un IDE
+                per piattaforme Windows 98, NT, 2000, XP, Vista, 7, 8, 10, 11;</p>
+            <p><a href="https://apps.apple.com/it/app/xcode/id497799835?mt=12" target="_blank"
+                    style="color: black;text-decoration: underline;">"Xcode"</a> IDE predefinito per MAC OS, al suo
+                interno
+                contiene tools per programmare C++;</p>
+            <p><a href="https://www.onlinegdb.com/online_c++_compiler" target="_blank"
+                    style="color: black;text-decoration: underline;">"Online C++ Compiler"</a> IDE web accessibile da
+                qualsiasi parte e da qualsiasi dispositivi connesso ad internet, questo IDE è quello usato da questa
+                giuda
+                come predefinito.</p>
+        </div>
+        <!-- Paragrafo di testo con un'annotazione "<em>" e ulteriori paragrafi e link (Informazioni che appagliono a schermo)-->
+    </div>
+    <div class="paragrafoDue">
+        <h2>Primi passi</h2>
+        <p>Per capire velocemente ed al meglio C++ analizzaremo il codice base di ogni linguaggio di programmazione,
+            "Hello World!" <em>("Ciao Mondo!")</em> non a caso è il primo codice che vi appare aprendo l'IDE "Online
+            C++".</p>
+        <div class="immagineCenter">
+            <img src="image/HelloWord.png" alt="Caricamento imagine..." width="583" height="297">
+        </div>
+        <p>Questo è il codice base "Hello World!", ma cominciamo dall'inizio:</p>
+        <p>Alto troverete le funzioni dell'IDE:
+            La prima icona serve a creare un nuovo file, la seconda icona serve a caricare un file, il tasto verde "RUN"
+            serve ad <b>eseguire</b> il codice <em>(F9)</em> , il tasto blu "Debug" serve ad eseguire il codice linea
+            per linea per capire il procedimento (F8), il tasto rosso "STOP" serve a <b>fermare</b> il codice in
+            eseguzione ,
+            il tasto giallo "Share" serve per condividere il codice tramite link, il tasto blu scuro "Save" serve per
+            salvare il codice scritto, il primo tasto azzurro serve a rendere
+            il codice più "bello" per esempio se mancano spazi o dovevate andare a capo lui corregge, il secondo tasto
+            azzurro serve a <b>scaricare</b> il codice.</p>
+        <p><em>(I tasti in grassetto sono i più importanti)</em></p>
+        <p>Passando leggermento sotto, troveremo il "file system" cioè dove vediamo tutti i file del nostro progetto,
+            adesso c'è un solo file: "main.cpp", il file principale si chiama "main" <em>("principale" in inglese)</em>
+            e ".cpp" è l'estenzione dei file C++</p>
+        <p>Passando sotto trovere finalmente il foglio C++ dove possiamo programmare, prima capiamo cosa c'è sritto.</p>
+        <p>All'inizio del foglio viene scritto cosa si deve includere nel progetto, in questo caso viene incluso nel
+            progetto la libreria "iostream" <br> Cosa contiene un libreria? Contiene delle funzioni che possono tornarci
+            utili, ad esempio: la somma tra due numeri ecc...; la libreria "iostream" contiene i principali comandi di
+            "input" e "output" <em>("lettura" e "scrittura")</em> la sintassi è: <b>"# include ("includi") < nome della
+                    libreria>" .</b>;</p>
+        <p>Passando sotto troviamo "Using namespace std;" qui specifica che vuole usare "parole chiavi" cioè funzioni e
+            classi standard di C++ perché ognino può creare la proprie parole chiavi.</p>
+        <p>la sintassi è <b>" using namespace std ;"</b>;</p>
+        <p>Alla riga 5 troviamo la funzione principale "main" <em>("principale in inglese")</em> dove viene scritto il
+            codice principale quello che sarà per primo eseguito, come possiamo notare l'apertura delle parentesi graffe
+            apreno uno spazio chiamato <b>corpo</b> contrassegnato da quello che c'è sritto dentro è spaziato
+            diversamente</p>
+        <p>La sintassi del corpo main è: <b>" int main( ){ apertura corpo }"</b>;</p>
+        <p>Dentro il corpo del "main" alla riga 7 troviamo il comando "cout" ("character output") significa che mandamo
+            in
+            console un messaggio da mostrare, in questo caso una frase "Hello World!". È seguita da << , l'operatore di
+                inserimento. Gli operatori di inserimento mandano i dati agli operatori di flusso che vengono prima di
+                loro</p>
+                <p>La sintassi è <b> cout < < " Frase " ; </b>
+                </p>
+                <p>Ultimo comando alla riga 9 troviamo il "return 0;" <em>("Restituisci 0")</em> cioè alla fine del
+                    programma
+                    restituiamo un valore di corretta eseguzione del programma</p>
+                <p>La sintassi è: <b> return 0; </b></p>
+    </div>
+    <div class="paragrafoTre">
+        <h2>Esecuzione</h2>
+        <div class="textcenter">
+            <p>Capito come scritto è il tempo di eseguirlo, clicco sul tasto verde "RUN" oppure F9 ed eseguo.</p>
+        </div>
+        <div class="immagineCenter">
+            <img src="image/runProgram.png" alt="Immagine in caricamento..." width="775" height="172">
+        </div>
+        <p>Avviato il programma apparirà una finestra nera, quella è la console basata su riga di codice; Coma hai
+            notato il "cout" ha scritto "hello World!" e sotto c'è scritto che il programma è finito correttamente senza
+            errori.</p>
+    </div>
+    <div class="paragrafoQuattro">
+        <h2>Lettura e Scrittura</h2>
+        <div class="textcenter">
+            <p>Capiamo come leggere o scrivere nel programma...</p>
+            <div class="immagineCenter">
+                <img src="image/Program1.png" alt="Immagine in caricamento..." width="572" height="292">
+            </div>
+            <p>Sono due i comandi fondamentali per leggere e scrivire. <br>Leggere: "Cout
+                << " Che abbiamo già trattato <br> Scrittura: Il comando " Cin>> " indica che le informazioni in
+                    questione
+                    devono essere inserite dal programmatore durante lo svolgimento del programma, in altre parole
+                    chiediamo
+                    dati durante lo svolgimento del programma; La sintassi è: <b>"cin>>
+                        variabile"</b>.
+            </p>
+        </div>
+    </div>
 </body>
+
 <style>
+    /*Stili per il corpo della pagina */
     body {
         margin-top: 0;
         background-color: rgb(228, 228, 228);
     }
 
+    /* Stili per la barra del titolo */
     .mainBoxTitle {
         margin-bottom: 2.5%;
         display: flex;
         height: 150px;
     }
 
+    /* Stili per i contenitori "box" e "box2" */
     .box,
     .box2 {
         display: block;
@@ -42,23 +170,26 @@
         box-shadow: 0px 10px rgba(0, 0, 0, 0.8);
     }
 
+    /* Altri stili specifici per "box" */
     .box {
         border-right: none;
         border-radius: 10% 0px 0px 10%;
     }
 
+    /* Altri stili specifici per "box2" */
     .box2 {
         border-left: none;
         border-radius: 0px 10% 10% 0px;
     }
 
+    /* Stili per gli elementi all'interno di ".mainBoxTitle" */
     .mainBoxTitle .box,
     .mainBoxTitle .box2 {
         height: 92%;
         width: 12.5%;
-
     }
 
+    /* Stili per il titolo centrale */
     .title {
         text-align: center;
         height: 92%;
@@ -69,30 +200,34 @@
         box-shadow: 0px 10px rgba(0, 0, 0, 0.80);
     }
 
+    /* Stili per i link */
     .link {
         height: 100%;
         width: 100%;
         font-size: xxx-large;
         display: block;
         font-weight: bolder;
-
     }
 
+    /* Stili per i link quando sono visitati */
     a.link:-webkit-any-link {
         color: whitesmoke;
         text-decoration: none;
     }
 
+    /* Stili per i link generici */
     a:-webkit-any-link {
         color: whitesmoke;
         text-decoration: none;
     }
 
+    /* Stili per i link nei contenitori "link" */
     .link a {
         display: block;
         user-select: none;
     }
 
+    /* Stili per la schermata di caricamento */
     .loading-screen {
         position: fixed;
         top: 0;
@@ -106,11 +241,13 @@
         z-index: 10;
     }
 
+    /* Stili per l'immagine nella schermata di caricamento */
     .loading-screen img {
         max-width: 100%;
         max-height: 80vh
     }
 
+    /* Stili per il testo centrato */
     .text-center {
         display: flex !important;
         justify-content: center;
@@ -118,11 +255,44 @@
         height: 100%;
         flex-direction: column-reverse;
     }
+
+    /* Stili per i paragrafi */
+    p {
+        font-size: x-large;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        color: rgb(44, 44, 44) !important;
+    }
+
+    h2 {
+        color: rgb(122, 1, 187);
+        text-align: center;
+        font-size: xx-large;
+    }
+
+    b {
+        color: rgb(122, 1, 187);
+    }
+
+    .immagineCenter {
+        text-align: center;
+    }
+
+    .barrafinale {
+        height: 88%;
+        width: 12.5%;
+    }
+
+    .textcenter {
+        text-align: center;
+    }
 </style>
+
 <script>
+    // Pagina dello script per la pagina di caricamento
+    <!-- Script JavaScript -->
     window.addEventListener('load', function () {
         const loadingScreen = document.querySelector('.loading-screen');
-        setTimeout(() => { loadingScreen.style.display = 'none'; }, 1000);// Nascondi la schermata di caricamento
+        setTimeout(() => { loadingScreen.style.display = 'none'; }, 1000); // Nascondi la schermata di caricamento dopo 1 secondo
     });
 </script>
 

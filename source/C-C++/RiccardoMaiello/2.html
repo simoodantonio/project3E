@@ -1,0 +1,280 @@
+<!DOCTYPE html> <!-- Definizione del tipo di documento come HTML5 -->
+
+<html lang="it">
+<!-- Inizio del documento HTML con dichiarazione della lingua italiana per servizi come google traduttore ecc...-->
+
+<head>
+    <!-- Intestazione del documento, contiene metadati e collegamenti a fogli di stile -->
+    <meta charset="UTF-8"> <!-- Imposta l'encoding dei caratteri a UTF-8 -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!-- Specifica la compatibilità con Internet Explorer -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Imposta la visualizzazione responsive -->
+    <title>Variabili e Constanti</title> <!-- Titolo della pagina visualizzato nella scheda del browser -->
+    <link rel="shortcut icon" href="image/icon.ico" /> <!-- Collegamento all'icona del sito nella scheda del browser -->
+</head>
+
+<body>
+    <div class="loading-screen" style="text-align: center;">
+        <!-- Immagine di caricamento con testo alternativo -->
+        <div class="distacco" style="border-top: 15%;">
+            <img src="image/loading.gif" alt="Schermata di caricamento..." style="margin-bottom: 50%;">
+        </div>
+    </div>
+    <!-- Il corpo del documento HTML -->
+    <div class="mainBoxTitle">
+        <div class="box" style="border-top-left-radius: 0px; background-color: rgb(156, 1, 187);">
+            <a href="1.html" class="link">
+                <!--  link che porta a "main.html" con la classe "link" -->
+                <img src="image/arrowBack.png" alt="Torna indietro" width="100" height="100" style="margin-top: 9%;">
+                <!-- Un'immagine di una freccia che punta indietro e con testo alternativo "Torna indietro" e alcune dimensioni e stili -->
+            </a>
+        </div>
+        <div class="title">
+            <!-- Div con la classe "title" -->
+            <div class="link" style="background-color: rgb(156, 1, 187);">
+                <!-- Un div con la classe "link" e uno stile CSS -->
+                <a href="main.html" class="text-center" style="color: rgba(0, 0, 0, 0.80);">Variabili e Constanti</a>
+                <!-- Un link senza attributo "href" con il testo del titolo -->
+            </div>
+        </div>
+        <div class="box2" style="border-top-right-radius: 0px; background-color: rgb(156, 1, 187);">
+            <!-- Ancora un div con la classe "box2" e stili CSS -->
+            <a href="3.html" class="link" style="text-align: right;">
+                <img src="image/advance.png" alt="Argomento successivo" width="100" height="100"
+                    style="margin-top: 9%;">
+            </a>
+            <!-- Un link vuoto senza attributo "href" solo per copiare lo stile -->
+        </div>
+    </div>
+    <div class="paragrafoUno">
+        <h2>Cos'è una variabile?</h2>
+        <p>In poche parole è un contenitore di dati situato in una porzione di memoria destinata a contenere valori,
+            esso possono essere modificati nel corso dell'esecuzione di un programma. Questo strumento è utilissimo per
+            immagazzinare dati.<br> Una variabile è
+            caratterizzata da un tipo da un nome e da un valore.</p>
+    </div>
+    <div class="paragrafoDue">
+        <h2>Caratteristiche delle variabili</h2>
+        <p>Come detto una variabile ha varie Caratteristiche:</p>
+        <p>Tipo: durante la fare della dichiarazione diciamo che tipo di dati quella variabile conterrà.<br>Nome: il
+            nome di una variabile deve essere unico, non ambiguo e senza spazi.<br>Valore: sicuramente un variabile è
+            creata per avere un dato.</p>
+        <p>Nel caso delle variabili constanti <b>non</b> accettano cambiamenti nel valore durante il corso del
+            programma, accetta il volore solo durante la dichiarazione.</p>
+    </div>
+    <div class="paragrafoTre">
+        <h2>Dichiarazione e Definizione delle variabili in C++</h2>
+        <p>Ogni variabile in C++ deve essere definita prima del suo utilizo, con "definizione" si intende un nome
+            univoco e tipo.</p>
+        <div class="immagineCenter">
+            <img src="image/Program2.png" alt="Immagine in caricamento..." width="572" height="325">
+        </div>
+        <p>Vediamo questo semplice esempio, nella riga 7 ho dichiarato una variabile; <br> la sintassi è: <b>" tipo
+                nome_variabile ; "</b> Che cos'è un tipo? è che tipo di valori quella variabile conterrà: <br>int -->
+            intero (1 , 6 , 7 , 14 ecc..)<br>float --> variabili con la virgola (14.958 , 8.1 ecc...)<br>bool -->
+            variabili con solo due valori (true o false) espressi anche come 0 e 1 <br>char --> variabili con una sola
+            lettera (a, b, C, d, E contrassengati dall'apotrofo ' ')<br>string --> Variabili che accentano frasi da più
+            lettere ("Hello", "ecc" contrassegnati delle doppie virgolette " ")</p>
+        <p>E cos'è un nome?
+            diamo un nome univoco per rivolgersi proprio a quella variabile; ovviamente esistono delle buone regole per
+            scegliere che tipo di nome dare:</p>
+        <p>1. Deve possibilemente descrivere il suo contenuto ("numero Sei" riga 8
+            contiene infatti il numero 6) <br>2. Deve <b>non</b> contenere spazi tra le lettere (scrivere <b
+                style="color: red;">"numero sei" è
+                uno sbaglio</b>
+            non che darebbe errore) <br>3. Se il nome contiene due parole la senconda deve iniziare con la lettera
+            maiuscola o avere in mezzo il trattino basso ( _ ) ("numeroSei" o "numero_sei") per questa regola evita di
+            dare la lettera maiuscola alla prima lettera. <br>4. In progetti con più persone le variabili tendono a
+            essere scritte in linguua inglese.</p>
+        <p>Nella fase di dichiarazione di una variabile è possibile già assegnare un valore, come nalla riga 10.</p>
+        <p>Con le variabili constanti l'uso cambia, esse accentano valori solo nella fase della dichiarazione:</p>
+        <div class="immagineCenter">
+            <img src="image/Program3.png" alt="Immagine in caricamento..." width="582" height="276">
+        </div>
+        <p>Come vedi le variabili constanti sono utitili per valori che non cambiano nel tempo, come il Pi greco un
+            valore fisso che non cambia; <br>La sintassi è: <b>" const tipo_variabile nome_variabile = (valore) ; "</b>
+        </p>
+        <p>Dare un valore dopo la dichiarazione è <b style="color: red;">uno sbaglio</b>.</p>
+    </div>
+    <div class="paragrafoQuattro">
+        <h2>Uso delle variabili in C++</h2>
+        <p>Ora che abbiamo capito come dichiarare e definire una variabile capiamo come usare la stessa variabile;
+            <br>Ora creremo uno dei primi programmi di questo corso: Creremo insieme un programma che somma due numeri
+            scelti dall'utente.
+        </p>
+        <div class="immagineCenter">
+            <img src="image/Program4.png" alt="Immagine in caricamento..." width="583" height="403">
+        </div>
+        <p>Analiziamo riga per riga: </p>
+        <p>Righe 7-9: Dichiaro le variabili necessarie per il programma con tipo intero e con nomi univoci<br>Righe
+            10-13:
+            Scrivo la domanda per gli addendi usando il <b>cout</b> e effitivamente chiedo con il <b>cin</b>; la
+            sintassi è: <b>" cin > > nome_variabile ; "</b><br>Riga 14: Uso un operatore che parleremo nella lezione
+            succesiva (<a href="3.html" style="color: blue; ">lezione succesiva</a>)<br>Riga 15: Scrivo il risultato con
+            il <b>cout</b>.</p>
+        <div class="immagineCenter">
+            <img src="image/runProgram2.png" alt="Immagine in caricamento..." width="740" height="156">
+        </div>
+        <p>Avvio l'esecuzione del programma e funziona do come dati 1 e 5 e il programma mi ha restituito 6 quindi il
+            programma funziona.</p>
+    </div>
+    <div class="paragrafoQuattro">
+        <h2>Tutti i tipi di variabili</h2>
+        <p>Questo paragrafo non è fondamentale per chi è alle prime armi ma per persone già un poco esperti</p>
+        <p>int – numeri interi compresi tra -2.147.483.648 e 2.147.483.647 (dipende anche dal compilatore) e occupano 4
+            byte (32 bit). <br>float – numeri in virgola mobile in singola precisione e occupano 4 byte (32
+            bit).<br>double – numeri in virgola mobile in doppia precisione e occupano 8 byte (64 bit). <br>char – un
+            carattere occupa 1 byte (8 bit).<br>bool – può assumere solo i valori vero (true) o falso (false).</p>
+    </div>
+</body>
+
+<style>
+    /*Stili per il corpo della pagina */
+    body {
+        margin-top: 0;
+        background-color: rgb(228, 228, 228);
+    }
+
+    /* Stili per la barra del titolo */
+    .mainBoxTitle {
+        margin-bottom: 2.5%;
+        display: flex;
+        height: 150px;
+    }
+
+    /* Stili per i contenitori "box" e "box2" */
+    .box,
+    .box2 {
+        display: block;
+        border: solid rgba(0, 0, 0, 0.6) 6px;
+        background-color: rgb(122, 1, 187);
+        box-shadow: 0px 10px rgba(0, 0, 0, 0.8);
+    }
+
+    /* Altri stili specifici per "box" */
+    .box {
+        border-right: none;
+        border-radius: 10% 0px 0px 10%;
+    }
+
+    /* Altri stili specifici per "box2" */
+    .box2 {
+        border-left: none;
+        border-radius: 0px 10% 10% 0px;
+    }
+
+    /* Stili per gli elementi all'interno di ".mainBoxTitle" */
+    .mainBoxTitle .box,
+    .mainBoxTitle .box2 {
+        height: 92%;
+        width: 12.5%;
+    }
+
+    /* Stili per il titolo centrale */
+    .title {
+        text-align: center;
+        height: 92%;
+        width: 75%;
+        border-top: solid rgba(0, 0, 0, 0.6) 6px;
+        border-bottom: solid rgba(0, 0, 0, 0.6) 6px;
+        background-color: rgb(122, 1, 187);
+        box-shadow: 0px 10px rgba(0, 0, 0, 0.80);
+    }
+
+    /* Stili per i link */
+    .link {
+        height: 100%;
+        width: 100%;
+        font-size: xxx-large;
+        display: block;
+        font-weight: bolder;
+    }
+
+    /* Stili per i link quando sono visitati */
+    a.link:-webkit-any-link {
+        color: whitesmoke;
+        text-decoration: none;
+    }
+
+    /* Stili per i link generici */
+    a:-webkit-any-link {
+        color: whitesmoke;
+        text-decoration: none;
+    }
+
+    /* Stili per i link nei contenitori "link" */
+    .link a {
+        display: block;
+        user-select: none;
+    }
+
+    /* Stili per la schermata di caricamento */
+    .loading-screen {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #FCFCFF;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 10;
+    }
+
+    /* Stili per l'immagine nella schermata di caricamento */
+    .loading-screen img {
+        max-width: 100%;
+        max-height: 80vh
+    }
+
+    /* Stili per il testo centrato */
+    .text-center {
+        display: flex !important;
+        justify-content: center;
+        text-align: center;
+        height: 100%;
+        flex-direction: column-reverse;
+    }
+
+    /* Stili per i paragrafi */
+    p {
+        font-size: x-large;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        color: rgb(44, 44, 44) !important;
+    }
+
+    h2 {
+        color: rgb(122, 1, 187);
+        text-align: center;
+        font-size: xx-large;
+    }
+
+    b {
+        color: rgb(122, 1, 187);
+    }
+
+    .immagineCenter {
+        text-align: center;
+    }
+
+    .barrafinale {
+        height: 88%;
+        width: 12.5%;
+    }
+
+    .textcenter {
+        text-align: center;
+    }
+</style>
+
+<script>
+    // Pagina dello script per la pagina di caricamento
+    <!-- Script JavaScript -->
+    window.addEventListener('load', function () {
+        const loadingScreen = document.querySelector('.loading-screen');
+        setTimeout(() => { loadingScreen.style.display = 'none'; }, 1000);
+    });
+</script>
+
+</html>
