@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Algoritmi notevoli</title>
+</head>
+<body style="font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif">
+    <h1 style="text-align: center;color: red">Algoritmi notevoli: Ordinamento e Ricerca</h1>
+    <h2 style="text-align: center;"><em>Ferreira Natan Luis Carlos 4E</em></h2>
+    <h2> Algoritmi notevoli </h2>
+    <p style="font-size: 20px"> Esistono delle operazioni che ricorrono frequentemente nella gestione di sistemi e in applicazioni di varia natura, come ad
+        esempio i problemi di ordinamento, ricerca e fusione di insiemi di elementi omogenei (ossia dello stesso tipo). Insiemi di
+        dati omogenei sono i vettori.<br>
+        Sono stati definiti in letteratura algoritmi, detti algoritmi notevoli, che rappresentano procedure
+        standard per la risoluzione di tali problemi ricorrenti:<br></p>
+    <ul style="font-size: 20px">
+        <li>Algoritmi di ordinamento - sort: elencare gli elementi di un insieme di dati omogenei, secondo una relazione d ordine di
+        tipo crescente o decrescente, in modo che ogni elemento sia minore o maggiore del successivo;</li>
+        <li>Algoritmi di ricerca - search: trovare all interno di un insieme di dati omogenei un elemento avente determinate
+        proprieta;</li>
+    </ul>  <br>
+
+    <h1 style="text-align: center;"> Algoritmi di Ordinamento </h1>
+
+    <h2 style="font-size: 25px"><em>Exchage Sort</em> </h2>
+    <p style="font-size: 20px">Detto anche Ordinamento per scambio tradizionale, consiste nel confrontare ogni elemento con tutti i suoi successivi e
+        nel caso in cui un elemento successivo sia minore/maggiore dell elemento corrente, questi vengono scambiati.<br> Prevede i seguenti passi:</p>
+    <ul style="font-size: 20px">
+        <li> Ogni elemento i, eccetto l ultimo, viene confrontato con tutti i successivi j</li>
+        <li>Se l elemento j &egrave minore dellelemento i (nel caso di ordinamento crescente) o maggiore (nel caso di ordinamento
+            decrescente), vengono scambiati;</li>
+        <li>Nel caso di scambio, i successivi confronti verranno fatti con il nuovo valore nella posizione di riferimento i.</li>
+    </ul>
+    <p style="font-size: 17px"><strong>PSEUDOCODICE</strong></p>
+    <img src="immagini/pseudocodice.jpg">
+    <p style="font-size: 17px"><strong>COMPLESSITA</strong></p>
+    <p style="font-size: 20px">La sua complessita non dipende dai dati di ingresso: qualunque sia la disposizione iniziale degli elementi da ordinare, se la
+        cardinalita dell insieme (dimensione dell array) &egrave N, il numero di operazioni (confronti) effettuate dall algoritmo per
+        ordinare la sequenza &egrave O(N2).</p>
+
+    <p><br></p>
+
+    <h2 style="font-size: 25px"><em>Selection Sort</em> </h2>
+    <p style="font-size: 20px">Conosciuto anche come algoritmo per minimi successivi, suddivide la sequenza in due sottosequenze: una (gia ordinata)
+        composta inizialmente da un solo elemento e l altra da ordinare. L algoritmo seleziona di volta in volta l elemento minore (piu piccolo) nella sottosequenza da ordinare e lo sposta in quella
+        ordinata.</p>
+    <p style="font-size: 17px"><strong>PSEUDOCODICE</strong></p>
+    <img src="immagini/pseudocodice selction sort.jpg">
+    <p style="font-size: 17px"><strong>COMPLESSITA</strong></p>
+    <p style="font-size: 20px">La sua complessita non dipende dai dati di ingresso: qualunque sia la disposizione iniziale degli elementi da ordinare, se la
+        cardinalita dell insieme (dimensione dell array) &egrave N, il numero di operazioni (confronti) effettuate dall algoritmo per
+        ordinare la sequenza &egrave O(N2).</p>
+
+    <p><br></p>
+
+    <h2 style="font-size: 25px"><em>Bubble Sort</em> </h2>
+    <p style="font-size: 20px">Algoritmo di ordinamento basato su confronti e su scambio a bolle, ossia ad ogni iterazione l elemento pi&ugrave grande risale in
+        alto:</p>
+    <ul style="font-size: 20px">
+        <li>alla prima iterazione il pi&ugrave grande risale in ultima posizione;</li>
+        <li>alla seconda iterazione il secondo pi&ugrave grande risale in penultima posizione;</li>
+        <li>e cos&igrave via.</li></ul>
+    <p style="font-size: 20px">Come gli algoritmi Exchange Sort e Selection Sort, si basa su confronti, ma mentre i primi due all i-esima iterazione
+        l i-esimo elemento viene confrontato con tutti i suoi successivi, nel Bubble sort ad ogni iterazione il confronto &egrave tra
+        coppie di elementi consecutivi.</p>
+    <div style="text-align: center;">
+        <img src="immagini/esempio bubble sort.jpg" style="display: block; margin: 0 auto;">
+    </div>
+
+    <p style="font-size: 20px">Prevede i seguenti passi:</p>
+    <ul style="font-size: 20px">
+        <li>Gli elementi da ordinare vengono confrontati a coppie: il primo con il secondo, il secondo con il terzo e cos&igrave via;</li>
+        <li>Ad ogni confronto, viene eventualmente effettuato lo scambio;</li>
+        <li>Arrivati in fondo, si ritorna al punto 1 finch&egrave l ordinamento non &egrave completo.</li>
+
+        </ul>
+    <p style="font-size: 17px"><strong>PSEUDOCODICE</strong></p>
+    <img src="immagini/pseudocodice bubble sort.jpg">
+    <p style="font-size: 17px"><strong>COMPLESSITA</strong></p>
+    <p style="font-size: 20px">In questa versione del Bubble sort non esiste un caso favorevole: a prescindere dalla configurazione degli elementi del
+        vettore, se N &egrave la sua dimensione, sono richiesti N-1 step (iterazioni del for esterno), e per ciascuno step vengono fatti confronti che danno come risultato O(N2).</p>
+    <p style="font-size: 17px"><strong>ESEMPIO</strong></p>
+    <p style="font-size: 20px">Clicca il seguente link per il vedere un video riassunto sul Bubble Sort: <a href="https://www.youtube.com/watch?v=18OO361--1E">Clicca qui</a></p>
+
+
+
+    <br>
+    <h2 style="font-size: 25px"><em>Bubble Sort con sentinella</em> </h2>
+    <p style="font-size: 20px">Per migliorare l efficienza dell algoritmo si introduce la possibilita di terminare l esecuzione non appena risulta evidente
+        che il vettore  ordinato.
+        Quello che si fa &egrave utilizzare una variabile sentinella, la variabile booleana scambio nel seguente modo: la variabile
+        scambio, inizializzata a false, quando viene effettuato uno scambio viene settata a true. Se al termine dell iterazione,
+        continua ad avere come valore false, vuol dire che non &egrave stato realizzato nessuno scambio e quindi che il vettore &egrave ordinato.
+        In questo caso l algoritmo pu&ograve terminare preventivamente.<br><br>
+        Il ciclo for esterno viene quindi sostituito con un ciclo while controllato dalla variabile scambio: finch&egrave scambio &egrave
+        uguale a true si continua a confrontare gli elementi a coppie adiacenti; quando non avvengono pi&ugrave scambi (variabile scambio
+        uguale a false) si esce dal ciclo.
+        Ad ogni iterazione del while la variabile scambio viene inizializzata a false e solo se c &egrave uno scambio viene settata a true.</p>
+    <p style="font-size: 17px"><strong>PSEUDOCODICE</strong></p>
+    <img src="immagini/pseudocodice sentinella.jpg">
+    <p style="font-size: 17px"><strong>COMPLESSITA</strong></p>
+    <p style="font-size: 20px">Nel caso migliore, ossia vettore gi&agrave ordinato, si entra una sola volta nel ciclo while e vengono effettuati N-1 confronti.
+        Essendo gi&agrave ordinato la variabile scambio sar&agrave false e quindi si uscir&agrave dal ciclo.
+        La complessit&agrave nel CASO MIGLIORE &egrave quindi un O(N).
+        Nel caso peggiore, ossia vettore completamente disordinato, il ciclo while sar&agrave eseguito N-1 volte equindi un O(N2).
+
+    <p><br></p>
+
+    <h2 style="font-size: 25px"><em>Bubble Sort con sentinella e riduzione delle iterazioni del for interno</em> </h2>
+    <p style="font-size: 20px">Dal momento che ad ogni iterazione l elemento massimo viene collocato in "alto" nella posizione corretta, non &egrave necessario
+        che vengano fatti confronti con esso. Per cui, il ciclo interno la prima volta che viene eseguito effettuer&agrave N-1 iterazioni (da
+        0 a N-2), la seconda volta ne effettuer&agrave N-2 (da 0 a N-3) e cos&igrave via.
+        Per implementare questa logica, si utilizzer&agrave una variabile intera stop come valore finale del contatore del for, che sar&agrave
+        inizializzata a N-2 e ad ogni iterazione del while sar&agrave decrementata di 1.</p>
+    <p style="font-size: 17px"><strong>PSEUDOCODICE</strong></p>
+    <img src="immagini/pseudo bubble con stop.jpg">
+    <p style="font-size: 17px"><strong>COMPLESSITA</strong></p>
+    <p style="font-size: 20px">Nel caso migliore, ossia vettore gi&agrave ordinato, si entra una sola volta nel ciclo while e vengono effettuati N-1 confronti.
+        Essendo gi&agrave ordinato la variabile scambio sar&agrave false e quindi si uscir&agrave dal ciclo.
+        La complessit&agrave nel CASO MIGLIORE &egrave quindi un O(N).
+        Nel caso peggiore, ossia vettore completamente disordinato, il ciclo while sar&agrave eseguito N-1 volte e ad ogni iterazione
+        il numero di confronti che si riduce di uno (grazie alla variabile STOP) rispetto al Bubble sort con la sola sentinella:
+        La complessit&agrave nel CASO PEGGIORE &egrave quindi un O(N2).
+
+    <p><br></p>
+
+    <h2 style="font-size: 25px"><em>Quick sort</em> </h2>
+    <p style="font-size: 20px">Algoritmo di ordinamento ricorsivo che sfrutta la tecnica divide et impera: suddivide il problema in sottoproblemi della
+        stessa natura via via pi&ugrave piccoli.
+        Prevede la scelta di un elemento detto PIVOT all interno della sequenza da ordinare, e confronta tutti gli elementi con
+        esso.
+        Alla fine del confronto, tutti gli elementi pi&ugrave piccoli del PIVOT saranno disposti prima di esso, mentre tutti gli
+        elementi pi&ugrave grandi dopo di esso. Questo nel caso di ordinamento crescente. Nel caso di ordinamento decrescente, la loro
+        disposizione sar&agrave inversa.</p>
+    <p style="font-size: 20px">Prevede quindi i seguenti passi:</p>
+    <ul style="font-size: 20px">
+        <li>scelta dell elemto PIVOT: di solito si sceglie l elemento centrale oppure il primo;</li>
+        <li>confronto tutti gli elementi con il PIVOT e disposizione alla sua sinistra degli pi&ugrave piccolo e alla sua destra degli elementi
+            pi&ugrave grandi;</li>
+        <li>si applicano ricorsivamente i punti 1 e 2 alla sottosequenza di sinistra e alla sottosequenza di destra.</li>
+    </ul>
+    <p style="font-size: 17px"><strong>PSEUDOCODICE</strong></p>
+    <img src="immagini/pseudocodice quick sort.jpg">
+
+    <p style="font-size: 17px"><strong>COMPLESSITA</strong></p>
+    <p style="font-size: 20px">Nel caso peggiore la complessit&agrave &egrave O(N2), ma a differenza degli altri algoritmi la scelta del pivot pu&ograve influenzare il costo.
+        Il caso migliore &egrave uguale al caso medio quando il pivot &egrave pi&ugrave o meno centrale. In tal caso la complessit&agrave &egrave O(nlog2n).
+    <br><br>
+    <h1 style="text-align: center;"> Algoritmi di Ricerca </h1>
+    <p style="font-size: 20px">Ricercare un elemento in un insieme di dati &egrave un problema comune in molti aspetti delle attivit&agrave umane, si pensi alla ricerca di una parola in un vocabolario, o di un nominativo in un elenco telefonico. Molto dipende dalla struttura dati utilizzata per contenere gli elementi su cui si vuole condurre la ricerca: le modalit&agrave di accesso consentite su questa potranno influenzare in maniera determinante il tipo e la velocit&agrave degli algoritmi di ricerca utilizzabili. <br><br>Anche intuitivamente si pu&ograve affermare che la ricerca su una struttura ad accesso diretto sar&agrave in genere pi&ugrave performante rispetto a una ricerca su una struttura ad accesso sequenziale. Nei prossimi paragrafi analizzeremo alcune tecniche di ricerca applicabili ad array monodimensionali (quindi strutture ad accesso diretto) e, nello specifico, a vettori di numeri interi, senza per questo perdere di generalit&egrave nell esposizione degli algoritmi che saranno presentati.
+    <br><h2 style="font-size: 25px"><em>Ricerca Completa</em> </h2>
+    <p style="font-size: 20px">Se il nostro vettore non &egrave ordinato, l unica possibilit&agrave di verificare se un valore sia presente o meno in esso &egrave quella di applicare un algoritmo di ricerca completa. Si scandiscono sequenzialmente uno dopo l altro gli elementi del vettore fino a quando non si incontra un valore uguale a quello ricercato (successo), oppure non si raggiunge la fine del vettore (insuccesso).</p>
+    <p style="font-size: 20px">Supponiamo di avere il vettore in maniera crescenta, l algoritmo descritto &egrave implementato nella seguente funzione C++:</p>
+    <img src="immagini/ricerca completa.jpg">
+    <br><h2 style="font-size: 25px"><em>Ricerca Binaria (o dicotomica)</em> </h2>
+    <p style="font-size: 20px">Se dovessimo cercare una parola su un dizionario, sapendo che questo &egrave ordinato alfabeticamente, si potrebbe pensare di iniziare la ricerca non dal primo elemento, ma da quello centrale, cio&egrave a met&agrave del dizionario. A questo punto il valore ricercato viene confrontato con il valore dell elemento preso in esame e se sono uguali la ricerca termina con successo, altrimenti si sceglie la met&agrave del dizionario su cui continuare la ricerca (la prima met&agrave se la parola cercata &egrave minore di quella centrale, la seconda met&agrave altrimenti) e si riapplica il procedimento descritto. Quando non &egrave pi&ugrave possibile determinare un intervallo di ricerca, l algoritmo termina con insuccesso perch&egrave elemento cercato non &egrave presente.<br></p>
+    <p style="font-size: 20px">Si calcola la posizione dell elemento centrale m del vettore partizionando , rimanenti elementi in due sottoinsiemi ordinati A (con elementi tutti minori di m) e B (con elementi tutti maggiori di mi). Se l elemento cercato k &egrave uguale a m, l algoritmo termina con successo: in caso contrario, se k < m si riapplica il procedimento al sottoinsieme A, altrimenti al sottoinsieme B. Se non &egrave possibile determinare un intervallo di ricerca L algoritmo termina con insuccesso, senza che k sia stato trovato.
+    <p style="font-size: 20px">Il procedimento non &egrave difficile da implementare in C++, come mostrato di seguito:</p>
+    <img src="immagini/ricerca bin.jpg">
+    <br>
+    <p style="font-size: 25px; text-align: center"><a href="http://localhost:63342/Algoritmi%20notevoli/Complessit%C3%A0%20Computazionale.html?_ijt=q2fk371u4hk34qlgf1b6iiven4&_ij_reload=RELOAD_ON_SAVE">Pagina successiva ---></a></p>
+
+
+
+</body>
+</html>

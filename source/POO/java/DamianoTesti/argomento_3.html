@@ -1,0 +1,54 @@
+
+    <!--argomento3-->
+    <!--Rappresentazione degli oggetti (area Stack e area Heap)-->
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <title>rappresentazione degli oggetti in area stack</title>
+        <link rel="icon" href="3d.png" type="image/x-icon">
+        <link rel="stylesheet" type="text/css" href="styles.css">
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+    </head>
+    <body>
+        <h1>
+        Rappresentazione degli oggetti (area Stack e area Heap)<br>
+        </h1>
+        <p class=".paragrafo_locali ">Nella programmazione, gli oggetti possono essere rappresentati in diverse aree di memoria, principalmente nell'area dello stack e nell'area dell'heap. Queste due aree di memoria servono a scopi diversi e hanno caratteristiche specifiche:<br>
+            Area dello Stack:<br>
+            Scopo: L'area dello stack è utilizzata principalmente per la gestione delle chiamate di funzione e delle variabili locali. Ogni volta che si chiama una funzione, viene creato un nuovo frame nello stack per archiviare i parametri della funzione, le variabili locali e l'indirizzo di ritorno. Quando la funzione termina, il suo frame nello stack viene rimosso.<br>
+            Rappresentazione degli oggetti: Gli oggetti rappresentati nello stack sono spesso variabili locali, strutture di controllo e dati temporanei. Gli oggetti nello stack hanno una durata di vita limitata alla durata del loro frame nello stack.<br>
+            Velocità di Accesso: L'accesso agli oggetti nello stack è generalmente più veloce rispetto all'area dell'heap poiché l'allocazione e la deallocazione dello stack sono gestite in modo efficiente a livello di hardware.<br>
+            Limiti di Memoria: Lo stack ha spesso dimensioni limitate e fisse, quindi la quantità di memoria disponibile per gli oggetti nello stack è limitata.<br>
+            Area dell'Heap:<br>
+            Scopo: L'area dell'heap è utilizzata per la gestione della memoria dinamica. Gli oggetti nell'heap hanno una durata di vita più lunga e persistono oltre la chiamata di funzione che li ha creati. L'allocazione e la deallocazione dell'heap devono essere gestite manualmente in molti linguaggi di programmazione (come C e C++) o automaticamente dal garbage collector in linguaggi come Java o C#.<br>
+            Rappresentazione degli oggetti: Gli oggetti nell'heap sono spesso oggetti più complessi, strutture dati dinamiche e oggetti che devono persistere oltre la vita di una funzione.<br>
+            Velocità di Accesso: L'accesso agli oggetti nell'heap può essere più lento rispetto allo stack a causa della gestione più complessa della memoria dinamica.<br>
+            Ampia Memoria: L'heap può essere significativamente più grande dello stack ed è adatto per oggetti di grandi dimensioni o oggetti con durata di vita prolungata.<br>
+            La scelta tra l'allocazione di oggetti nello stack o nell'heap dipende dalla durata di vita dell'oggetto, dalle dimensioni dell'oggetto e dalle esigenze di gestione della memoria del tuo programma. In molti linguaggi di programmazione, questa decisione è presa implicitamente dal linguaggio stesso o dal programmatore attraverso la dichiarazione di variabili e l'uso di funzioni di allocazione dinamica.<br>
+        </p>
+
+        <nav>
+            <ul>
+                <li><a href="home.html">
+                    <img src="house.png" alt="icona"width="40" height="35">
+                </a></li>
+                <br><br>
+                <li><a href="argomento_1.html">Rappresentazione dei tipi primitivi (area Stack)
+                    <img src="stone.png" alt="icona"width="20" height="15">
+                </a></li>
+                <br><br>
+                <li><a href="argomento_2.html">Identificativo di un oggetto come riferimento all'oggetto
+                    <img src="compass.png" alt="icona"width="20" height="15">
+                </a></li>
+                <br><br>
+                <li><a href="argomento_3.html">Rappresentazione degli oggetti (area Stack e area Heap)
+                    <img src="3d.png" alt="icona"width="20" height="15">
+                </a></li>
+                <br><br>
+            </ul>
+        </nav>
+    
+    </body>

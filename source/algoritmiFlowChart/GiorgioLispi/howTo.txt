@@ -1,0 +1,5 @@
+Algoritmi e Flow-Chart - Punti da trattare:
+
+1. dal problema al algortimo
+2. algortimi ed esecutori
+3. rappresentazione di un algortimo: Diagrammi a blocchi (DAB) e Notazione lineare strutturata (NLS)
