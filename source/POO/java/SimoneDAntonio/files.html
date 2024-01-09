@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>I file in Java</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body style="background-color: whitesmoke">
+    <div class="header">
+        <a href="index.html">Home</a>
+        <a href="stream I-O.html">Stream di Input e Output</a>
+        <a href="scanner.html">Classe Scanner</a>
+    </div>
+
+    <h1>I File in Java</h1>
+
+    <p>Java mette a disposizione dell'utente che lo utilizza diverse classi e metodi che permetto di creare, scrivere e leggere file. In questo modo, per esempio, è possibile salvare degli eventuali output da console direttamente in un file di testo</p>
+
+    <h2>Creare un file in Java</h2>
+
+    <p>Per creare un file in Java è necessario utilizzare la classe <b>File</b> che si trova nel package <b>java.io</b>. Per poterla utilizzare è necessario importare il package java.io.</p>
+
+    <pre>
+        import java.io.File;
+    </pre>
+
+    <p>Per creare un file è necessario utilizzare il costruttore della classe File che prende in ingresso il nome del file da creare.</p>
+
+    <p>Un esempio di codice per creare un file è il seguente: </p>
+
+    <pre>
+        import java.io.File;
+
+        public class Main {
+            public static void main(String[] args) {
+                File doc = new File("newFile.txt");
+            }
+        }
+    </pre>
+
+    <h2>Scrivere su un file in Java</h2>
+
+    <p>Per scrivere su un file in Java è necessario utilizzare la classe <b>PrintWriter</b> che si trova nel package <b>java.io</b>. Per poterla utilizzare è necessario importare il package java.io.</p>
+
+    <pre>
+        import java.io.PrintWriter;
+    </pre>
+
+    <p>Per la scrittura su un file si deve utilizzare il costruttore della classe PrintWriter che prende in ingresso il nome del file su cui scrivere.</p>
+
+    <pre>
+        PrintWriter writer = new PrintWriter(doc);
+    </pre>
+
+    <p>Per scrivere su un file è necessario utilizzare il metodo <b>print()</b> o <b>println()</b> della classe PrintWriter che prende in ingresso il testo da inserire all'interno del file</p>
+
+    <pre>
+        writer.print("Ciao");
+        writer.println("Mondo");
+    </pre>
+
+    <p>Al termine della scrittura sul file, è fondamentale utilizzare il metodo <b>close()</b> della classe PrintWriter, in modo tale da chiudere il buffer di input.</p>
+
+    <pre>
+        writer.close();
+    </pre>
+
+    <p>È possibile che, durante la scrittura su file, si verifichi un' <b>eccezione</b>: infatti può succedere che non venga trovato il file in cui effettuare la scrittura dei dati.</p>
+
+    <p>Per questo motivo è necessario utilizzare il costrutto <b>try-catch</b> per gestire l'eccezione.</p>
+
+    <p>Un esempio di codice completo per effettuare la scrittura su un file è il seguente:</p>
+
+    <pre>
+        import java.io.File;
+        import java.io.PrintWriter;
+        import java.io.FileNotFoundException;
+
+        public class Main {
+            public static void main(String[] args) {
+                PrintWriter print = null;
+
+                try {
+                    print = new PrintWriter(newFile.txt);
+                    print.println(testo);
+                    print.close();
+                } catch (FileNotFoundException e) {
+                    System.err.println("File non valido");
+                } finally {
+                    if (null!=print) {
+                        print.close();
+                    }
+                }
+            }
+        }
+    </pre>
+
+    <p>In questo modo è possibile gestire l'eccezione che potrebbe verificarsi.</p>
+
+    <h2>Leggere un file in Java</h2>
+
+    <p>Per leggere un file in Java è necessario utilizzare la classe <b>Scanner</b> che si trova nel package <b>java.util</b>. Per poterla utilizzare è necessario importare il package java.util.</p>
+
+    <pre>
+        import java.util.Scanner;
+    </pre>
+
+    <p>Per la lettura di un file si deve utilizzare il costruttore della classe Scanner che prende in ingresso il nome del file da leggere.</p>
+
+    <pre>
+        Scanner reader = new Scanner(newFile.txt);
+    </pre>
+
+    <p>Per leggere il contenuto del file è necessario utilizzare il metodo <b>nextLine()</b> della classe Scanner che prende in ingresso il testo da inserire all'interno del file</p>
+
+    <pre>
+        String testo = reader.nextLine();
+    </pre>
+
+    <p>Al termine della lettura del file, è fondamentale utilizzare il metodo <b>close()</b> della classe Scanner, in modo tale da chiudere il buffer di output.</p>
+
+    <pre>
+        reader.close();
+    </pre>
+
+    <p>È possibile che, durante la lettura del file, si verifichi l'eccezione precedente: per gestirla si può utilizzare il metodo visto in precedenza</p>
+
+    <p>Questo è un esempio di codice:</p>
+
+    <pre>
+    try {
+        System.out.println("Contenuto del file: ");
+        Scanner s = new Scanner(newFile.txt);
+        while(s.hasNextLine()) {
+            System.out.println(s.nextLine());
+        }
+        s.close();
+        System.out.println("\n\nIl file si può trovare nella cartella del progetto");
+    } catch (FileNotFoundException e) {
+        System.out.println("File non valido");
+    }
+    </pre>
+
+    <p>Questo codice presenta una caratteristica in più rispetto a quanto detto in precedenza: utilizzando un 'while', permette di continuare a verificare se nel file sono presenti righe scritte e, in caso positivo, le stampa in console. Nel momento in cui la condizione dovesse verificarsi falsa (ossia che nel file non sono più presenti righe scritte) la lettura dalla console terminerebbe.</p>
+
+    <h2>Come utilizzare la classe 'File' in modo efficiente</h2>
+
+    <p>Al fine di utilizzare al meglio la creazione, scrittura e lettura di file è possibile creare una <b>classe di utilità</b>: si può impostare in modo da avere dei metodi fissi da usare. Per esempio: </p>
+
+    <pre>
+    package utils;
+
+    import java.io.File;
+    import java.io.FileNotFoundException;
+    import java.io.PrintWriter;
+    import java.util.Scanner;
+
+    public class FileUtils {
+        public static File creaFile(String nomeFile) {
+            System.out.println("Creazione del file in corso...\n");
+            File doc = new File(nomeFile);
+            return doc;
+        }
+    }
+    </pre>
+
+    <p>In questo modo è possibile creare un file in modo più efficiente, senza dover sempre riscrivere il codice per la creazione di un file.</p>
+
+    <p>Per esempio, in un file Java, includendo la classe di utilità, sarà possibile creare un file semplicemente scrivendo:</p>
+
+    <pre>
+    import utils.FileUtils;
+
+    import java.io.File;
+
+    public class Test {
+        public static void main (String[] args) {
+            File doc = FileUtils.creaFile("newFile.txt");
+        }
+    }   
+    </pre>
+
+    <p>All'interno della stessa classe di utilità è possibile anche creare un metodo per scrivere su un file, in questo modo:</p>
+
+    <pre>
+    package utils;
+
+    import java.io.File;
+    import java.io.FileNotFoundException;
+    import java.io.PrintWriter;
+    import java.util.Scanner;
+
+    public class FileUtils {
+        public static void scriviFile(File f, String testo) {
+            PrintWriter print = null;
+    
+            try {
+                print = new PrintWriter(f);
+                System.out.println("Scrittura sul file in corso...\n");
+                print.println(testo);
+                print.close();
+            } catch (FileNotFoundException e) {
+                System.err.println("File non valido");
+            } finally {
+                if (null!=print) {
+                    print.close();
+                }
+            }
+        }
+    }
+    </pre>
+
+    <p>In questo modo, in un ipotetico file di Java si potrà scrivere su file con questo semplice codice:</p>
+
+    <pre>
+    import utils.FileUtils;
+
+    import java.io.File;
+
+    public class Test {
+        public static void main (String[] args) {
+            File doc = FileUtils.creaFile("newFile.txt");
+        }
+    }
+    </pre>
+
+    <p>Per leggere un file, invece, è possibile creare un metodo all'interno della classe di utilità in questo modo:</p>
+
+    <pre>
+    package utils;
+
+    import java.io.File;
+    import java.io.FileNotFoundException;
+    import java.io.PrintWriter;
+    import java.util.Scanner;
+
+    public class FileUtils {
+        public static void leggiFile(File f) {
+            try {
+                System.out.println("Contenuto del file: ");
+                Scanner s = new Scanner(f);
+                while(s.hasNextLine()) {
+                    System.out.println(s.nextLine());
+                }
+                s.close();
+                System.out.println("\n\nIl file si può trovare nella cartella del progetto");
+            } catch (FileNotFoundException e) {
+                System.out.println("File non valido");
+            }
+        }
+    }
+    </pre>
+
+    <p>In questo modo, in un ipotetico file di Java si potrà leggere un file con questo codice:</p>
+
+    <pre>
+    import utils.FileUtils;
+
+    import java.io.File;
+
+    public class Test {
+        public static void main (String[] args) {
+            FileUtils.leggiFile(ilMioDoc);
+        }
+    }
+    </pre>
+
+    <h2 style="text-align: center;">Adesso vediamo <a href="spiegFile.html">come funziona la gestione dei file in Java</a></h2>
+
+</body>
+</html>

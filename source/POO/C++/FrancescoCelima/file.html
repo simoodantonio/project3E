@@ -1,18 +1,69 @@
-<!DOCTYPE html>
+<<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Documets</title>
 </head>
 <body>
-    <p>devi fare:</p>
-    <ul>
-        <li>Definizione di una classe</li>
-        <li>Sezione pubblica e privata</li>
-        <li>Metodi costruttori e metodi accessori (getter/setter)</li>
-        <li>Instanziare un oggetto</li>
-    </ul>
+<hgroup>
+    <h1>
+        <strong>
+            Le Classi
+        </strong>
+    </h1>
+</hgroup>
+<p>
+    Una classe &egrave; la descrizione astratta di un tipo di dato e descrive una famiglia di oggetti con caratteristiche e comportamenti simili(stessi attributi,stesse operazioni).
+    -Nei linguaggi di programmazione, classe viene dichiarata con la parola class, e al suo interno possiamo specificare il tipo di visibilità di dati:
+
+</p>
+
+<p>
+
+    -public:permette l’utilizzo di variabili e metodi dall’esterno;
+    -private:nasconde metodi e codice che risulteranno inutilizzabili;
+    -protected:dati e codici nascosti ma visibili da chi li eredita.
+
+    esempio in Java:
+    public class Rettangolo{
+    private int base;
+    private int altezza;
+    //metodi vari
+    public int calcolaPerimetro(){
+    return 2*(base + altezza);
+    }
+    public int calcolaArea(){
+    return base * altezza;
+
+
+</p>
+
+<p>
+
+    I costruttori inizializzano subito un oggetto al momento della creazione, esso &egrave; un metodo particolare che si distingue dagli  altri per 3 elementi:
+    -ha lo stesso nome della classe;
+    -non ha tipo di ritorno;
+    -ha visibilità pubblica;
+    I metodi get/set, sono importanti per un programma in java:
+    -Il metodo get, restituisce il valore dell’attributo.
+    -il metodo set, ha lo scopo di impostare un nuovo valore all’attributo.
+
+    esempio in c++:
+    double getBase(){
+    return base;
+    }
+    void setBase(double valore){
+    base = valore;
+    }
+
+    double getAltezza(){
+    return altezza;
+    }
+    void setAltezza(double valore){
+    altezza = valore;
+    }
+
+</p>
+
 </body>
 </html>

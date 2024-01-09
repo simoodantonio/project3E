@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>area stack tipi primitivi</title>
+    <link rel="icon" href="stone.png" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+<body>
+<!--argomento1-->
+    <!--Rappresentazione dei tipi primitivi (area Stack)-->
+    <h1>Rappresentazione dei tipi primitivi (area Stack)</h1>
+<p>l'area dello stack è una parte della memoria utilizzata per la gestione delle chiamate di funzione e delle variabili locali. I tipi primitivi come interi, numeri in virgola mobile, booleani e puntatori vengono solitamente memorizzati nell'area dello stack in base alla loro dimensione.
+    di seguito una piccola spiegazione su ogni tipo primitivo e che utilità/funzione hanno all'interno della programmazione
+</p>
+
+
+
+
+
+<h2 style="font-size: 32px">Interi</h2><p>Nella programmazione, gli "interi" sono un tipo di dato utilizzato per rappresentare numeri interi, ovvero numeri senza parte frazionaria o decimale. Gli interi possono essere positivi, negativi o zero e possono variare in dimensione a seconda del linguaggio di programmazione utilizzato.
+    <br>
+    Tipi di Dati Intero: Nella maggior parte dei linguaggi di programmazione, ci sono diversi tipi di dati intero che possono variare per dimensione e range. I tipi di dati int possono includere int, long, short, byte e altri, a seconda delle specifiche del linguaggio. Ogni tipo di dato ha una dimensione e un range di valori supportati diversi.<br>
+    Rappresentazione: Gli interi sono rappresentati utilizzando bit o byte nella memoria del computer. La dimensione esatta di un intero dipende dal tipo di dati e dall'architettura del computer, ma comunemente sono rappresentati come numeri binari.<br>
+    Operazioni Matematiche: Gli interi sono comunemente utilizzati per eseguire operazioni matematiche, come addizione, sottrazione, moltiplicazione e divisione. Poiché gli interi non hanno parti decimali, queste operazioni restituiscono risultati interi.<br>
+    Limiti: Ogni tipo di dati int ha limiti superiori e inferiori che definiscono il range di valori che può rappresentare. Ad esempio, un int potrebbe avere un range di -2,147,483,648 a 2,147,483,647, mentre un byte potrebbe avere un range di -128 a 127.<br>
+    Utilizzo: Gli interi sono ampiamente utilizzati nella programmazione per rappresentare numeri interi in una varietà di contesti, come conteggi, indici di array, rappresentazione di date e altro ancora. Questi interi possono essere memorizzati direttamente nell'area dello stack.</p>
+
+
+
+    <h3 style="font-size: 32px">Booleani</h3><p>Nella programmazione, i "booleani" sono un tipo di dato utilizzato per rappresentare solo due valori: vero (true) o falso (false). Questo tipo di dato è essenziale per il controllo del flusso di un programma, l'esecuzione condizionale delle istruzioni e la valutazione delle espressioni logiche.<br>
+    Ecco alcune caratteristiche chiave dei booleani nella programmazione:<br>
+    Valori: I booleani possono assumere solo due valori: vero (true) o falso (false). Questi valori rappresentano il risultato di una valutazione logica o di una condizione.<br>
+    Operazioni Logiche: I booleani vengono utilizzati principalmente in operazioni logiche come l'AND, l'OR e il NOT. Queste operazioni consentono di combinare o negare condizioni per prendere decisioni basate su risultati booleani.<br>
+    Controllo del Flusso: I booleani sono fondamentali per il controllo del flusso di un programma. Gli statement condizionali, come gli "if", i "while", i "for" e gli "switch", utilizzano valori booleani per determinare quale percorso di esecuzione seguire.<br>
+    Comparazioni: I booleani spesso risultano da operazioni di comparazione tra valori. Ad esempio, un'istruzione come "5 > 3" restituirà il valore booleano "true", mentre "2 == 7" restituirà "false".<br>
+    Variabili Booleane: Le variabili booleane sono variabili che possono contenere solo valori booleani. Sono utilizzate per conservare informazioni su uno stato o una condizione nel programma.</p>
+    <img src="bool.PNG" width="500" height="360">
+
+
+
+    <h4 style="font-size: 32px">Puntatori</h4><p>Un puntatore è una variabile speciale che contiene l'indirizzo di memoria di un'altra variabile o oggetto. Questo consente ai programmatori di manipolare direttamente la memoria del computer e accedere ai dati in modi avanzati.<br>
+    Ecco alcuni punti chiave sui puntatori nella programmazione:<br>
+    Dichiarazione dei Puntatori: Per dichiarare un puntatore, si utilizza il tipo di dati seguito dall'asterisco (*). Ad esempio, int* p dichiara un puntatore a un intero. Questo significa che p conterrà l'indirizzo di memoria di una variabile di tipo intero.<br>
+    Operazioni con i Puntatori: È possibile effettuare diverse operazioni con i puntatori, tra cui:<br>
+    Assegnare a un puntatore l'indirizzo di memoria di una variabile.<br>
+    Accedere al valore di una variabile puntata da un puntatore utilizzando l'operatore di dereferenziazione (*).<br>
+    Modificare il valore di una variabile puntata da un puntatore.<br>
+    Indirizzi di Memoria: Gli indirizzi di memoria sono numeri che rappresentano la posizione fisica della memoria del computer in cui è archiviato un dato. I puntatori contengono questi indirizzi e consentono di accedere direttamente ai dati in quella posizione di memoria.<br>
+    Uso Comune: I puntatori sono utilizzati per vari scopi, tra cui l'allocazione dinamica di memoria (come in C e C++), il passaggio di dati per riferimento, la manipolazione di strutture dati complesse e l'ottimizzazione delle prestazioni del codice.</p>
+    <img src="puntatore.PNG" width="500" height="360">
+
+
+    <h5 style="font-size: 32px">Caratteri</h5><p>I caratteri nei linguaggi di programmazione sono i componenti di base utilizzati per scrivere codice. I caratteri rappresentano lettere, numeri, simboli e altri segni che vengono utilizzati per definire istruzioni, variabili, costanti e altri elementi nel codice di programmazione. Ecco alcune informazioni chiave sui caratteri nei linguaggi di programmazione:<br>
+    Lettere e Numeri: Nei linguaggi di programmazione, puoi utilizzare lettere (alfabeto) e numeri per creare identificatori di variabili, nomi di funzioni, classi, e altro ancora. Ad esempio, variabile1 è un identificatore che utilizza lettere e numeri.<br>
+    Simboli Speciali: I linguaggi di programmazione spesso utilizzano simboli speciali come operatori matematici (+, -, *, /), operatori di confronto (==, !=, <,> ), parentesi (,), parentesi graffe ({, }), virgole (,), punti e virgola (;), e molti altri. Questi simboli hanno significati specifici nel contesto del linguaggio di programmazione e vengono utilizzati per definire l'alogritmo e il comportamento del programma.<br>
+    Caratteri di Escape: Nei linguaggi di programmazione, puoi anche incontrare caratteri di escape, che consentono di inserire caratteri speciali o rappresentazioni speciali all'interno di una stringa. Ad esempio, \n rappresenta una nuova riga.<br>
+    Codifica dei Caratteri: La codifica dei caratteri è il metodo con cui i caratteri sono rappresentati sotto il cofice. Alcuni linguaggi di programmazione supportano diverse codifiche dei caratteri, come UTF-8, UTF-16, ASCII, ecc., che determinano come i caratteri speciali e i caratteri non latini sono gestiti all'interno del codice.<br>
+    Commenti: Nei linguaggi di programmazione, i commenti sono utilizzati per aggiungere note esplicative al codice. I commenti sono costituiti da testo e spesso iniziano con un carattere speciale o una sequenza di caratteri specifica che indica che il testo successivo è un commento e non deve essere interpretato come codice eseguibile.</p>
+
+
+
+    <h6 style="font-size: 32px">Variabili Locali</h6><p>Le variabili locali sono variabili dichiarate all'interno di una funzione o di un blocco di codice specifico in un programma. Queste variabili esistono solo all'interno di quel contesto locale e non sono accessibili o visibili da altre parti del programma al di fuori di quel blocco di codice. Le variabili locali sono importanti per mantenere la modularità e l'incapsulamento del codice, poiché limitano la visibilità e la manipolazione delle variabili solo al loro contesto di dichiarazione.<br>
+    Ecco alcune caratteristiche delle variabili locali:<br>
+    Ambito Limitato: Una variabile locale è accessibile solo all'interno della funzione o del blocco di codice in cui è stata dichiarata. Al di fuori di questo contesto, la variabile non è definita e non può essere utilizzata.<br>
+    Incapsulamento: Le variabili locali contribuiscono all'incapsulamento, che è un principio di progettazione del software che mira a nascondere i dettagli di implementazione e a proteggere le variabili da modifiche indesiderate.<br>
+    Durata di Vita Limitata: La durata di vita di una variabile locale è limitata alla durata dell'esecuzione del blocco di codice in cui è dichiarata. Quando il blocco di codice termina l'esecuzione, la variabile locale esce dallo scope e la sua memoria viene solitamente liberata.<br>
+    Riutilizzo del Nome: È possibile utilizzare lo stesso nome per variabili locali all'interno di funzioni diverse o blocchi di codice separati senza causare conflitti, poiché ognuna esiste solo nel suo proprio contesto.</p>
+    <img src="esempio_variabili_locali.PNG" width="500" height="400">
+    
+
+    <nav>
+        <ul>
+            <li><a href="home.html"> 
+                <img src="house.png" alt="icona"width="40" height="35">
+            </a></li>
+            <br><br>
+            <li><a href="argomento_1.html">Rappresentazione dei tipi primitivi (area Stack)
+                <img src="stone.png" alt="icona"width="20" height="15">
+            </a></li>
+            <br><br>
+            <li><a href="argomento_2.html">Identificativo di un oggetto come riferimento all'oggetto
+                <img src="compass.png" alt="icona"width="20" height="15">
+            </a></li>
+            <br><br>
+            <li><a href="argomento_3.html">Rappresentazione degli oggetti (area Stack e area Heap)
+                <img src="3d.png" alt="icona"width="20" height="15">
+            </a></li>
+            <br><br>
+        </ul>
+    </nav>
+</body>

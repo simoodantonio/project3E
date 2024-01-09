@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel = "stylesheet" href = "./style.css">
+    <title>La classe Scanner</title>
+</head>
+<body style="background-color: whitesmoke;">
+    <div class="header">
+        <a href="index.html">Home</a>
+        <a href="stream I-O.html">Stream di Input e Output</a>
+        <a href="files.html">I File in Java</a>
+    </div>
+
+    <h1>La classe Scanner</h1>
+
+    <p>La classe Scanner è una classe che permette di leggere i dati di input da un flusso di byte (come la tastiera) e di convertirli in tipi di dati Java.</p>
+
+    <p>La classe Scanner è definita nel package java.util e per poterla utilizzare è necessario importare il package java.util.</p>
+
+    <pre>
+    import java.util.Scanner;
+    </pre>
+
+    <p>Per utilizzare la classe Scanner è necessario passare mediante una variabile di tipo <b>Scanner</b> che sfrutta la libreria <b>System.in</b>. Infatti la classe Scanner prevede in ingresso l'oggetto di cui fare la scansione. </p>
+    <pre>
+    Scanner input = new Scanner(System.in);
+    </pre>
+
+    <p>La classe Scanner contiene al suo interno numerosi metodi per ricevere dei dati da input, ognuno diverso per ogni tipo di dato.</p>
+
+    <h3>Funzione 'next();'</h3>
+    <div>       
+        <p>Questo metodo prende in considerazione solo il primo <span class="pop">token</span> inviato in input</p>
+        <p style="font-size: 13px; color: red;">!! Un token è la parola subito prima del <b>delimitatore di default</b>, in questo caso lo spazio</p>
+    </div>
+
+    <pre>
+    import java.util.Scanner;
+
+    public class Main {
+        public static void main(String[] args) {
+            Scanner scanner = new Scanner(System.in);
+            System.out.println("Inserisci il tuo nome: ");
+            String nome = scanner.next();
+            System.out.println("Hai scritto '" + nome + "'");
+        }
+    }
+    </pre>
+
+    <p>In questo caso, inserendo un nome da tastiera e trasmettendolo in flussi di byte, verrà presa in considerazione solo la prima parola inviata, perciò inserendo più di una parola verrà inviata solo la prima.</p>
+
+    <img style="width: 15%; border: 2px solid black" src="./assets/Screenshot 2023-09-11 alle 22.22.31.png" alt="">
+
+    <h3>Funzione 'nextLine();'</h3>
+    <p>Questo metodo prende tutta la linea digitata prima di premere il tasto di invio</p>
+
+    <pre>
+    import java.util.Scanner;
+
+    public class Main {
+        public static void main(String[] args) {
+            Scanner scanner = new Scanner(System.in);
+            System.out.println("Inserisci il tuo nome e il tuo cognome: ");
+            String nome = scanner.nextLine();
+            System.out.println("Hai scritto '" + nome + "'");
+        }
+    }
+    </pre>
+
+    <img style="width: 20%; border: 2px solid black" src="./assets/Screenshot 2023-09-11 alle 22.34.23.png" alt="">
+
+    <h3>Funzione 'nextInt();'</h3>
+    <p>Questo metodo prende in considerazione solo il primo numero inviato in input</p>
+
+    <pre>
+    import java.util.Scanner;
+
+    public class Main {
+        public static void main(String[] args) {
+            Scanner scanner = new Scanner(System.in);
+            System.out.println("Inserisci un numero: ");
+            Integer num = scanner.nextInt();
+            System.out.println("Hai scritto '" + num + "'");
+        }
+    }
+    </pre>
+
+    <img style="width: 15%; border: 2px solid black" src="./assets/Screenshot 2023-09-11 alle 22.46.19.png" alt="">
+    <p>Seguendo lo stesso principio della funzione 'next();', si prende in considerazione solo il primo numero prima del <b>delimitatore di default</b></p>
+
+    <h3>Funzione 'useDelimiter();'</h3>
+    <p>Questo metodo permette di cambiare il delimitatore di default, in questo caso lo spazio, con un altro delimitatore a scelta</p>
+
+    <pre>
+    import java.util.Scanner;
+
+    public class Main {
+        public static void main(String[] args) {
+            Scanner scanner = new Scanner(System.in);
+            scanner.useDelimiter(",");
+            System.out.println("Inserisci il tuo nome e il tuo cognome: ");
+            String nome = scanner.next();
+            System.out.println("Hai scritto '" + nome + "'");
+        }
+    }
+    </pre>
+
+    <img style="width: 20%; border: 2px solid black" src="./assets/Screenshot 2023-09-11 alle 23.03.29.png" alt="">
+
+    <p>Utilizzando la classe Scanner, ci si potrebbe imbattere in <b>un'Eccezione</b>: se in input si riceve un valore diverso dal tipo atteso questa si attiva. Non è un errore che dipende dalla sintassi del codice ma è un tipo di errore che si verifica durante l'esecuzione del programma stesso.</p>
+
+    <pre>
+    import java.util.Scanner;
+
+    public class Main {
+        public static void main(String[] args) {
+            Scanner scanner = new Scanner(System.in);
+            System.out.println("Inserire un numero: ");
+            Integer num = scanner.nextInt();
+            System.out.println("Hai scritto '" + num + "'");
+        }
+    }
+    </pre>
+
+    <img style="width: 30%; border: 2px solid #000" src="./assets/Screenshot 2023-09-11 alle 12.38.21.png" alt="">
+
+    <p>In questo caso il tipo di input atteso era un numero, essendo stata inserita una stringa il programma ha presentato l'eccezione e l'esecuzione è stata interrotta.</p>
+
+</body>
+</html>
