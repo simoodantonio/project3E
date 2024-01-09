@@ -1,0 +1,4 @@
+C-C++ - Punti da trattare:
+
+1. Paradigma di programmazione modulare e compilazione separata da riga di comando (compilatore g++ opzioni -c e -o)
+2. Variabili strutturate record (struct in C++), vettori di record (tabelle in C++) e dot notation per l'accesso ai campi dei record.

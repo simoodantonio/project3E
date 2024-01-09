@@ -1,0 +1,5 @@
+Algoritmi notevoli e complessità computazionale - Punti da trattare:
+
+1. Complessità computazionale e calcolo del costo di un algoritmo
+2. Algoritmi notevoli di ordinamento (exchange sort, selection sort, bubble sort, quick sort e merge sort)
+3. Algoritmi notevoli di ricerca (completa e binaria)

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La gestione dei File in Java</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body style="background-color: whitesmoke">
+    <div class="header">
+        <a href="./files.html" style="margin-top: 5px ;">
+            <img style="width: 60px;" src="./assets/arrow.png" alt="">
+        </a>
+        <a style="font-size: 22px;" href="index.html">Home</a>
+        <a style="font-size: 22px;" href="stream I-O.html">Stream di Input e Output</a>
+        <a style="font-size: 22px;" href="scanner.html">Classe Scanner</a>
+    </div> 
+
+    <h1>La gestione dei File in Java</h1>
+
+    <h2>La creazione di un file di Testo</h2>
+
+    <p></p>
+
+    <p>Vediamo adesso nella pratica come comportarsi con i codici scritti in precedenza. Utilizzando <a href="./fileUtili/FileUtils.java" download="">questo file</a> contenente la classe di utilità possiamo iniziare.</p>
+
+    <p>Per prima cosa, creiamo un file di testo chiamato <b>file.txt</b> all'interno della cartella del progetto e inseriamo al suo interno il seguente testo:</p>
+
+    <pre>
+    Hello World!
+    </pre>
+
+    <p>Adesso, creiamo un file Java all'interno della cartella del progetto e chiamiamolo <b>Main.java</b>. All'interno di questo file, inseriamo il seguente codice:</p>
+
+    <pre>
+    import utils.FileUtils;
+
+    import java.io.File;
+        
+    public class Test {
+        public static void main (String[] args) {
+            File ilMioDoc = FileUtils.creaFile("Ciao.txt");
+            FileUtils.scriviFile(ilMioDoc,"Hello World!");
+            FileUtils.leggiFile(ilMioDoc);
+        }
+    }
+    </pre>
+
+    <p>Se eseguiamo il codice, vedremo che verrà creato un file chiamato <b>Ciao.txt</b> all'interno della cartella del progetto e al suo interno verrà scritto il testo "<b>Hello World!</b>". Inoltre, verrà stampato a video il contenuto del file.</p>
+
+    <video width="640" height="360" controls src="./fileUtili/Registrazione schermo 2023-09-12 alle 19.43.12.mov"></video>
+</body>
+</html>

@@ -1,0 +1,8 @@
+C-C++ - Punti da trattare:
+
+1. Ricorsione e principio di induzione
+2. Gestione della memoria e suo modello a run-time:
+    -Area codice, area dati, modello heap e stack
+    -Politiche LIFO e FIFO
+    -Record di attivazione delle funzioni
+    -Complessità spaziale delle funzioni ricorsive

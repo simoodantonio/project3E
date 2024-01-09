@@ -1,0 +1,5 @@
+Linguaggi di programmazione - Punti da trattare: 
+
+1. I linguaggi di programmazione 
+2. Paradigmi di programmazione 
+3. Ciclo di sviluppo del software - modello Waterfall 
