@@ -19,26 +19,22 @@
     </div>
     <div class="container">
         <div class="row">
-            <a class="box">
-                <div class="show">
-                    <p>ndjksank</p>
-                    <div class="dropdown">
-                        <a href="AlessandroMartano/Pagina.html">Fasi di sviluppo di un programma</a>
-                        <a href="AlessandroMartano/Pagina 2.html">I traduttori</a>
-                        <a href="AlessandroMartano/Pagina 3.html">Un IDE</a>
-                    </div>
+            <div href="" class="box">
+                <p>Sviluppo di un programma, traduttori e IDE</p>
+                <div class="dropdown">
+                    <a href="AlessandroMartano/Pagina.html">Fasi di sviluppo di un programma</a>
+                    <a href="AlessandroMartano/Pagina 2.html">I traduttori</a>
+                    <a href="AlessandroMartano/Pagina 3.html">Un IDE</a>
                 </div>
-            </a>
-            <a class="box">
-                <div class="show">
-                    <p>d sjkanjdsk</p>
-                    <div class="dropdown">
-                        <a href="Pagina 2.html">I linguaggi di programmazione</a>
-                        <a href="Pagina.html">Paradigmi di programmazione</a>
-                        <a href="Pagina 3.html">Modello waterfall</a>
-                    </div>
+            </div>
+            <div href="" class="box">
+                <p>d sjkanjdsk</p>
+                <div class="dropdown">
+                    <a href="ChristianDurso/Pagina 2.html">I linguaggi di programmazione</a>
+                    <a href="ChristianDurso/Pagina.html">Paradigmi di programmazione</a>
+                    <a href="ChristianDurso/Pagina 3.html">Modello waterfall</a>
                 </div>
-            </a>
+            </div>
         </div>
     </div>
 </body>
@@ -46,6 +42,8 @@
 <style>
     .dropdown {
         z-index: 1;
+        top: 0;
+        position: relative;
     }
 
     .dropdown a {
@@ -71,14 +69,21 @@
         flex-direction: column;
     }
 
-    .show {
-        align-items: center;
-        justify-content: center;
-        display: flex;
+    .box>p {
+        width: 90%;
+        font-size: 22px;
+    }
+
+    .box:hover>p {
+        color: rgb(247, 95, 95);
+    }
+
+    .box:hover {
+        background-color: rgb(149, 183, 245);
     }
 
     .row {
-        gap: 300px;
+        gap: 200px;
     }
 </style>
 
