@@ -11,27 +11,51 @@
 
 <body>
     <div class="homeBar">
-        <div class="box">
-            <a style="" href="">//Algoritmi Flow Chart</a>
+        <p style="font-size: xx-large;" >MEGA PROGETTO DELLA 3E</p>
+    </div>
+    <div class="container">
+        <div class="row">
+            <a href="" class="box">
+                <p>//Algoritmi Flow Chart</p>
+            </a>
+            <a href="algortmiNotevoliComplessitaComputazionale/algortimiNotevoliIndex.html" class="box">
+                <p >Algoritmi notevoli</p>
+            </a>
+            <a href="C-C++/C-C++-Index.html" class="box">
+                <p>C / C++ Introduzione</p>
+            </a>
         </div>
-        <div class="box">
-            <a href="algortmiNotevoliComplessitaComputazionale/algortimiNotevoliIndex.html">Algoritmi notevoli</a>
-        </div>
-        <div class="box">
-            <a href="C-C++/C-C++-Index.html">C / C++ - Introduzione</a>
-        </div>
-        <div class="box">
-            <a href="linguaggiProgrammazione/linguaggiProgrammazione-Index.html">Linguaggi di programmazione</a>
-        </div>
-        <div class="box">
-            <a href="POO/POO-index.html">Programmazione orientata agli oggetti</a>
+        <div class="row">
+            <a href="linguaggiProgrammazione/linguaggiProgrammazione-Index.html" class="box">
+                <p>Linguaggi di programmazione</p>
+            </a>
+            <a href="POO/POO-index.html" class="box">
+                <p>Programmazione orientata agli oggetti</p>
+            </a>
         </div>
     </div>
 </body>
 
 <style>
-    .box > a {  
+    .box > p {
         margin-top: 0;
+        text-decoration: none;
+    }
+
+    .row {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 100px;
+    }
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 90vh;
+        gap: 90px;
     }
 </style>
 

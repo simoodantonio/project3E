@@ -9,7 +9,7 @@
     align-items: center;
     flex-direction: row;
     height: 15vh;
-    background-color: #fff;
+    background-color: #F4EFC9;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
     z-index: 1;
     position: sticky;
@@ -17,11 +17,13 @@
 
 .box {
     display: block;
-    width: 20%;
-    height: 100%;
+    width: 30%;
+    height: 250px;
     text-align: center;
     align-items: center;
     display: flex;
+    background-color: rgb(111, 205, 185);
+    border-radius: 10px;
 }
 
 .box > a {
@@ -34,7 +36,7 @@
     margin-top: 0;
 }
 
-.show>a {
+/* .show>a {
     display: block;
     width: 100%;
     text-align: center;
@@ -42,7 +44,7 @@
     font-size: larger;
     font-weight: bold;
     margin-top: 0;
-}
+} */
 
 .box>a:link {
     text-decoration: none;
@@ -118,6 +120,15 @@ li:hover a {
 }
 
 a:visited {
+    text-decoration: none;
+    color: black;
+}
+
+.link{
+    box-sizing: content-box;
+    display: block !important;
+    z-index: 1;
+    position: absolute;
     text-decoration: none;
     color: black;
 }
