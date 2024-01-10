@@ -15,15 +15,35 @@
     position: sticky;
 }
 
+.back {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 15vh;
+    width: 50px;
+    z-index: 1;
+    position: sticky;
+    margin-left: 30px;
+}
+
 .box {
-    display: block;
-    width: 30%;
+    width: 300px;
     height: 250px;
+    margin: 0 10px;
+    display: block;
+    display: flex;
     text-align: center;
     align-items: center;
-    display: flex;
-    background-color: rgb(111, 205, 185);
+    justify-content: center;
     border-radius: 10px;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+    text-decoration: none;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
 }
 
 .box > a {
