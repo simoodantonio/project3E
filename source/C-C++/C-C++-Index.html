@@ -9,18 +9,25 @@
 </head>
 
 <body>
-    <div class="homeBar">
-        <div class="box">
-            <a href="../index.html">Back to home</a>
+    <div style="justify-content: space-between;" class="homeBar">
+        <a class="back" href="../index.html">
+            <img width="100%" src="../../assets/home.png" alt="Home icon">
+        </a>
+        <div style="justify-content: center; width: 100%; text-align: center;">
+            <p style="font-size: xx-large;">C - C++</p>
         </div>
-        <div class="box">
-            <a href="RiccardoMaiello/main.html">Introduzioni C++ e principi fondamentali</a>
-        </div>
-        <div class="box">
-            <a href="NicolasLongordo/index.html">Programmazione procedurale e gestione della memoria</a>
-        </div>
-        <div class="box">
-            <a>Programmazione modulare</a>
+    </div>
+    <div class="container">
+        <div class="row">
+            <a href="RiccardoMaiello/main.html" class="box">
+                <p>Introduzioni C++ e principi fondamentali</p>
+            </a>
+            <a href="NicolasLongordo/index.html" class="box">
+                <p>Programmazione procedurale<br>e gestione della memoria</p>
+            </a>
+            <a href="" class="box">
+                <p>Programmazione modulare</p>
+            </a>
         </div>
     </div>
 </body>
@@ -29,6 +36,25 @@
     .homeBar {
         gap: 6%;
     }
+
+    .row {
+        gap: 100px;
+    }
+
+    .box {
+        background-color: #87de97;
+    }
+
+    .box>p {
+        font-size: x-large;
+    }
+
+    .box {
+        width: 300px;
+        height: 400px;
+    }
+
+
 </style>
 
 </html>

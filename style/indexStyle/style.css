@@ -56,15 +56,14 @@
     margin-top: 0;
 }
 
-/* .show>a {
-    display: block;
-    width: 100%;
-    text-align: center;
-    margin-top: 0;
-    font-size: larger;
-    font-weight: bold;
-    margin-top: 0;
-} */
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+    gap: 90px;
+}
 
 .box>a:link {
     text-decoration: none;
