@@ -23,15 +23,15 @@
                 <p>Introduzione</p>
             </a>
             <a href="nomeCognome2/file.html" class="box">
-                <p >Classe String e metodi statici</p>
+                <p>Classe String e metodi statici</p>
             </a>
         </div>
         <div class="row">
             <a href="C++/FrancescoCelima/file.html" class="box">
-                <p >C/C++ - Le classi</p>
+                <p>C/C++ - Le classi</p>
             </a>
-            <div class="box">
-                <p>Java</p>
+            <div class="box menu">
+                <p style="font-size: 20px; margin: 0px">Java</p>
                 <div class="dropdown">
                     <a href="java/AlessandroLuddeni/index.html">Basi della programmazione ad oggetti</a>
                     <a href="java/DamianoTesti/home.html">Gestione della memoria</a>
@@ -45,40 +45,26 @@
 </body>
 
 <style>
-    .dropdown a {
-        color: black;
-        padding: 12px 16px;
-        text-decoration: none;
-        display: block;
-    }
-
     .box > p {
-        width: 90%;
         font-size: 22px;
     }
 
-    .box:hover .dropdown {
+    .box.menu:active .dropdown {
         display: block;
         opacity: 1;
     }
 
-    .dropdown a:hover {
-        background-color: #f2f2f2;
-    }
-
-    .box {
-        align-items: center;
-        justify-content: center;
-        display: flex;
-        flex-direction: column;
-    }
-
-    .box:hover {
-        background-color: #87de97;
+    .dropdown > a {
+        font-size: 15px;
     }
 
     .row {
         gap: 100px;
+    }
+
+    .dropdown {
+        max-height: 70%;
+        margin-top: 5%;
     }
 </style>
 

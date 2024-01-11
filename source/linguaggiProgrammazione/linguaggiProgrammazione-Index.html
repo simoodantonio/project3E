@@ -19,7 +19,7 @@
     </div>
     <div class="container">
         <div class="row">
-            <div href="" class="box">
+            <div href="" class="box menu">
                 <p>Sviluppo di un programma, traduttori e IDE</p>
                 <div class="dropdown">
                     <a href="AlessandroMartano/Pagina.html">Fasi di sviluppo di un programma</a>
@@ -27,7 +27,7 @@
                     <a href="AlessandroMartano/Pagina 3.html">Un IDE</a>
                 </div>
             </div>
-            <div href="" class="box">
+            <div href="" class="box menu">
                 <p>Linguaggi di programmazione, paradigmi e modello waterfall</p>
                 <div class="dropdown">
                     <a href="ChristianDurso/Pagina 2.html">I linguaggi di programmazione</a>
@@ -40,50 +40,26 @@
 </body>
 
 <style>
-    .dropdown {
-        z-index: 1;
-        top: 0;
-        position: relative;
-    }
-
-    .dropdown a {
-        color: black;
-        padding: 12px 16px;
-        text-decoration: none;
-        display: block;
-    }
-
     .box:hover .dropdown {
         display: block;
         opacity: 1;
     }
 
-    .dropdown a:hover {
-        background-color: #f2f2f2;
-    }
-
-    .box {
-        align-items: center;
-        justify-content: center;
-        display: flex;
-        flex-direction: column;
-    }
-
     .box>p {
-        width: 90%;
         font-size: 22px;
-    }
-
-    .box:hover>p {
-        color: rgb(247, 95, 95);
-    }
-
-    .box:hover {
-        background-color: rgb(149, 183, 245);
     }
 
     .row {
         gap: 200px;
+    }
+
+    .menu > p {
+        font-size: 20px;
+        height: 51px;
+    }
+
+    .box {
+        height: 400px;
     }
 </style>
 

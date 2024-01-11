@@ -11,15 +11,19 @@
 
 <body>
     <div class="homeBar">
-        <p style="font-size: xx-large;" >MEGA PROGETTO DELLA 3E</p>
+        <p style="font-size: xx-large;" >Programma Informatica 3E A.S. 2022/2023</p>
     </div>
     <div class="container">
         <div class="row">
             <a href="" class="box">
                 <p>Algoritmi Flow Chart<br>(da definire)</p>
             </a>
-            <a href="linguaggiProgrammazione/linguaggiProgrammazione-Index.html" class="box">
+            <a href="linguaggiProgrammazione/linguaggiProgrammazione-Index.html" class="box menu">
                 <p>Linguaggi di programmazione</p>
+                <div class="dropdown">
+                    <p style="text-align: left;">Sviluppo di un programma, traduttori e IDE</p>
+                    <p style="text-align: left;">Linguaggi di programmazione, paradigmi e modello waterfall</p>
+                </div>
             </a>
             <a href="C-C++/C-C++-Index.html" class="box">
                 <p>C++ - Introduzione</p>
@@ -27,7 +31,6 @@
             
         </div>
         <div class="row">
-            
             <a href="POO/POO-index.html" class="box">
                 <p>Programmazione orientata agli oggetti</p>
             </a>
@@ -44,13 +47,29 @@
         font-size: 22px;
     }
 
-    .box {
-        background-color: rgb(111, 205, 185);
-    }
-
     .row {
         gap: 100px;
     }
+
+    .dropdown > p {
+        font-size: 15px;
+        max-width: 90%;
+        text-align: center;
+        margin: 10px;
+    }
+
+    .menu:hover .dropdown {
+        display: flex;
+        opacity: 1;
+        flex-direction: row;
+    }
+
+    .dropdown {
+        justify-content: center;
+        align-items: center;
+    }
+    
+
 </style>
 
 </html>
