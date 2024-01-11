@@ -86,6 +86,7 @@ figcaption{
     height: 29%;
     background-color: aqua;
     border-radius: 100%;
+    transition: 1s;
 }
 
 .boxBubble-1{
@@ -94,6 +95,7 @@ figcaption{
     height: 60%;
     background-color: aqua;
     border-radius: 100%;
+    transition: 1s;
 }
 
 .boxBubble-2{
@@ -102,6 +104,7 @@ figcaption{
     height: 40%;
     background-color: aqua;
     border-radius: 100%;
+    transition: 1s;
 }
 
 .boxBubble-3{
@@ -110,6 +113,7 @@ figcaption{
     background-color: aqua; 
     width: 6.9%;
     height: 20%;
+    transition: 1s;
 }
 
 .boxBubble:hover,

@@ -1,15 +1,16 @@
 <!DOCTYPE html>
 <html lang="it">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Complessità computazionale e algoritmi notevoli</title>
-        <link rel="stylesheet" href="styles.css">
-    </head>
 
-    <body>
-        <!-- <div class="sommario">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complessità computazionale e algoritmi notevoli</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- <div class="sommario">
             <ol>
                 <li>
                     La complessità computazionale
@@ -40,129 +41,137 @@
                 </li>
             </ol>
         </div> -->
-        <div class="container">
-            
-            <header>
-                <h1> Gli algoritmi notevoli di ordinamento </h1>
+    <div class="container">
+        <a href="../algortimiNotevoliIndex.html"
+            style="display: flex; text-decoration: none; color: black;align-items: center; height: 60.5px;">
+            <img src="../../../assets/white-home.png" alt="Home icon" style="margin: 0; width: 100%; height: 100%;">
+        </a>
 
-                <a class="button" href="complessitaComputazionale.html"><b> &lt; </b></a>
-                <a class="button" href="complessitaComputazionale.html"> La complessità computazionale </a>
-                <p class="button"> Algoritmi notevoli di ordinamento </p>
-                <a class="button" href="algoritmiRicerca.html"> Algoritmi notevoli di ricerca </a>
-                <a class="button" href="algoritmiRicerca.html"><b> &gt; </b></a>
-            </header>
+        <header>
+            <h1> Gli algoritmi notevoli di ordinamento </h1>
 
-            <main>
-                <p> 
-                    Gli algoritmi notevoli di ordinamento servono per elencare gli elementi di un insieme di dati omogenei, secondo una relazione d'ordine di tipo crescente o decrescente, in modo che ogni elemento sia minore o maggiore del successivo;
-                    <br>
-                    Per il resto dell'argomento parleremo solamente di un ordinamento crescente per evitare confusione (anche se tutti gli algoritmi si possono applicare anche in ordine decrescente) 
-                </p>
+            <a class="button" href="complessitaComputazionale.html"><b> &lt; </b></a>
+            <a class="button" href="complessitaComputazionale.html"> La complessità computazionale </a>
+            <p class="button"> Algoritmi notevoli di ordinamento </p>
+            <a class="button" href="algoritmiRicerca.html"> Algoritmi notevoli di ricerca </a>
+            <a class="button" href="algoritmiRicerca.html"><b> &gt; </b></a>
+        </header>
 
-                <!-- EXCHANGE SORT -->
-                <h2>Exchange sort</h2>
-                <p class="definizione">L'exchange sort consiste nel confrontare ogni elemento con tutti i suoi successivi, se un elemento successivo dovesse essere minore dell'elemento corrente, questi vengono scambiati.</p>
-                <p>Esempio:</p>
-                <table>
-                    <td>6</td>
-                    <td>2</td>
-                    <td>5</td>
-                    <td>1</td>
-                </table>
+        <main>
+            <p>
+                Gli algoritmi notevoli di ordinamento servono per elencare gli elementi di un insieme di dati omogenei,
+                secondo una relazione d'ordine di tipo crescente o decrescente, in modo che ogni elemento sia minore o
+                maggiore del successivo;
+                <br>
+                Per il resto dell'argomento parleremo solamente di un ordinamento crescente per evitare confusione
+                (anche se tutti gli algoritmi si possono applicare anche in ordine decrescente)
+            </p>
 
-                <!-- PRIMA ITERAZIONE -->
-                <p><b>Prima iterazione:</b></p>
-                <table>
-                    <td class="selezionata">6</td>
-                    <td class="selezionata">2</td>
-                    <td>5</td>
-                    <td>1</td>
-                </table>
-                <p style="display: inline;"> 6 &gt; 2 =&gt;</p>
-                <table>
-                    <td class="selezionata">2</td>
-                    <td class="selezionata">6</td>
-                    <td>5</td>
-                    <td>1</td>
-                </table>
+            <!-- EXCHANGE SORT -->
+            <h2>Exchange sort</h2>
+            <p class="definizione">L'exchange sort consiste nel confrontare ogni elemento con tutti i suoi successivi,
+                se un elemento successivo dovesse essere minore dell'elemento corrente, questi vengono scambiati.</p>
+            <p>Esempio:</p>
+            <table>
+                <td>6</td>
+                <td>2</td>
+                <td>5</td>
+                <td>1</td>
+            </table>
 
+            <!-- PRIMA ITERAZIONE -->
+            <p><b>Prima iterazione:</b></p>
+            <table>
+                <td class="selezionata">6</td>
+                <td class="selezionata">2</td>
+                <td>5</td>
+                <td>1</td>
+            </table>
+            <p style="display: inline;"> 6 &gt; 2 =&gt;</p>
+            <table>
+                <td class="selezionata">2</td>
+                <td class="selezionata">6</td>
+                <td>5</td>
+                <td>1</td>
+            </table>
+
+            <br><br>
+            <table>
+                <td class="selezionata">2</td>
+                <td>6</td>
+                <td class="selezionata">5</td>
+                <td>1</td>
+            </table>
+            <p style="display: inline;"> 2 &lt; 5
                 <br><br>
-                <table>
-                    <td class="selezionata">2</td>
-                    <td>6</td>
-                    <td class="selezionata">5</td>
-                    <td>1</td>
-                </table>
-                <p style="display: inline;"> 2 &lt; 5
-                <br><br>
 
-                <table>
-                    <td class="selezionata">2</td>
-                    <td>6</td>
-                    <td>5</td>
-                    <td class="selezionata">1</td>
-                </table>
-                <p style="display: inline;"> 2 &gt; 1 =&gt;</p>
-                <table>
-                    <td class="selezionata">1</td>
-                    <td>6</td>
-                    <td>5</td>
-                    <td class="selezionata">2</td>
-                </table>
+            <table>
+                <td class="selezionata">2</td>
+                <td>6</td>
+                <td>5</td>
+                <td class="selezionata">1</td>
+            </table>
+            <p style="display: inline;"> 2 &gt; 1 =&gt;</p>
+            <table>
+                <td class="selezionata">1</td>
+                <td>6</td>
+                <td>5</td>
+                <td class="selezionata">2</td>
+            </table>
 
-                <!-- SECONDA ITERAZIONE -->
-                <p><b>Seconda iterazione:</b></p>
-                <table>
-                    <td>1</td>
-                    <td class="selezionata">6</td>
-                    <td class="selezionata">5</td>
-                    <td>2</td>
-                </table>
-                <p style="display: inline;"> 6 &gt; 5 =&gt;</p>
-                <table>
-                    <td>1</td>
-                    <td class="selezionata">5</td>
-                    <td class="selezionata">6</td>
-                    <td>2</td>
-                </table>
-                <br><br>
-                <table>
-                    <td>1</td>
-                    <td class="selezionata">5</td>
-                    <td>6</td>
-                    <td class="selezionata">2</td>
-                </table>
-                <p style="display: inline;"> 5 &gt; 2 =&gt;</p>
-                <table>
-                    <td>1</td>
-                    <td class="selezionata">2</td>
-                    <td>6</td>
-                    <td class="selezionata">5</td>
-                </table>
-                <!-- TERZA ITERAZIONE -->
-                <p><b>Terza iterazione:</b></p>
-                <table>
-                    <td>1</td>
-                    <td>2</td>
-                    <td class="selezionata">6</td>
-                    <td class="selezionata">5</td>
-                </table>
-                <p style="display: inline;"> 6 &gt; 5 =&gt;</p>
-                <table>
-                    <td>1</td>
-                    <td>2</td>
-                    <td class="selezionata">5</td>
-                    <td class="selezionata">6</td>
-                </table>
-                <br><br>
-                <table>
-                    <td>1</td>
-                    <td>2</td>
-                    <td>5</td>
-                    <td>6</td>
-                </table>
-                <p>Esempio di una implementazione dell'exchange sort in c++:</p>
-<pre><code>void exchangeSort(int a[], int n) {
+            <!-- SECONDA ITERAZIONE -->
+            <p><b>Seconda iterazione:</b></p>
+            <table>
+                <td>1</td>
+                <td class="selezionata">6</td>
+                <td class="selezionata">5</td>
+                <td>2</td>
+            </table>
+            <p style="display: inline;"> 6 &gt; 5 =&gt;</p>
+            <table>
+                <td>1</td>
+                <td class="selezionata">5</td>
+                <td class="selezionata">6</td>
+                <td>2</td>
+            </table>
+            <br><br>
+            <table>
+                <td>1</td>
+                <td class="selezionata">5</td>
+                <td>6</td>
+                <td class="selezionata">2</td>
+            </table>
+            <p style="display: inline;"> 5 &gt; 2 =&gt;</p>
+            <table>
+                <td>1</td>
+                <td class="selezionata">2</td>
+                <td>6</td>
+                <td class="selezionata">5</td>
+            </table>
+            <!-- TERZA ITERAZIONE -->
+            <p><b>Terza iterazione:</b></p>
+            <table>
+                <td>1</td>
+                <td>2</td>
+                <td class="selezionata">6</td>
+                <td class="selezionata">5</td>
+            </table>
+            <p style="display: inline;"> 6 &gt; 5 =&gt;</p>
+            <table>
+                <td>1</td>
+                <td>2</td>
+                <td class="selezionata">5</td>
+                <td class="selezionata">6</td>
+            </table>
+            <br><br>
+            <table>
+                <td>1</td>
+                <td>2</td>
+                <td>5</td>
+                <td>6</td>
+            </table>
+            <p>Esempio di una implementazione dell'exchange sort in c++:</p>
+            <pre><code>void exchangeSort(int a[], int n) {
   for (int i=0; i&lt;n-1; i++) {
     for (int j=i+1; j&lt;n; j++) {
       if (a[i] &gt; a[j]) {
@@ -174,116 +183,144 @@
   }
 }</code></pre>
 
-                <p>L'exchange sort ha una complessità computazionale di O(n<sup>2</sup>) (o quadratica)</p>
+            <p>L'exchange sort ha una complessità computazionale di O(n<sup>2</sup>) (o quadratica)</p>
 
-                <!-- SELECTION SORT -->
-                <h2 id="selection_sort">Selection sort</h2>
-                <p class="definizione">
-                    Il selection sort consiste nel separare la sequenza in due sottosequenze: una con tutti i valori ordinati, l'altra con i valori da ordinare.
-                    <br>
-                    Si seleziona il valore più piccolo nella sottosequenza da ordinare e lo si sposta nell'ultima posizione della sequenza ordinata, si ripete così finché l'insieme non è riordinato.
-                </p>
-                <p>Esempio:</p>
-                <table>
-                    <td>6</td>
-                    <td>2</td>
-                    <td>5</td>
-                    <td>1</td>
-                </table>
-                <table><td>6</td></table>
-                <!-- PRIMA ITERAZIONE -->
-                <p><b>Prima iterazione:</b></p>
-                <table>
-                    <td>6</td>
-                    <td class="selezionata">2</td>
-                    <td>5</td>
-                    <td>1</td>
-                </table>
-                <table><td class="selezionata">6</td></table>
-                <p style="display: inline;"> 6 &gt; 2 =&gt;</p>
-                <table><td class="selezionata">2</td></table>
-                <br><br>
-                <table>
-                    <td>6</td>
-                    <td>2</td>
-                    <td class="selezionata">5</td>
-                    <td>1</td>
-                </table>
-                <table><td class="selezionata">2</td></table>
-                <p style="display: inline;"> 2 &lt; 5</p>
-                <br><br>
-                <table>
-                    <td>6</td>
-                    <td>2</td>
-                    <td>5</td>
-                    <td class="selezionata">1</td>
-                </table>
-                <table><td class="selezionata">2</td></table>
-                <p style="display: inline;"> 2 &gt; 1 =&gt;</p>
-                <table><td class="selezionata">1</td></table>
-                <br><br>
-                <table>
-                    <td style="border-right-width: 6px;">1</td>
-                    <td>6</td>
-                    <td>2</td>
-                    <td>5</td>
-                </table>
-                <table><td>6</td></table>
-                <!-- SECONDA ITERAZIONE -->
-                <p><b>Seconda iterazione:</b></p>
-                <table>
-                    <td style="border-right-width: 6px;">1</td>
-                    <td>6</td>
-                    <td class="selezionata">2</td>
-                    <td>5</td>
-                </table>
-                <table><td class="selezionata">6</td></table>
-                <p style="display: inline;"> 6 &gt; 2 =&gt;</p>
-                <table><td class="selezionata">2</td></table>
-                <br><br>
-                <table>
-                    <td style="border-right-width: 6px;">1</td>
-                    <td>6</td>
-                    <td>2</td>
-                    <td class="selezionata">5</td>
-                </table>
-                <table><td class="selezionata">2</td></table>
-                <p style="display: inline;"> 2 &lt; 5</p>
-                <br><br>
-                <table>
-                    <td>1</td>
-                    <td style="border-right-width: 6px;">2</td>
-                    <td>6</td>
-                    <td>5</td>
-                </table>
-                <table><td>6</td></table>
-                <!-- TERZA ITERAZIONE -->
-                <p><b>Terza iterazione:</b></p>
-                <table>
-                    <td>1</td>
-                    <td style="border-right-width: 6px;">2</td>
-                    <td>6</td>
-                    <td class="selezionata">5</td>
-                </table>
-                <table><td class="selezionata">6</td></table>
-                <p style="display: inline;"> 6 &gt; 5 =&gt;</p>
-                <table><td class="selezionata">5</td></table>
-                <br><br>
-                <table>
-                    <td>1</td>
-                    <td>2</td>
-                    <td style="border-right-width: 6px;">5</td>
-                    <td>6</td>
-                </table>
-                <br><br>
-                <table>
-                    <td>1</td>
-                    <td>2</td>
-                    <td>5</td>
-                    <td>6</td>
-                </table>
-                <p>Esempio di una implementazione del selection sort in c++:</p>
-<pre><code>void selectionSort(int a[], int n) {
+            <!-- SELECTION SORT -->
+            <h2 id="selection_sort">Selection sort</h2>
+            <p class="definizione">
+                Il selection sort consiste nel separare la sequenza in due sottosequenze: una con tutti i valori
+                ordinati, l'altra con i valori da ordinare.
+                <br>
+                Si seleziona il valore più piccolo nella sottosequenza da ordinare e lo si sposta nell'ultima posizione
+                della sequenza ordinata, si ripete così finché l'insieme non è riordinato.
+            </p>
+            <p>Esempio:</p>
+            <table>
+                <td>6</td>
+                <td>2</td>
+                <td>5</td>
+                <td>1</td>
+            </table>
+            <table>
+                <td>6</td>
+            </table>
+            <!-- PRIMA ITERAZIONE -->
+            <p><b>Prima iterazione:</b></p>
+            <table>
+                <td>6</td>
+                <td class="selezionata">2</td>
+                <td>5</td>
+                <td>1</td>
+            </table>
+            <table>
+                <td class="selezionata">6</td>
+            </table>
+            <p style="display: inline;"> 6 &gt; 2 =&gt;</p>
+            <table>
+                <td class="selezionata">2</td>
+            </table>
+            <br><br>
+            <table>
+                <td>6</td>
+                <td>2</td>
+                <td class="selezionata">5</td>
+                <td>1</td>
+            </table>
+            <table>
+                <td class="selezionata">2</td>
+            </table>
+            <p style="display: inline;"> 2 &lt; 5</p>
+            <br><br>
+            <table>
+                <td>6</td>
+                <td>2</td>
+                <td>5</td>
+                <td class="selezionata">1</td>
+            </table>
+            <table>
+                <td class="selezionata">2</td>
+            </table>
+            <p style="display: inline;"> 2 &gt; 1 =&gt;</p>
+            <table>
+                <td class="selezionata">1</td>
+            </table>
+            <br><br>
+            <table>
+                <td style="border-right-width: 6px;">1</td>
+                <td>6</td>
+                <td>2</td>
+                <td>5</td>
+            </table>
+            <table>
+                <td>6</td>
+            </table>
+            <!-- SECONDA ITERAZIONE -->
+            <p><b>Seconda iterazione:</b></p>
+            <table>
+                <td style="border-right-width: 6px;">1</td>
+                <td>6</td>
+                <td class="selezionata">2</td>
+                <td>5</td>
+            </table>
+            <table>
+                <td class="selezionata">6</td>
+            </table>
+            <p style="display: inline;"> 6 &gt; 2 =&gt;</p>
+            <table>
+                <td class="selezionata">2</td>
+            </table>
+            <br><br>
+            <table>
+                <td style="border-right-width: 6px;">1</td>
+                <td>6</td>
+                <td>2</td>
+                <td class="selezionata">5</td>
+            </table>
+            <table>
+                <td class="selezionata">2</td>
+            </table>
+            <p style="display: inline;"> 2 &lt; 5</p>
+            <br><br>
+            <table>
+                <td>1</td>
+                <td style="border-right-width: 6px;">2</td>
+                <td>6</td>
+                <td>5</td>
+            </table>
+            <table>
+                <td>6</td>
+            </table>
+            <!-- TERZA ITERAZIONE -->
+            <p><b>Terza iterazione:</b></p>
+            <table>
+                <td>1</td>
+                <td style="border-right-width: 6px;">2</td>
+                <td>6</td>
+                <td class="selezionata">5</td>
+            </table>
+            <table>
+                <td class="selezionata">6</td>
+            </table>
+            <p style="display: inline;"> 6 &gt; 5 =&gt;</p>
+            <table>
+                <td class="selezionata">5</td>
+            </table>
+            <br><br>
+            <table>
+                <td>1</td>
+                <td>2</td>
+                <td style="border-right-width: 6px;">5</td>
+                <td>6</td>
+            </table>
+            <br><br>
+            <table>
+                <td>1</td>
+                <td>2</td>
+                <td>5</td>
+                <td>6</td>
+            </table>
+            <p>Esempio di una implementazione del selection sort in c++:</p>
+            <pre><code>void selectionSort(int a[], int n) {
   for (int i=0; i&lt;n-1; i++) {
     int posizioneMinimo = i;	
     for (int j=i+1; j&lt;n; j++) 
@@ -295,139 +332,146 @@
     }
   }
 }</code></pre>
-                <p>Il selection sort ha una complessità computazionale di O(n<sup>2</sup>) (o quadratica)</p>
+            <p>Il selection sort ha una complessità computazionale di O(n<sup>2</sup>) (o quadratica)</p>
 
 
-                <!-- BUBBLE SORT -->
-                <h2>Bubble sort</h2>
-                <p class="definizione">
-                    Il bubble sort consiste nello scambio di elementi adiacenti se il loro ordine dovesse essere sbagliato, il procedimento continua finché non siamo sicuri che l'intera lista sia ordinata.
-                    <br>
-                    Il nome deriva da come gli elementi più grandi "galleggiano" verso la fine della lista, come le bolle in un liquido.
-                </p>
-                <p>Per migliorare l'efficienza del bubble sort si possono applicare le seguenti modifiche all'algoritmo:</p>
-                <ul>
-                    <li><b>Sentinella</b>: la sentinella è una variabile booleana che tiene traccia se è stato eseguito uno scambio in una iterazione; se per la fine dell'iterazione non è avvenuto alcuno scambio allora significa che la lista è già ordinata e possiamo smettere.</li>
-                    <li><b>Variabile stop</b>: alla fine di ogni iterazione sappiamo che almeno un elemento è stato ordinato (partendo dal più grande), possiamo quindi evitare di ricontrollare questi elementi ogni singola iterazione utilizando una variabile che separa l'insieme in due sottoinsiemi: uno da ordinare e uno ordinato.</li>
-                </ul>
-                <p>Esempio di bubble sort con sentinella e variabile stop:</p>
-                <table>
-                    <td>6</td>
-                    <td>2</td>
-                    <td>5</td>
-                    <td>1</td>
-                </table>
-                <!-- PRIMA ITERAZIONE -->
-                <p><b>Prima iterazione:</b></p>
-                <table>
-                    <td class="selezionata">6</td>
-                    <td class="selezionata">2</td>
-                    <td>5</td>
-                    <td>1</td>
-                </table>
-                <p style="display: inline;"> 6 &gt; 2 =&gt;</p>
-                <table>
-                    <td class="selezionata">2</td>
-                    <td class="selezionata">6</td>
-                    <td>5</td>
-                    <td>1</td>
-                </table>
-                <br><br>
-                <table>
-                    <td>2</td>
-                    <td class="selezionata">6</td>
-                    <td class="selezionata">5</td>
-                    <td>1</td>
-                </table>
-                <p style="display: inline;"> 6 &gt; 5 =&gt;</p>
-                <table>
-                    <td>2</td>
-                    <td class="selezionata">5</td>
-                    <td class="selezionata">6</td>
-                    <td>1</td>
-                </table>
-                <br><br>
-                <table>
-                    <td>2</td>
-                    <td>5</td>
-                    <td class="selezionata">6</td>
-                    <td class="selezionata">1</td>
-                </table>
-                <p style="display: inline;"> 6 &gt; 1 =&gt;</p>
-                <table>
-                    <td>2</td>
-                    <td>5</td>
-                    <td class="selezionata">1</td>
-                    <td class="selezionata">6</td>
-                </table>
-                <br><br>
-                <table>
-                    <td>2</td>
-                    <td>5</td>
-                    <td style="border-right-width: 6px;">1</td>
-                    <td>6</td>
-                </table>
-                <!-- SECONDA ITERAZIONE -->
-                <p><b>Seconda iterazione</b></p>
-                <table>
-                    <td class="selezionata">2</td>
-                    <td class="selezionata">5</td>
-                    <td>1</td>
-                    <td style="border-left-width: 6px;">6</td>
-                </table>
-                <p style="display: inline;"> 2 &lt; 5</p>
-                <br><br>
-                <table>
-                    <td>2</td>
-                    <td class="selezionata">5</td>
-                    <td class="selezionata">1</td>
-                    <td  style="border-left-width: 6px;">6</td>
-                </table>
-                <p style="display: inline;"> 5 &gt; 1 =&gt;</p>
-                <table>
-                    <td>2</td>
-                    <td class="selezionata">1</td>
-                    <td class="selezionata">5</td>
-                    <td style="border-left-width: 6px;">6</td>
-                </table>
-                <br><br>
-                <table>
-                    <td>2</td>
-                    <td>1</td>
-                    <td style="border-left-width: 6px;">5</td>
-                    <td>6</td>
-                </table>
-                <!-- TERZA ITERAZIONE -->
-                <p><b>Terza iterazione</b></p>
-                <table>
-                    <td class="selezionata">2</td>
-                    <td class="selezionata">1</td>
-                    <td style="border-left-width: 6px;">5</td>
-                    <td>6</td>
-                </table>
-                <p style="display: inline;"> 2 &gt; 1 =&gt;</p>
-                <table>
-                    <td class="selezionata">1</td>
-                    <td class="selezionata">2</td>
-                    <td style="border-left-width: 6px;">5</td>
-                    <td>6</td>
-                </table>
-                <br><br>
-                <table>
-                    <td>1</td>
-                    <td style="border-left-width: 6px;">2</td>
-                    <td>5</td>
-                    <td>6</td>
-                </table>
-                <br><br>
-                <table>
-                    <td>1</td>
-                    <td>2</td>
-                    <td>5</td>
-                    <td>6</td>
-                </table>
-                <p>Esempio di una implementazione del bubble sort in c++:</p>
-<pre><code>void bubbleSort(int a[], int n) {
+            <!-- BUBBLE SORT -->
+            <h2>Bubble sort</h2>
+            <p class="definizione">
+                Il bubble sort consiste nello scambio di elementi adiacenti se il loro ordine dovesse essere sbagliato,
+                il procedimento continua finché non siamo sicuri che l'intera lista sia ordinata.
+                <br>
+                Il nome deriva da come gli elementi più grandi "galleggiano" verso la fine della lista, come le bolle in
+                un liquido.
+            </p>
+            <p>Per migliorare l'efficienza del bubble sort si possono applicare le seguenti modifiche all'algoritmo:</p>
+            <ul>
+                <li><b>Sentinella</b>: la sentinella è una variabile booleana che tiene traccia se è stato eseguito uno
+                    scambio in una iterazione; se per la fine dell'iterazione non è avvenuto alcuno scambio allora
+                    significa che la lista è già ordinata e possiamo smettere.</li>
+                <li><b>Variabile stop</b>: alla fine di ogni iterazione sappiamo che almeno un elemento è stato ordinato
+                    (partendo dal più grande), possiamo quindi evitare di ricontrollare questi elementi ogni singola
+                    iterazione utilizando una variabile che separa l'insieme in due sottoinsiemi: uno da ordinare e uno
+                    ordinato.</li>
+            </ul>
+            <p>Esempio di bubble sort con sentinella e variabile stop:</p>
+            <table>
+                <td>6</td>
+                <td>2</td>
+                <td>5</td>
+                <td>1</td>
+            </table>
+            <!-- PRIMA ITERAZIONE -->
+            <p><b>Prima iterazione:</b></p>
+            <table>
+                <td class="selezionata">6</td>
+                <td class="selezionata">2</td>
+                <td>5</td>
+                <td>1</td>
+            </table>
+            <p style="display: inline;"> 6 &gt; 2 =&gt;</p>
+            <table>
+                <td class="selezionata">2</td>
+                <td class="selezionata">6</td>
+                <td>5</td>
+                <td>1</td>
+            </table>
+            <br><br>
+            <table>
+                <td>2</td>
+                <td class="selezionata">6</td>
+                <td class="selezionata">5</td>
+                <td>1</td>
+            </table>
+            <p style="display: inline;"> 6 &gt; 5 =&gt;</p>
+            <table>
+                <td>2</td>
+                <td class="selezionata">5</td>
+                <td class="selezionata">6</td>
+                <td>1</td>
+            </table>
+            <br><br>
+            <table>
+                <td>2</td>
+                <td>5</td>
+                <td class="selezionata">6</td>
+                <td class="selezionata">1</td>
+            </table>
+            <p style="display: inline;"> 6 &gt; 1 =&gt;</p>
+            <table>
+                <td>2</td>
+                <td>5</td>
+                <td class="selezionata">1</td>
+                <td class="selezionata">6</td>
+            </table>
+            <br><br>
+            <table>
+                <td>2</td>
+                <td>5</td>
+                <td style="border-right-width: 6px;">1</td>
+                <td>6</td>
+            </table>
+            <!-- SECONDA ITERAZIONE -->
+            <p><b>Seconda iterazione</b></p>
+            <table>
+                <td class="selezionata">2</td>
+                <td class="selezionata">5</td>
+                <td>1</td>
+                <td style="border-left-width: 6px;">6</td>
+            </table>
+            <p style="display: inline;"> 2 &lt; 5</p>
+            <br><br>
+            <table>
+                <td>2</td>
+                <td class="selezionata">5</td>
+                <td class="selezionata">1</td>
+                <td style="border-left-width: 6px;">6</td>
+            </table>
+            <p style="display: inline;"> 5 &gt; 1 =&gt;</p>
+            <table>
+                <td>2</td>
+                <td class="selezionata">1</td>
+                <td class="selezionata">5</td>
+                <td style="border-left-width: 6px;">6</td>
+            </table>
+            <br><br>
+            <table>
+                <td>2</td>
+                <td>1</td>
+                <td style="border-left-width: 6px;">5</td>
+                <td>6</td>
+            </table>
+            <!-- TERZA ITERAZIONE -->
+            <p><b>Terza iterazione</b></p>
+            <table>
+                <td class="selezionata">2</td>
+                <td class="selezionata">1</td>
+                <td style="border-left-width: 6px;">5</td>
+                <td>6</td>
+            </table>
+            <p style="display: inline;"> 2 &gt; 1 =&gt;</p>
+            <table>
+                <td class="selezionata">1</td>
+                <td class="selezionata">2</td>
+                <td style="border-left-width: 6px;">5</td>
+                <td>6</td>
+            </table>
+            <br><br>
+            <table>
+                <td>1</td>
+                <td style="border-left-width: 6px;">2</td>
+                <td>5</td>
+                <td>6</td>
+            </table>
+            <br><br>
+            <table>
+                <td>1</td>
+                <td>2</td>
+                <td>5</td>
+                <td>6</td>
+            </table>
+            <p>Esempio di una implementazione del bubble sort in c++:</p>
+            <pre><code>void bubbleSort(int a[], int n) {
   for (int i=0; i&lt;n-1; i++) {
     for (int j=0; j&lt;n-1; j++) {
       if (a[j] &gt; a[j+1]) {
@@ -438,9 +482,9 @@
     }
   }
 }</code></pre>
-                <br>
-                <p>Esempio di una implementazione del bubble sort con sentinella in c++:</p>
-<pre><code>void bubbleSortSentinella(int a[], int n) {
+            <br>
+            <p>Esempio di una implementazione del bubble sort con sentinella in c++:</p>
+            <pre><code>void bubbleSortSentinella(int a[], int n) {
   bool scambio;
   do {
     scambio = false;
@@ -454,9 +498,9 @@
     }
   } while (scambio);
 }</code></pre>
-                <br>
-                <p>Esempio di una implementazione del bubble sort con sentinella e variabile stop in c++:</p>
-<pre><code>void bubbleSortSentinellaStop(int a[], int n) {
+            <br>
+            <p>Esempio di una implementazione del bubble sort con sentinella e variabile stop in c++:</p>
+            <pre><code>void bubbleSortSentinellaStop(int a[], int n) {
   int stop = n-1;
   bool scambio;
   do {
@@ -472,91 +516,96 @@
     stop--;
   } while (scambio);
 }</code></pre>
-                <p>
-                    Il bubble sort ha una complessità computazionale di O(n<sup>2</sup>) (o quadratica)
-                    <br>
-                    Le modifiche aggiunte al bubble sort diminuiscono la complessità computazionale solamente nel caso migliore, che diventa O(n) (o lineare); il caso peggiore rimane O(n<sup>2</sup>) (o quadratica)
-                </p>
+            <p>
+                Il bubble sort ha una complessità computazionale di O(n<sup>2</sup>) (o quadratica)
+                <br>
+                Le modifiche aggiunte al bubble sort diminuiscono la complessità computazionale solamente nel caso
+                migliore, che diventa O(n) (o lineare); il caso peggiore rimane O(n<sup>2</sup>) (o quadratica)
+            </p>
 
 
-                <!-- QUICK SORT -->
-                <h2>Quick sort</h2>
-                <p class="definizione">
-                    Il quick sort utiliza la ricorsione e sfrutta la tecnica <i>divide et impera</i>.
-                    <br>
-                    Il quick sort consiste nella scelta di un <i>pivot</i> (che di solito è l'elemento centrale) e lo si confronta con tutti gli elementi nell'insieme; tutti gli elementi più piccoli vengono posizionati alla sua sinistra e quelli più grandi alla sua destra; poi si riapplica il procedimento ai due sottoinsiemi.
-                </p>
-                <p>Esempio:</p>
-                <table>
-                    <td>6</td>
-                    <td>8</td>
-                    <td>1</td>
-                    <td>5</td>
-                    <td>2</td>
-                    <td>3</td>
-                    <td>9</td>
-                    <td>7</td>
-                </table>
-                <!-- PRIMA ITERAZIONE -->
-                <p><b>Prima iterazione:</b></p>
-                <table>
-                    <td>6</td>
-                    <td>8</td>
-                    <td>1</td>
-                    <td class="selezionata" style="border-left-width: 6px; border-right-width: 6px;">5</td>
-                    <td>2</td>
-                    <td>3</td>
-                    <td>9</td>
-                    <td>7</td>
-                </table>
-                <br><br>
-                <table>
-                    <td>2</td>
-                    <td>3</td>
-                    <td>1</td>
-                    <td class="selezionata" style="border-left-width: 6px; border-right-width: 6px;">5</td>
-                    <td>6</td>
-                    <td>8</td>
-                    <td>9</td>
-                    <td>7</td>
-                </table>
-                <!-- SECONDA ITERAZIONE -->
-                <p><b>Seconda iterazione:</b></p>
-                <table>
-                    <td>2</td>
-                    <td class="selezionata" style="border-left-width: 6px; border-right-width: 6px;">3</td>
-                    <td>1</td>
-                    <td style="border-left-width: 6px; border-right-width: 6px;">5</td>
-                    <td>6</td>
-                    <td class="selezionata" style="border-left-width: 6px; border-right-width: 6px;">8</td>
-                    <td>9</td>
-                    <td>7</td>
-                </table>
-                <br><br>
-                <table>
-                    <td>1</td>
-                    <td>2</td>
-                    <td class="selezionata" style="border-left-width: 6px; border-right-width: 6px;">3</td>
-                    <td style="border-left-width: 6px; border-right-width: 6px;">5</td>
-                    <td>6</td>
-                    <td>7</td>
-                    <td class="selezionata" style="border-left-width: 6px; border-right-width: 6px;">8</td>
-                    <td>9</td>
-                </table>
-                <br><br>
-                <table>
-                    <td>1</td>
-                    <td>2</td>
-                    <td>3</td>
-                    <td>5</td>
-                    <td>6</td>
-                    <td>7</td>
-                    <td>8</td>
-                    <td>9</td>
-                </table>
-                <p>Questo esempio tratta di un caso abbastanza favorevole per questo algoritmo poiché il primo <i>pivot</i> è casualmente circa il valore medio dell'insieme, l'algoritmo sarebbe meno efficiente se questo non fosse stato il caso.</p>
-                <p>Esempio di una implementazione del quick sort in c++:</p>
-<pre><code>void quickSort(int a[], int n, int inizio, int fine) {
+            <!-- QUICK SORT -->
+            <h2>Quick sort</h2>
+            <p class="definizione">
+                Il quick sort utiliza la ricorsione e sfrutta la tecnica <i>divide et impera</i>.
+                <br>
+                Il quick sort consiste nella scelta di un <i>pivot</i> (che di solito è l'elemento centrale) e lo si
+                confronta con tutti gli elementi nell'insieme; tutti gli elementi più piccoli vengono posizionati alla
+                sua sinistra e quelli più grandi alla sua destra; poi si riapplica il procedimento ai due sottoinsiemi.
+            </p>
+            <p>Esempio:</p>
+            <table>
+                <td>6</td>
+                <td>8</td>
+                <td>1</td>
+                <td>5</td>
+                <td>2</td>
+                <td>3</td>
+                <td>9</td>
+                <td>7</td>
+            </table>
+            <!-- PRIMA ITERAZIONE -->
+            <p><b>Prima iterazione:</b></p>
+            <table>
+                <td>6</td>
+                <td>8</td>
+                <td>1</td>
+                <td class="selezionata" style="border-left-width: 6px; border-right-width: 6px;">5</td>
+                <td>2</td>
+                <td>3</td>
+                <td>9</td>
+                <td>7</td>
+            </table>
+            <br><br>
+            <table>
+                <td>2</td>
+                <td>3</td>
+                <td>1</td>
+                <td class="selezionata" style="border-left-width: 6px; border-right-width: 6px;">5</td>
+                <td>6</td>
+                <td>8</td>
+                <td>9</td>
+                <td>7</td>
+            </table>
+            <!-- SECONDA ITERAZIONE -->
+            <p><b>Seconda iterazione:</b></p>
+            <table>
+                <td>2</td>
+                <td class="selezionata" style="border-left-width: 6px; border-right-width: 6px;">3</td>
+                <td>1</td>
+                <td style="border-left-width: 6px; border-right-width: 6px;">5</td>
+                <td>6</td>
+                <td class="selezionata" style="border-left-width: 6px; border-right-width: 6px;">8</td>
+                <td>9</td>
+                <td>7</td>
+            </table>
+            <br><br>
+            <table>
+                <td>1</td>
+                <td>2</td>
+                <td class="selezionata" style="border-left-width: 6px; border-right-width: 6px;">3</td>
+                <td style="border-left-width: 6px; border-right-width: 6px;">5</td>
+                <td>6</td>
+                <td>7</td>
+                <td class="selezionata" style="border-left-width: 6px; border-right-width: 6px;">8</td>
+                <td>9</td>
+            </table>
+            <br><br>
+            <table>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+                <td>5</td>
+                <td>6</td>
+                <td>7</td>
+                <td>8</td>
+                <td>9</td>
+            </table>
+            <p>Questo esempio tratta di un caso abbastanza favorevole per questo algoritmo poiché il primo <i>pivot</i>
+                è casualmente circa il valore medio dell'insieme, l'algoritmo sarebbe meno efficiente se questo non
+                fosse stato il caso.</p>
+            <p>Esempio di una implementazione del quick sort in c++:</p>
+            <pre><code>void quickSort(int a[], int n, int inizio, int fine) {
   int pivot;
   if (inizio &lt; fine) {
     pivot = inizio;
@@ -579,405 +628,409 @@
     quickSort(a, (fine-j), j+1, fine);
   }
 }</code></pre>
-                <p>
-                    Nel caso migliore il quick sort ha una complessità computazionale di O(n log<sub>2</sub> n) (o linearitmica)
-                    <br>
-                    Nel caso peggiore ha invece una complessità computazionale di O(n<sup>2</sup>) (o quadratica)
-                </p>
+            <p>
+                Nel caso migliore il quick sort ha una complessità computazionale di O(n log<sub>2</sub> n) (o
+                linearitmica)
+                <br>
+                Nel caso peggiore ha invece una complessità computazionale di O(n<sup>2</sup>) (o quadratica)
+            </p>
 
-                <!-- MERGE SORT -->
-                <h2 id="merge_sort">Merge sort</h2>
-                <p class="definizione">
-                    Il merge sort utiliza la ricorsione e sfrutta la tecnica <i>divide et impera</i>.
-                    <br>
-                    Il merge sort è suddiviso in due parti:
-                    <br>
-                    1. <i><b>divide</b></i>: dove l'insieme viene suddiviso in tanti sottoinsiemi ognuno di grandezza 1 (ognuno dei sottoinsiemi sono già ordinati poiché un insieme di grandezza 1 può avere solo un ordine).
-                    <br>
-                    2. <i><b>impera</b></i>: dove gli insiemi vengono uniti (da cui deriva il nome merge) tra di loro a coppie di due e ordinati. Per fare ciò si estrae ripetutamente il minimo delle due sottosequenze e lo si pone nella sequenza in uscita, che risulterà ordinata.
-                </p>
-                <p>Esempio:</p>
-                <table>
-                    <td>6</td>
-                    <td>8</td>
-                    <td>1</td>
-                    <td>5</td>
-                    <td>2</td>
-                    <td>3</td>
-                    <td>9</td>
-                    <td>7</td>
-                </table>
-                <!-- DIVIDE -->
-                <p><b>Divide:</b></p>
-                <table style="border-collapse: separate;">
-                    <td>6</td>
-                    <td>8</td>
-                    <td>1</td>
-                    <td>5</td>
-                    <td>2</td>
-                    <td>3</td>
-                    <td>9</td>
-                    <td>7</td>
-                </table>
-                <!-- IMPERA -->
-                <p><b>Impera:</b></p>
-                <!-- PRIMA ITERAZIONE -->
-                <p><b>Prima iterazione:</b></p>
-                <table>
+            <!-- MERGE SORT -->
+            <h2 id="merge_sort">Merge sort</h2>
+            <p class="definizione">
+                Il merge sort utiliza la ricorsione e sfrutta la tecnica <i>divide et impera</i>.
+                <br>
+                Il merge sort è suddiviso in due parti:
+                <br>
+                1. <i><b>divide</b></i>: dove l'insieme viene suddiviso in tanti sottoinsiemi ognuno di grandezza 1
+                (ognuno dei sottoinsiemi sono già ordinati poiché un insieme di grandezza 1 può avere solo un ordine).
+                <br>
+                2. <i><b>impera</b></i>: dove gli insiemi vengono uniti (da cui deriva il nome merge) tra di loro a
+                coppie di due e ordinati. Per fare ciò si estrae ripetutamente il minimo delle due sottosequenze e lo si
+                pone nella sequenza in uscita, che risulterà ordinata.
+            </p>
+            <p>Esempio:</p>
+            <table>
+                <td>6</td>
+                <td>8</td>
+                <td>1</td>
+                <td>5</td>
+                <td>2</td>
+                <td>3</td>
+                <td>9</td>
+                <td>7</td>
+            </table>
+            <!-- DIVIDE -->
+            <p><b>Divide:</b></p>
+            <table style="border-collapse: separate;">
+                <td>6</td>
+                <td>8</td>
+                <td>1</td>
+                <td>5</td>
+                <td>2</td>
+                <td>3</td>
+                <td>9</td>
+                <td>7</td>
+            </table>
+            <!-- IMPERA -->
+            <p><b>Impera:</b></p>
+            <!-- PRIMA ITERAZIONE -->
+            <p><b>Prima iterazione:</b></p>
+            <table>
+                <td class="selezionata">6</td>
+                <td class="selezionata">8</td>
+            </table>
+            <table>
+                <td class="selezionata">1</td>
+                <td class="selezionata">5</td>
+            </table>
+            <table>
+                <td class="selezionata">2</td>
+                <td class="selezionata">3</td>
+            </table>
+            <table>
+                <td class="selezionata">7</td>
+                <td class="selezionata">9</td>
+            </table>
+            <!-- SECONDA ITERAZIONE -->
+            <p><b>Seconda iterazione:</b></p>
+            <table>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </table>
+            <table>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </table>
+            <br><br>
+            <table>
+                <tr>
                     <td class="selezionata">6</td>
-                    <td class="selezionata">8</td>
-                </table>
-                <table>
+                    <td>8</td>
+                </tr>
+                <tr>
                     <td class="selezionata">1</td>
-                    <td class="selezionata">5</td>
-                </table>
-                <table>
+                    <td>5</td>
+                </tr>
+            </table>
+            <table>
+                <tr>
                     <td class="selezionata">2</td>
-                    <td class="selezionata">3</td>
-                </table>
-                <table>
+                    <td>3</td>
+                </tr>
+                <tr>
                     <td class="selezionata">7</td>
+                    <td>9</td>
+                </tr>
+            </table>
+            <p> 1 &lt; 6 <br> 2 &lt; 7</p>
+            <table>
+                <td>1</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </table>
+            <table>
+                <td>2</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </table>
+            <br><br>
+            <table>
+                <tr>
+                    <td class="selezionata">6</td>
+                    <td>8</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td class="selezionata">5</td>
+                </tr>
+            </table>
+            <table>
+                <tr>
+                    <td>2</td>
+                    <td class="selezionata">3</td>
+                </tr>
+                <tr>
+                    <td class="selezionata">7</td>
+                    <td>9</td>
+                </tr>
+            </table>
+            <p> 5 &lt; 6 <br> 3 &lt; 7</p>
+            <table>
+                <td>1</td>
+                <td>5</td>
+                <td></td>
+                <td></td>
+            </table>
+            <table>
+                <td>2</td>
+                <td>3</td>
+                <td></td>
+                <td></td>
+            </table>
+            <br><br>
+            <table>
+                <tr>
+                    <td class="selezionata">6</td>
+                    <td>8</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>5</td>
+                </tr>
+            </table>
+            <table>
+                <tr>
+                    <td>2</td>
+                    <td>3</td>
+                </tr>
+                <tr>
+                    <td class="selezionata">7</td>
+                    <td>9</td>
+                </tr>
+            </table>
+            <br><br>
+            <table>
+                <td>1</td>
+                <td>5</td>
+                <td>6</td>
+                <td>8</td>
+            </table>
+            <table>
+                <td>2</td>
+                <td>3</td>
+                <td>7</td>
+                <td>9</td>
+            </table>
+
+            <!-- TERZA ITERAZIONE -->
+            <p><b>Terza iterazione:</b></p>
+            <table>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </table>
+            <br><br>
+            <table>
+                <tr>
+                    <td class="selezionata">1</td>
+                    <td>5</td>
+                    <td>6</td>
+                    <td>8</td>
+                </tr>
+                <tr>
+                    <td class="selezionata">2</td>
+                    <td>3</td>
+                    <td>7</td>
+                    <td>9</td>
+                </tr>
+            </table>
+            <p> 1 &lt; 2</p>
+            <table>
+                <td>1</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </table>
+            <br><br>
+            <table>
+                <tr>
+                    <td>1</td>
+                    <td class="selezionata">5</td>
+                    <td>6</td>
+                    <td>8</td>
+                </tr>
+                <tr>
+                    <td class="selezionata">2</td>
+                    <td>3</td>
+                    <td>7</td>
+                    <td>9</td>
+                </tr>
+            </table>
+            <p> 2 &lt; 5</p>
+            <table>
+                <td>1</td>
+                <td>2</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </table>
+            <br><br>
+            <table>
+                <tr>
+                    <td>1</td>
+                    <td class="selezionata">5</td>
+                    <td>6</td>
+                    <td>8</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td class="selezionata">3</td>
+                    <td>7</td>
+                    <td>9</td>
+                </tr>
+            </table>
+            <p> 3 &lt; 5</p>
+            <table>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </table>
+            <br><br>
+            <table>
+                <tr>
+                    <td>1</td>
+                    <td class="selezionata">5</td>
+                    <td>6</td>
+                    <td>8</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>3</td>
+                    <td class="selezionata">7</td>
+                    <td>9</td>
+                </tr>
+            </table>
+            <p> 5 &lt; 7</p>
+            <table>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+                <td>5</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </table>
+            <br><br>
+            <table>
+                <tr>
+                    <td>1</td>
+                    <td>5</td>
+                    <td class="selezionata">6</td>
+                    <td>8</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>3</td>
+                    <td class="selezionata">7</td>
+                    <td>9</td>
+                </tr>
+            </table>
+            <p> 6 &lt; 7</p>
+            <table>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+                <td>5</td>
+                <td>6</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </table>
+            <br><br>
+            <table>
+                <tr>
+                    <td>1</td>
+                    <td>5</td>
+                    <td>6</td>
+                    <td class="selezionata">8</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>3</td>
+                    <td class="selezionata">7</td>
+                    <td>9</td>
+                </tr>
+            </table>
+            <p> 7 &lt; 8</p>
+            <table>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+                <td>5</td>
+                <td>6</td>
+                <td>7</td>
+                <td></td>
+                <td></td>
+            </table>
+            <br><br>
+            <table>
+                <tr>
+                    <td>1</td>
+                    <td>5</td>
+                    <td>6</td>
+                    <td class="selezionata">8</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>3</td>
+                    <td>7</td>
                     <td class="selezionata">9</td>
-                </table>
-                <!-- SECONDA ITERAZIONE -->
-                <p><b>Seconda iterazione:</b></p>
-                <table>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </table>
-                <table>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </table>
-                <br><br>
-                <table>
-                    <tr>
-                        <td class="selezionata">6</td>
-                        <td>8</td>
-                    </tr>
-                    <tr>
-                        <td class="selezionata">1</td>
-                        <td>5</td>
-                    </tr>
-                </table>
-                <table>
-                    <tr>
-                        <td class="selezionata">2</td>
-                        <td>3</td>
-                    </tr>
-                    <tr>
-                        <td class="selezionata">7</td>
-                        <td>9</td>
-                    </tr>
-                </table>
-                <p> 1 &lt; 6 <br> 2 &lt; 7</p>
-                <table>
-                    <td>1</td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </table>
-                <table>
-                    <td>2</td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </table>
-                <br><br>
-                <table>
-                    <tr>
-                        <td class="selezionata">6</td>
-                        <td>8</td>
-                    </tr>
-                    <tr>
-                        <td>1</td>
-                        <td class="selezionata">5</td>
-                    </tr>
-                </table>
-                <table>
-                    <tr>
-                        <td>2</td>
-                        <td class="selezionata">3</td>
-                    </tr>
-                    <tr>
-                        <td class="selezionata">7</td>
-                        <td>9</td>
-                    </tr>
-                </table>
-                <p> 5 &lt; 6 <br> 3 &lt; 7</p>
-                <table>
-                    <td>1</td>
-                    <td>5</td>
-                    <td></td>
-                    <td></td>
-                </table>
-                <table>
-                    <td>2</td>
-                    <td>3</td>
-                    <td></td>
-                    <td></td>
-                </table>
-                <br><br>
-                <table>
-                    <tr>
-                        <td class="selezionata">6</td>
-                        <td>8</td>
-                    </tr>
-                    <tr>
-                        <td>1</td>
-                        <td>5</td>
-                    </tr>
-                </table>
-                <table>
-                    <tr>
-                        <td>2</td>
-                        <td>3</td>
-                    </tr>
-                    <tr>
-                        <td class="selezionata">7</td>
-                        <td>9</td>
-                    </tr>
-                </table>
-                <br><br>
-                <table>
+                </tr>
+            </table>
+            <p> 8 &lt; 9</p>
+            <table>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+                <td>5</td>
+                <td>6</td>
+                <td>7</td>
+                <td>8</td>
+                <td></td>
+            </table>
+            <br><br>
+            <table>
+                <tr>
                     <td>1</td>
                     <td>5</td>
                     <td>6</td>
                     <td>8</td>
-                </table>
-                <table>
+                </tr>
+                <tr>
                     <td>2</td>
                     <td>3</td>
                     <td>7</td>
-                    <td>9</td>
-                </table>
-                
-                <!-- TERZA ITERAZIONE -->
-                <p><b>Terza iterazione:</b></p>
-                <table>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </table>
-                <br><br>
-                <table>
-                    <tr>
-                        <td class="selezionata">1</td>
-                        <td>5</td>
-                        <td>6</td>
-                        <td>8</td>
-                    </tr>
-                    <tr>
-                        <td class="selezionata">2</td>
-                        <td>3</td>
-                        <td>7</td>
-                        <td>9</td>
-                    </tr>
-                </table>
-                <p> 1 &lt; 2</p>
-                <table>
-                    <td>1</td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </table>
-                <br><br>
-                <table>
-                    <tr>
-                        <td>1</td>
-                        <td class="selezionata">5</td>
-                        <td>6</td>
-                        <td>8</td>
-                    </tr>
-                    <tr>
-                        <td class="selezionata">2</td>
-                        <td>3</td>
-                        <td>7</td>
-                        <td>9</td>
-                    </tr>
-                </table>
-                <p> 2 &lt; 5</p>
-                <table>
-                    <td>1</td>
-                    <td>2</td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </table>
-                <br><br>
-                <table>
-                    <tr>
-                        <td>1</td>
-                        <td class="selezionata">5</td>
-                        <td>6</td>
-                        <td>8</td>
-                    </tr>
-                    <tr>
-                        <td>2</td>
-                        <td class="selezionata">3</td>
-                        <td>7</td>
-                        <td>9</td>
-                    </tr>
-                </table>
-                <p> 3 &lt; 5</p>
-                <table>
-                    <td>1</td>
-                    <td>2</td>
-                    <td>3</td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </table>
-                <br><br>
-                <table>
-                    <tr>
-                        <td>1</td>
-                        <td class="selezionata">5</td>
-                        <td>6</td>
-                        <td>8</td>
-                    </tr>
-                    <tr>
-                        <td>2</td>
-                        <td>3</td>
-                        <td class="selezionata">7</td>
-                        <td>9</td>
-                    </tr>
-                </table>
-                <p> 5 &lt; 7</p>
-                <table>
-                    <td>1</td>
-                    <td>2</td>
-                    <td>3</td>
-                    <td>5</td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </table>
-                <br><br>
-                <table>
-                    <tr>
-                        <td>1</td>
-                        <td>5</td>
-                        <td class="selezionata">6</td>
-                        <td>8</td>
-                    </tr>
-                    <tr>
-                        <td>2</td>
-                        <td>3</td>
-                        <td class="selezionata">7</td>
-                        <td>9</td>
-                    </tr>
-                </table>
-                <p> 6 &lt; 7</p>
-                <table>
-                    <td>1</td>
-                    <td>2</td>
-                    <td>3</td>
-                    <td>5</td>
-                    <td>6</td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </table>
-                <br><br>
-                <table>
-                    <tr>
-                        <td>1</td>
-                        <td>5</td>
-                        <td>6</td>
-                        <td class="selezionata">8</td>
-                    </tr>
-                    <tr>
-                        <td>2</td>
-                        <td>3</td>
-                        <td class="selezionata">7</td>
-                        <td>9</td>
-                    </tr>
-                </table>
-                <p> 7 &lt; 8</p>
-                <table>
-                    <td>1</td>
-                    <td>2</td>
-                    <td>3</td>
-                    <td>5</td>
-                    <td>6</td>
-                    <td>7</td>
-                    <td></td>
-                    <td></td>
-                </table>
-                <br><br>
-                <table>
-                    <tr>
-                        <td>1</td>
-                        <td>5</td>
-                        <td>6</td>
-                        <td class="selezionata">8</td>
-                    </tr>
-                    <tr>
-                        <td>2</td>
-                        <td>3</td>
-                        <td>7</td>
-                        <td class="selezionata">9</td>
-                    </tr>
-                </table>
-                <p> 8 &lt; 9</p>
-                <table>
-                    <td>1</td>
-                    <td>2</td>
-                    <td>3</td>
-                    <td>5</td>
-                    <td>6</td>
-                    <td>7</td>
-                    <td>8</td>
-                    <td></td>
-                </table>
-                <br><br>
-                <table>
-                    <tr>
-                        <td>1</td>
-                        <td>5</td>
-                        <td>6</td>
-                        <td>8</td>
-                    </tr>
-                    <tr>
-                        <td>2</td>
-                        <td>3</td>
-                        <td>7</td>
-                        <td class="selezionata">9</td>
-                    </tr>
-                </table>
-                <br><br>
-                <table>
-                    <td>1</td>
-                    <td>2</td>
-                    <td>3</td>
-                    <td>5</td>
-                    <td>6</td>
-                    <td>7</td>
-                    <td>8</td>
-                    <td>9</td>
-                </table>
-                <p>Esempio di una implementazione del merge sort in c++:</p>
-<pre><code>void mergeSort(int a[], int inizio, int fine) {
+                    <td class="selezionata">9</td>
+                </tr>
+            </table>
+            <br><br>
+            <table>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+                <td>5</td>
+                <td>6</td>
+                <td>7</td>
+                <td>8</td>
+                <td>9</td>
+            </table>
+            <p>Esempio di una implementazione del merge sort in c++:</p>
+            <pre><code>void mergeSort(int a[], int inizio, int fine) {
   if (inizio &lt; fine) {
     int centro = (inizio + fine) / 2;
     mergeSort(a, inizio, centro);
@@ -1019,14 +1072,16 @@ void merge(int a[], int inizio, int centro, int fine) {
     a[k] = b[k-inizio];
   }
 }</code></pre>
-                    <p>Il merge sort ha una complessità computazionale di O(n log n) (o linearitmica)</p>
-            </main>
+            <p>Il merge sort ha una complessità computazionale di O(n log n) (o linearitmica)</p>
+        </main>
 
-            <footer>
-                <p>Di Luca Dell'Aversana</p>
-                <a href="../algortimiNotevoliIndex.html" style="display: flex; text-decoration: none; color: black;align-items: center;">back to home</a>
-                <p>05/09/2023</p>
-            </footer>
-        </div>
-    </body>
+        <footer>
+            <p>Di Luca Dell'Aversana</p>
+            <a href="../algortimiNotevoliIndex.html"
+                style="display: flex; text-decoration: none; color: black;align-items: center;">back to home</a>
+            <p>05/09/2023</p>
+        </footer>
+    </div>
+</body>
+
 </html>
