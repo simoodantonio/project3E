@@ -1,7 +1,7 @@
 body {
     background-image: url("images/background.png");
     background-attachment: fixed;
-
+    flex-direction: column;
     display: flex;
     justify-content: space-between;
 }
