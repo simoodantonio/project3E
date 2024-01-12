@@ -27,20 +27,30 @@
             </a>
             <a href="C-C++/C-C++-Index.html" class="box menu">
                 <p>C++ - Introduzione</p>
-                <div class="dropdown" style="flex-direction: column;">
-                    <div class="row tabella" >
-                        <p class="textbox">programmazione modulare </p>
-                        <p class="textbox">C++ fondamentali</p>
+                <div style="flex-direction: column;" class="dropdown">
+                    <div style="gap: 0px" class="row">
+                        <p>Introduzione e Principi</p>
+                        <p>Programmazione modulare</p>
                     </div>
-                    <p class="textbox">programmazione procedurale e gestione memoria</p>
-
+                    <div class="row">
+                        <p>Programmazione procedurale e gestione della memoria</p>
+                    </div>
                 </div>
             </a>
 
         </div>
         <div class="row">
-            <a href="POO/POO-index.html" class="box">
+            <a href="POO/POO-index.html" class="box menu">
                 <p>Programmazione orientata agli oggetti</p>
+                <div style="flex-direction: row;" class="dropdown">
+                    <div style="display: flex; flex-direction: column; gap: 0%; width: 50%;" class="row">
+                        <p>C++</p>
+                        <p>Java</p>
+                    </div>
+                    <div style="gap: 0%; height: 100%; width: 50%;" class="row">
+                        <p style="width: 100%; ">Classe String e metodi statici</p>
+                    </div>
+                </div>
             </a>
             <a href="algortmiNotevoliComplessitaComputazionale/algortimiNotevoliIndex.html" class="box">
                 <p>Algoritmi notevoli</p>
@@ -60,9 +70,23 @@
     }
 
     .dropdown>p {
-        font-size: 13.7px;
+        font-size: 15px;
         max-width: 90%;
-        margin: 10px;
+        text-align: center;
+        padding: 10px;
+        border-width: 1px;
+        border-color: black;
+        border-style: solid;
+        margin: 0;
+    }
+
+    .row>p {
+        border-color: black;
+        border-width: 1px;
+        border-style: solid;
+        padding: 10px;
+        text-align: center;
+        margin: 0;
     }
 
     .menu:hover .dropdown {
@@ -74,18 +98,6 @@
     .dropdown {
         justify-content: center;
         align-items: center;
-    }
-
-    .tabella{
-        gap: 0px; max-height: 50%;
-    }
-
-    .textbox{
-        /*box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);*/
-        border: 1px solid rgba(28, 24, 24, 0.618);
-        text-align: center;
-        margin: 0px !important;
-        max-width: 100% !important;
     }
 </style>
 
