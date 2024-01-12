@@ -11,7 +11,7 @@
 
 <body>
     <div class="homeBar">
-        <p style="font-size: xx-large;" >Programma Informatica 3E A.S. 2022/2023</p>
+        <p style="font-size: xx-large;">Programma Informatica 3E A.S. 2022/2023</p>
     </div>
     <div class="container">
         <div class="row">
@@ -25,10 +25,18 @@
                     <p style="text-align: left;">Linguaggi di programmazione, paradigmi e modello waterfall</p>
                 </div>
             </a>
-            <a href="C-C++/C-C++-Index.html" class="box">
+            <a href="C-C++/C-C++-Index.html" class="box menu">
                 <p>C++ - Introduzione</p>
+                <div class="dropdown" style="flex-direction: column;">
+                    <div class="row tabella" >
+                        <p class="textbox">programmazione modulare </p>
+                        <p class="textbox">C++ fondamentali</p>
+                    </div>
+                    <p class="textbox">programmazione procedurale e gestione memoria</p>
+
+                </div>
             </a>
-            
+
         </div>
         <div class="row">
             <a href="POO/POO-index.html" class="box">
@@ -42,7 +50,7 @@
 </body>
 
 <style>
-    .box > p {
+    .box>p {
         width: 90%;
         font-size: 22px;
     }
@@ -51,10 +59,9 @@
         gap: 100px;
     }
 
-    .dropdown > p {
-        font-size: 15px;
+    .dropdown>p {
+        font-size: 13.7px;
         max-width: 90%;
-        text-align: center;
         margin: 10px;
     }
 
@@ -68,8 +75,18 @@
         justify-content: center;
         align-items: center;
     }
-    
 
+    .tabella{
+        gap: 0px; max-height: 50%;
+    }
+
+    .textbox{
+        /*box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);*/
+        border: 1px solid rgba(28, 24, 24, 0.618);
+        text-align: center;
+        margin: 0px !important;
+        max-width: 100% !important;
+    }
 </style>
 
 </html>
