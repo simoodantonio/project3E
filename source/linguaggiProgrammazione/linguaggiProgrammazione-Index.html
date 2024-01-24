@@ -9,27 +9,30 @@
 </head>
 
 <body>
-    <div class="homeBar">
-        <div class="box">
-            <a href="../index.html">Back to home</a>
+    <div style="justify-content: space-between;" class="homeBar">
+        <a class="back" href="../index.html">
+            <img width="100%" src="../../assets/black-home.png" alt="Home icon">
+        </a>
+        <div style="justify-content: center; width: 100%; text-align: center;">
+            <p style="font-size: xx-large;">I linguaggi di programmazione</p>
         </div>
-        <div class="box">
-            <div class="show">
-                <a>ndjksank</a>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div href="" class="box menu">
+                <p>Sviluppo di un programma, traduttori e IDE</p>
                 <div class="dropdown">
                     <a href="AlessandroMartano/Pagina.html">Fasi di sviluppo di un programma</a>
                     <a href="AlessandroMartano/Pagina 2.html">I traduttori</a>
                     <a href="AlessandroMartano/Pagina 3.html">Un IDE</a>
                 </div>
             </div>
-        </div>
-        <div class="box">
-            <div class="show">
-                <a>d sjkanjdsk</a>
+            <div href="" class="box menu">
+                <p>Linguaggi di programmazione, paradigmi e modello waterfall</p>
                 <div class="dropdown">
-                    <a href="Pagina 2.html">I linguaggi di programmazione</a>
-                    <a href="Pagina.html">Paradigmi di programmazione</a>
-                    <a href="Pagina 3.html">Modello waterfall</a>
+                    <a href="ChristianDurso/Pagina 2.html">I linguaggi di programmazione</a>
+                    <a href="ChristianDurso/Pagina.html">Paradigmi di programmazione</a>
+                    <a href="ChristianDurso/Pagina 3.html">Modello waterfall</a>
                 </div>
             </div>
         </div>
@@ -37,33 +40,32 @@
 </body>
 
 <style>
-    .dropdown a {
-        color: black;
-        padding: 12px 16px;
-        text-decoration: none;
-        display: block;
-    }
-
     .box:hover .dropdown {
         display: block;
         opacity: 1;
     }
 
-    .dropdown a:hover {
-        background-color: #f2f2f2;
+    .box>p {
+        font-size: 22px;
+    }
+
+    .row {
+        gap: 200px;
+    }
+
+    .dropdown > a {
+        border-width: 1px;
+        border-color: black;
+        border-style: solid;
+    }
+
+    .menu > p {
+        font-size: 20px;
+        height: 51px;
     }
 
     .box {
-        align-items: center;
-        justify-content: center;
-        display: flex;
-        flex-direction: column;
-    }
-
-    .show {
-        align-items: center;
-        justify-content: center;
-        display: flex;
+        height: 400px;
     }
 </style>
 

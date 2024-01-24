@@ -1,103 +1,143 @@
 <!DOCTYPE html>
 <html lang="it">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Complessità computazionale e algoritmi notevoli</title>
-        <link rel="stylesheet" href="styles.css">
-    </head>
 
-    <body>
-        <div class="container">
-            <header>
-                <h1> La complessità computazionale </h1>
-                <nav>
-                    <p class="button"><b> &lt; </b></p>
-                    <p class="button"> La complessità computazionale </p>
-                    <a class="button" href="algoritmiOrdinamento.html"> Algoritmi notevoli di ordinamento </a>
-                    <a class="button" href="algoritmiRicerca.html"> Algoritmi notevoli di ricerca </a>
-                    <a class="button" href="algoritmiOrdinamento.html"><b> &gt; </b></a>
-                </nav>
-            </header>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complessità computazionale e algoritmi notevoli</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
 
-            <main>
-                <p>La complessità computazionale di un algoritmo è una misura della sua efficienza e può essere di tre diversi tipi:</p>
-                <ul>
-                    <li><b>TEMPORALE T(n)</b>: misura il tempo di esecuzione dell'algoritmo dato un input <i>n</i>.</li>
-                    <li><b>SPAZIALE</b>: misura la memoria utilizzata dall'algoritmo dato un input <i>n</i>, il risultato è rappresentato in byte.</li>
-                    <li><b>I/O</b>: misura il tempo impiegato per il trasferimento di dati da e verso le periferiche di i/o.</li>
-                </ul>
-                <p>Per il resto dell'argomento parleremo della complessità temporale poiché è la più utilizzata per determinare l'efficienza di un algoritmo.</p>
-                
-                <!-- IL MODELLO RAM -->
-                <h2>Il modello RAM</h2>
-                <p>Per calcolare la complessità computazionale di un algoritmo si devono tener conto di due ipotesi:</p>
-                <ul>
-                    <li>
-                        <b>INDIPENDENZA DAL SISTEMA DI ELABORAZIONE</b>: ovviamente l'efficienza dell'algoritmo dipende dalla macchina che lo esegue, per il nostro calcolo della complessità computazionale dobbiamo trovare un modo di calcolarla che non dipenda dalla velocità di calcolo della macchina sulla quale l'algoritmo viene eseguito.
-                        <br>
-                        Per rendere il calcolo indipendente dal sistema si utilizza il modello di computazionale RAM (Random Access Machine) che è caratterizzato da:
-                        <ul>
-                            <li>Un monoprocessore senza parallelismo.</li>
-                            <li>ISA (Istruction Set Architecture) con istruzioni semplici (operazioni di assegnamento, aritmetiche, logiche e relazionali) aventi costo unitario.</li>
-                        </ul>
-                    </li>
-                    <li>
-                        <b>DIPENDENZA AI DATI IN INGRESSO</b>: nel calcolo della complessità computazionale dobbiamo però tener conto della dimensione e del valore dei dati d'ingresso
-                        <br>
-                        Per rendere il calcolo dipendete ai dati in ingresso si considerano, di solito, tre possibili casi:
-                        <ul>
-                            <li><b>CASO MIGLIORE Ω(n)</b>: corrispondente alla configurazione dei dati di input che danno luogo al valore minimo di T(n).</li>
-                            <li><b>CASO PEGGIORE O(n)</b>: corrispondente alla configurazione dei dati di ingresso che danno luogo al valore massimo di T(n).</li>
-                            <li><b>CASO MEDIO Θ(n)</b>: che corrisponde al comportamento medio di T(n) al variare della configurazione dei dati di ingresso.</li>
-                        </ul>
-                        Spesso per il calcolo della complessità computazionale si calcola esclusivamente il caso peggiore, poiché se l'algoritmo è abbastanza efficiente nel risolvimento del caso peggiore lo sarà anche nel caso migliore.
-                    </li>
-                </ul>
-                
-                <!-- COME CALCOLARE LA COMPLESSITÀ COMPUTAZIONALE -->
-                <h2>Come calcolare la complessità computazionale</h2>
-                <p>
-                    Per calcolare la complessità computazionale di un algoritmo dobbiamo definire il modo migliore per rispettare entrambe le ipotesi descritte in precedenza. 
-                    Il modo migliore per fare ciò è definendo il costo di un algoritmo, cioè il numero di operazioni necessarie a realizzare il suo processo risolutivo.
+<body>
+    <a href="../algortimiNotevoliIndex.html"
+        style="display: flex; text-decoration: none; color: black;align-items: center; height: 60.5px; width: 60.5px;">
+        <img src="../../../assets/white-home.png" alt="Home icon" style="margin: 0; width: 100%; height: 100%;">
+    </a>
+    <div class="container">
+        <header>
+            <h1> La complessità computazionale </h1>
+            <nav>
+                <p class="button"><b> &lt; </b></p>
+                <p class="button"> La complessità computazionale </p>
+                <a class="button" href="algoritmiOrdinamento.html"> Algoritmi notevoli di ordinamento </a>
+                <a class="button" href="algoritmiRicerca.html"> Algoritmi notevoli di ricerca </a>
+                <a class="button" href="algoritmiOrdinamento.html"><b> &gt; </b></a>
+            </nav>
+        </header>
+
+        <main>
+            <p>La complessità computazionale di un algoritmo è una misura della sua efficienza e può essere di tre
+                diversi tipi:</p>
+            <ul>
+                <li><b>TEMPORALE T(n)</b>: misura il tempo di esecuzione dell'algoritmo dato un input <i>n</i>.</li>
+                <li><b>SPAZIALE</b>: misura la memoria utilizzata dall'algoritmo dato un input <i>n</i>, il risultato è
+                    rappresentato in byte.</li>
+                <li><b>I/O</b>: misura il tempo impiegato per il trasferimento di dati da e verso le periferiche di i/o.
+                </li>
+            </ul>
+            <p>Per il resto dell'argomento parleremo della complessità temporale poiché è la più utilizzata per
+                determinare l'efficienza di un algoritmo.</p>
+
+            <!-- IL MODELLO RAM -->
+            <h2>Il modello RAM</h2>
+            <p>Per calcolare la complessità computazionale di un algoritmo si devono tener conto di due ipotesi:</p>
+            <ul>
+                <li>
+                    <b>INDIPENDENZA DAL SISTEMA DI ELABORAZIONE</b>: ovviamente l'efficienza dell'algoritmo dipende
+                    dalla macchina che lo esegue, per il nostro calcolo della complessità computazionale dobbiamo
+                    trovare un modo di calcolarla che non dipenda dalla velocità di calcolo della macchina sulla quale
+                    l'algoritmo viene eseguito.
                     <br>
-                    Quindi se vogliamo calcolare la complessità computazionale di un algoritmo per prima cosa dobbiamo definire le operazioni di base che possiedono un costo pari a 1; come accennato precedentemente queste operazioni sono: (tra parentesi degli esempi in c++)
-                </p>
-                <ol>
-                    <li>Istruzioni di I/O (cin, cout)</li>
-                    <li>Dichiarazione di una variabile/array (int n, char a[10])</li>
-                    <li>Assegnazione di un valore a una variabile/array (n=0, a[2]='a')</li>
-                    <li>Lettura di una variabile/array (n, a[2])</li>
-                    <li>Operazioni aritmetiche (+, -, *, /, %, ++, --)</li>
-                    <li>Operazioni logiche (&amp&amp, ||, !, &lt;&lt;, &gt;&gt;, &amp, |, ^, ~)</li>
-                    <li>Operazioni di confronto (&lt;, &gt;, &lt;=, &gt;=, ==, !=)</li>
-                </ol>
+                    Per rendere il calcolo indipendente dal sistema si utilizza il modello di computazionale RAM (Random
+                    Access Machine) che è caratterizzato da:
+                    <ul>
+                        <li>Un monoprocessore senza parallelismo.</li>
+                        <li>ISA (Istruction Set Architecture) con istruzioni semplici (operazioni di assegnamento,
+                            aritmetiche, logiche e relazionali) aventi costo unitario.</li>
+                    </ul>
+                </li>
+                <li>
+                    <b>DIPENDENZA AI DATI IN INGRESSO</b>: nel calcolo della complessità computazionale dobbiamo però
+                    tener conto della dimensione e del valore dei dati d'ingresso
+                    <br>
+                    Per rendere il calcolo dipendete ai dati in ingresso si considerano, di solito, tre possibili casi:
+                    <ul>
+                        <li><b>CASO MIGLIORE Ω(n)</b>: corrispondente alla configurazione dei dati di input che danno
+                            luogo al valore minimo di T(n).</li>
+                        <li><b>CASO PEGGIORE O(n)</b>: corrispondente alla configurazione dei dati di ingresso che danno
+                            luogo al valore massimo di T(n).</li>
+                        <li><b>CASO MEDIO Θ(n)</b>: che corrisponde al comportamento medio di T(n) al variare della
+                            configurazione dei dati di ingresso.</li>
+                    </ul>
+                    Spesso per il calcolo della complessità computazionale si calcola esclusivamente il caso peggiore,
+                    poiché se l'algoritmo è abbastanza efficiente nel risolvimento del caso peggiore lo sarà anche nel
+                    caso migliore.
+                </li>
+            </ul>
 
-                <p>Operazioni più complesse hanno bisogno di un procedimento specifico per il calcolo della complessità computazionale:</p>
-                <ol>
-                    <li>
-                        <b>Selezione</b>:
-                        <ul>
-                            <li><b>if</b>: equivale alla somma del costo della sua condizione e del costo delle singole istruzioni contenute nel corpo se la condizione risulta vera altrimenti equivale solamente al costo della condizione </li>
-                            <li><b>if ... else</b>: equivale alla somma del costo della sua condizione più il costo delle singole istruzioni contenute nel corpo dell'if o dell'else, in base a quale viene eseguito</li>
-                            <li><b>if ... else if ... else</b>: equivale alla somma del costo delle singole istruzioni contenute nel corpo che verrà eseguito più tutte le condizioni precedenti</li>
-                            <li><b>switch ... case ... default</b>: equivale alla somma del costo delle singole istruzioni contenute nel corpo che verrà eseguito più 1 per ogni case precedente e/o corrente</li>
-                        </ul>
-                    </li>
-                    <li>
-                        <b>Iterazione</b>:
-                        <ul>
-                            <li><b>for</b>: equivale alla somma del costo delle singole istruzioni contenute nel corpo, più la condizione di esistenza, più le modifiche apportate alla variabile contatore alla fine di ogni ciclo moltiplicato per il numero di volte che viene eseguito il ciclo più le operazioni iniziali eseguite dal for</li>
-                            <li><b>while</b>: equivale alla somma del costo delle singole istruzioni contenute nel corpo, più la condizione di esistenza moltiplicato per il numero di volte che viene eseguito il ciclo</li>
-                            <li><b>do ... while</b>: equivale alla somma del costo delle singole istruzioni contenute nel corpo, più la condizione di esistenza moltiplicato per il numero di volte che viene eseguito il ciclo</li>
-                        </ul>
-                    </li>
-                    <li><b>Funzioni/procedure</b>: equivale alla somma del costo delle singole istruzioni contenute nel corpo più la chiamata della funzione/procedura (che vale 1) (da notare che l'operazione di return vale 1)</li>
-                </ol>
-                
-                <p>Esempio:</p>
-<pre><code>#include &lt;iostream&gt;
+            <!-- COME CALCOLARE LA COMPLESSITÀ COMPUTAZIONALE -->
+            <h2>Come calcolare la complessità computazionale</h2>
+            <p>
+                Per calcolare la complessità computazionale di un algoritmo dobbiamo definire il modo migliore per
+                rispettare entrambe le ipotesi descritte in precedenza.
+                Il modo migliore per fare ciò è definendo il costo di un algoritmo, cioè il numero di operazioni
+                necessarie a realizzare il suo processo risolutivo.
+                <br>
+                Quindi se vogliamo calcolare la complessità computazionale di un algoritmo per prima cosa dobbiamo
+                definire le operazioni di base che possiedono un costo pari a 1; come accennato precedentemente queste
+                operazioni sono: (tra parentesi degli esempi in c++)
+            </p>
+            <ol>
+                <li>Istruzioni di I/O (cin, cout)</li>
+                <li>Dichiarazione di una variabile/array (int n, char a[10])</li>
+                <li>Assegnazione di un valore a una variabile/array (n=0, a[2]='a')</li>
+                <li>Lettura di una variabile/array (n, a[2])</li>
+                <li>Operazioni aritmetiche (+, -, *, /, %, ++, --)</li>
+                <li>Operazioni logiche (&amp&amp, ||, !, &lt;&lt;, &gt;&gt;, &amp, |, ^, ~)</li>
+                <li>Operazioni di confronto (&lt;, &gt;, &lt;=, &gt;=, ==, !=)</li>
+            </ol>
+
+            <p>Operazioni più complesse hanno bisogno di un procedimento specifico per il calcolo della complessità
+                computazionale:</p>
+            <ol>
+                <li>
+                    <b>Selezione</b>:
+                    <ul>
+                        <li><b>if</b>: equivale alla somma del costo della sua condizione e del costo delle singole
+                            istruzioni contenute nel corpo se la condizione risulta vera altrimenti equivale solamente
+                            al costo della condizione </li>
+                        <li><b>if ... else</b>: equivale alla somma del costo della sua condizione più il costo delle
+                            singole istruzioni contenute nel corpo dell'if o dell'else, in base a quale viene eseguito
+                        </li>
+                        <li><b>if ... else if ... else</b>: equivale alla somma del costo delle singole istruzioni
+                            contenute nel corpo che verrà eseguito più tutte le condizioni precedenti</li>
+                        <li><b>switch ... case ... default</b>: equivale alla somma del costo delle singole istruzioni
+                            contenute nel corpo che verrà eseguito più 1 per ogni case precedente e/o corrente</li>
+                    </ul>
+                </li>
+                <li>
+                    <b>Iterazione</b>:
+                    <ul>
+                        <li><b>for</b>: equivale alla somma del costo delle singole istruzioni contenute nel corpo, più
+                            la condizione di esistenza, più le modifiche apportate alla variabile contatore alla fine di
+                            ogni ciclo moltiplicato per il numero di volte che viene eseguito il ciclo più le operazioni
+                            iniziali eseguite dal for</li>
+                        <li><b>while</b>: equivale alla somma del costo delle singole istruzioni contenute nel corpo,
+                            più la condizione di esistenza moltiplicato per il numero di volte che viene eseguito il
+                            ciclo</li>
+                        <li><b>do ... while</b>: equivale alla somma del costo delle singole istruzioni contenute nel
+                            corpo, più la condizione di esistenza moltiplicato per il numero di volte che viene eseguito
+                            il ciclo</li>
+                    </ul>
+                </li>
+                <li><b>Funzioni/procedure</b>: equivale alla somma del costo delle singole istruzioni contenute nel
+                    corpo più la chiamata della funzione/procedura (che vale 1) (da notare che l'operazione di return
+                    vale 1)</li>
+            </ol>
+
+            <p>Esempio:</p>
+            <pre><code>#include &lt;iostream&gt;
 
 using namespace std;
     
@@ -132,50 +172,64 @@ int main(int argc, char const *argv[]) {
     
   return 0;
 }</code></pre>
-                <p>
-                    Per calcolare la complessità computazionale di questo algoritmo basta sommare tutti i costi di tutte le linee di codice che verranno eseguite nel caso peggiore:
-                    <br>
-                    Per prima cosa sommiamo le dichiarazioni delle 4 variabili e dei tre input (con un costo totale di 7), poi dobbiamo scegliere il singolo case dello switch che porterà al risultato più lento; in questo caso si tratta del case '^' che calcola la potenza dei due numeri <i>n1</i> e <i>n2</i>. 
-                    Come abbiamo visto prima per il calcolo dello switch dobbiamo sommare il costo delle singole istruzioni contenute nel corpo (3<i>n2</i> + 2) e tutte le condizioni precedenti; poiché il case scelto è l'ultimo dello switch dovremmo sommare tutte le condizioni (4).
-                    In totale abbiamo una complessità computazionale di 7 + 3<i>n2</i> + 2 + 4 = 3<i>n2</i> + 13, che è un O(n) o una complessità lineare.
-                </p>
-                
-                <!-- LE CLASSI DI COMPLESSITÀ -->
-                <h2>Le classi di complessità</h2>
-                <p>
-                    Poco prima ho nominato la complessità lineare, essa, come le seguenti complessità, sono una classe di complessità.
-                    <br>
-                    Le diverse classi di complessità sono:
-                </p>
-                <ul>
-                    <li>Complessità costante O(1)</li>
-                    <li>Complessità logaritmica O(log n)</li>
-                    <li>Complessità polilogaritmica O(k log n)</li>
-                    <li>Complessità lineare O(n)</li>
-                    <li>Complessità linearitmica O(n log n)</li>
-                    <li>Complessità quadratica O(n<sup>2</sup>)</li>
-                    <li>Complessità cubica O(n<sup>3</sup>)</li>
-                    <li>Complessità polinomiale O(n<sup>k</sup>)</li>
-                    <li>Complessità esponenziale O(k<sup>n</sup>)</li>
-                    <li>Complessità fattoriale O(n!)</li>
-                </ul>
-                <img src="images/graph.png" alt="grafico con diverse classi di complessità">
-                <p>Alcuni esempi di algoritmi che utilizzano queste complessità computazionali:</p>
-                <ul>
-                    <li><b>Complessità logaritmica</b>: l'algoritmo di <a href="algoritmiRicerca.html#ricerca_binaria">ricerca binaria</a></li>
-                    <li><b>Complessità linearitmica</b>: l'algoritmo <a href="algoritmiOrdinamento.html#merge_sort">merge sort</a></li>
-                    <li><b>Complessità quadratica</b>: l'algoritmo di <a href="algoritmiOrdinamento.html#selection_sort">selection sort</a></li>
-                    <li><b>Complessità esponenziale</b>: un algoritmo non ottimizato di risoluzione della seguenza di Fibbonacci</li>
-                    <li><b>Complessità fattoriale</b>: l'algoritmo di risoluzione brute force del TSP*</li>
-                </ul>
-                <p>*Il problema del commesso viaggiatore (Traveling Salesman Problem) è un problema che dato un insieme di città, e note le distanze tra ciascuna coppia di esse, deve trovare il tragitto di minima percorrenza che un commesso viaggiatore deve seguire per visitare tutte le città una ed una sola volta e ritornare alla città di partenza.</p>
-            </main>
+            <p>
+                Per calcolare la complessità computazionale di questo algoritmo basta sommare tutti i costi di tutte le
+                linee di codice che verranno eseguite nel caso peggiore:
+                <br>
+                Per prima cosa sommiamo le dichiarazioni delle 4 variabili e dei tre input (con un costo totale di 7),
+                poi dobbiamo scegliere il singolo case dello switch che porterà al risultato più lento; in questo caso
+                si tratta del case '^' che calcola la potenza dei due numeri <i>n1</i> e <i>n2</i>.
+                Come abbiamo visto prima per il calcolo dello switch dobbiamo sommare il costo delle singole istruzioni
+                contenute nel corpo (3<i>n2</i> + 2) e tutte le condizioni precedenti; poiché il case scelto è l'ultimo
+                dello switch dovremmo sommare tutte le condizioni (4).
+                In totale abbiamo una complessità computazionale di 7 + 3<i>n2</i> + 2 + 4 = 3<i>n2</i> + 13, che è un
+                O(n) o una complessità lineare.
+            </p>
 
-            <footer>
-                <p>Di Luca Dell'Aversana</p>
-                <a href="../algortimiNotevoliIndex.html" style="display: flex; text-decoration: none; color: black;align-items: center;">back to home</a>
-                <p>04/09/2023</p>
-            </footer>
-        </div>
-    </body>
+            <!-- LE CLASSI DI COMPLESSITÀ -->
+            <h2>Le classi di complessità</h2>
+            <p>
+                Poco prima ho nominato la complessità lineare, essa, come le seguenti complessità, sono una classe di
+                complessità.
+                <br>
+                Le diverse classi di complessità sono:
+            </p>
+            <ul>
+                <li>Complessità costante O(1)</li>
+                <li>Complessità logaritmica O(log n)</li>
+                <li>Complessità polilogaritmica O(k log n)</li>
+                <li>Complessità lineare O(n)</li>
+                <li>Complessità linearitmica O(n log n)</li>
+                <li>Complessità quadratica O(n<sup>2</sup>)</li>
+                <li>Complessità cubica O(n<sup>3</sup>)</li>
+                <li>Complessità polinomiale O(n<sup>k</sup>)</li>
+                <li>Complessità esponenziale O(k<sup>n</sup>)</li>
+                <li>Complessità fattoriale O(n!)</li>
+            </ul>
+            <img src="images/graph.png" alt="grafico con diverse classi di complessità">
+            <p>Alcuni esempi di algoritmi che utilizzano queste complessità computazionali:</p>
+            <ul>
+                <li><b>Complessità logaritmica</b>: l'algoritmo di <a
+                        href="algoritmiRicerca.html#ricerca_binaria">ricerca binaria</a></li>
+                <li><b>Complessità linearitmica</b>: l'algoritmo <a href="algoritmiOrdinamento.html#merge_sort">merge
+                        sort</a></li>
+                <li><b>Complessità quadratica</b>: l'algoritmo di <a
+                        href="algoritmiOrdinamento.html#selection_sort">selection sort</a></li>
+                <li><b>Complessità esponenziale</b>: un algoritmo non ottimizato di risoluzione della seguenza di
+                    Fibbonacci</li>
+                <li><b>Complessità fattoriale</b>: l'algoritmo di risoluzione brute force del TSP*</li>
+            </ul>
+            <p>*Il problema del commesso viaggiatore (Traveling Salesman Problem) è un problema che dato un insieme di
+                città, e note le distanze tra ciascuna coppia di esse, deve trovare il tragitto di minima percorrenza
+                che un commesso viaggiatore deve seguire per visitare tutte le città una ed una sola volta e ritornare
+                alla città di partenza.</p>
+        </main>
+
+        <footer>
+            <p>Di Luca Dell'Aversana</p>
+            <p>04/09/2023</p>
+        </footer>
+    </div>
+</body>
+
 </html>

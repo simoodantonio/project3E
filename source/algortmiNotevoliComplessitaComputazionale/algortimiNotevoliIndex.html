@@ -1,28 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../style/indexStyle/style.css">
     <title>Algortimi Notevoli</title>
 </head>
+
 <body>
-    <div class="homeBar">
-        <div class="box">
-            <a href="../index.html">Back to home</a>
+    <div style="justify-content: space-between;" class="homeBar">
+        <a class="back" href="../index.html">
+            <img width="100%" src="../../assets/black-home.png" alt="Home icon">
+        </a>
+        <div style="justify-content: center; width: 100%; text-align: center;">
+            <p style="font-size: xx-large;">Algoritmi notevoli</p>
         </div>
-        <div class="box">
-            <a href="LucaDellAversana/complessitaComputazionale.html">Algoritmi notevoli 1 versione</a>
-        </div>
-        <div class="box">
-            <a href="NatanFerreira/Algoritmi notevoli.html">Algortimi notevoli 2 versione</a>
+    </div>
+    <div class="container">
+        <div class="row">
+            <a href="LucaDellAversana/complessitaComputazionale.html" class="box">
+                <p style="font-size: x-large;">Algoritmi notevoli<br>versione 1</p>
+            </a>
+            <a href="NatanFerreira/Algoritmi notevoli.html" class="box">
+                <p style="font-size: x-large;">Algortimi notevoli<br>versione 2</p>
+            </a>
         </div>
     </div>
 </body>
 
 <style>
-    .box{
-        width: 33%;
+    .box {
+        width: 300px;
+        height: 400px;
+    }
+
+    .row {
+        gap: 100px;
     }
 </style>
+
 </html>

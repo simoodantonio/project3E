@@ -5,22 +5,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../style/indexStyle/style.css">
-    <title>Document</title>
+    <title>C++</title>
 </head>
 
 <body>
-    <div class="homeBar">
-        <div class="box">
-            <a href="../index.html">Back to home</a>
+    <div style="justify-content: space-between;" class="homeBar">
+        <a class="back" href="../index.html">
+            <img width="100%" src="../../assets/black-home.png" alt="Home icon">
+        </a>
+        <div style="justify-content: center; width: 100%; text-align: center;">
+            <p style="font-size: xx-large;">C++ - Introduzione</p>
         </div>
-        <div class="box">
-            <a href="RiccardoMaiello/main.html">Introduzioni C++ e principi fondamentali</a>
-        </div>
-        <div class="box">
-            <a href="NicolasLongordo/index.html">Programmazione procedurale e gestione della memoria</a>
-        </div>
-        <div class="box">
-            <a>Programmazione modulare</a>
+    </div>
+    <div class="container">
+        <div class="row">
+            <a href="RiccardoMaiello/main.html" class="box menu">
+                <p>Introduzioni C++ e principi fondamentali</p>
+                <div class="dropdown">
+                    <div style="gap:0%" class="row">
+                        <p>Struttura fondamentale di un programma in C++</p>
+                        <p>Elementi del c++</p>
+                    </div>
+                    <div style="gap:0%" class="row">
+                        <p>La programmazione procedurale</p>
+                        <p>Importanza della procedurale e code refactoring</p>
+                    </div>
+                </div>
+            </a>
+            <a href="NicolasLongordo/index.html" class="box">
+                <p>Programmazione procedurale<br>e gestione della memoria</p>
+            </a>
+            <a href="" class="box">
+                <p>Programmazione modulare (da integrare)</p>
+            </a>
         </div>
     </div>
 </body>
@@ -29,6 +46,32 @@
     .homeBar {
         gap: 6%;
     }
+
+    .row {
+        gap: 100px;
+    }
+    
+    .box>p {
+        font-size: x-large;
+    }
+
+    .box {
+        width: 300px;
+        height: 400px;
+    }
+
+    .row>p {
+        font-size: 15px;
+        max-width: 50%;
+        text-align: left;
+        padding: 10px;
+        border-width: 1px;
+        border-color: black;
+        border-style: solid;
+        margin: 0;
+    }
+
+
 </style>
 
 </html>

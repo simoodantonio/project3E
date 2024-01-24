@@ -5,26 +5,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../style/indexStyle/style.css">
-    <title>Document</title>
+    <title>Programmazione Orientata agli Oggetti</title>
 </head>
 
 <body>
-    <div class="homeBar">
-        <div class="box">
-            <a href="../index.html">Back to home</a>
+    <div style="justify-content: space-between;" class="homeBar">
+        <a class="back" href="../index.html">
+            <img width="100%" src="../../assets/black-home.png" alt="Home icon">
+        </a>
+        <div style="justify-content: center; width: 100%; text-align: center;">
+            <p style="font-size: xx-large;">Programmazione Orientata agli Oggetti (OOP)</p>
         </div>
-        <div class="box">
-            <a href="MirkoBaldoni/file.html">Introduzione</a>
+    </div>
+    <div class="container">
+        <div class="row">
+            <a href="MirkoBaldoni/file.html" class="box">
+                <p>Introduzione</p>
+            </a>
+            <a href="nomeCognome2/file.html" class="box">
+                <p>Classe String e metodi statici</p>
+            </a>
         </div>
-        <div class="box">
-            <a href="nomeCognome2/file.html">Classe String e metodi statici</a>
-        </div>
-        <div class="box">
-            <a href="C++/FrancescoCelima/file.html">C/C++ - Le classi</a>
-        </div>
-        <div class="box">
-            <div class="show">
-                <a>Java</a>
+        <div class="row">
+            <a href="C++/FrancescoCelima/file.html" class="box">
+                <p>C/C++ - Le classi</p>
+            </a>
+            <div class="box menu">
+                <p style="font-size: 20px; margin: 0px">Java</p>
                 <div class="dropdown">
                     <a href="java/AlessandroLuddeni/index.html">Basi della programmazione ad oggetti</a>
                     <a href="java/DamianoTesti/home.html">Gestione della memoria</a>
@@ -34,36 +41,33 @@
             </div>
         </div>
     </div>
+    </div>
 </body>
 
 <style>
-    .dropdown a {
-        color: black;
-        padding: 12px 16px;
-        text-decoration: none;
-        display: block;
+    .box > p {
+        font-size: 22px;
     }
 
-    .box:hover .dropdown {
+    .box.menu:active .dropdown {
         display: block;
         opacity: 1;
     }
 
-    .dropdown a:hover {
-        background-color: #f2f2f2;
+    .dropdown > a {
+        font-size: 15px;
+        border-width: 1px;
+        border-color: black;
+        border-style: solid;
     }
 
-    .box {
-        align-items: center;
-        justify-content: center;
-        display: flex;
-        flex-direction: column;
+    .row {
+        gap: 100px;
     }
 
-    .show {
-        align-items: center;
-        justify-content: center;
-        display: flex;
+    .dropdown {
+        max-height: 70%;
+        margin-top: 5%;
     }
 </style>
 
